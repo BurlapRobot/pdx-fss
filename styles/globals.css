@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2d3748;
+  --accent-color: #4299e1;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Enhance prose styling */
+.prose {
+  @apply max-w-3xl;
+}
+
+.prose h1 {
+  @apply text-4xl font-bold text-gray-900 mb-8;
+}
+
+.prose h2 {
+  @apply text-3xl font-semibold text-gray-800 mt-8 mb-4;
+}
+
+.prose h3 {
+  @apply text-2xl font-semibold text-gray-800 mt-6 mb-3;
+}
+
+.prose p {
+  @apply mb-4 text-gray-700;
+}
+
+.prose a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-4;
+}
+
+.prose ol {
+  @apply list-decimal list-inside mb-4;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
+
+.prose code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-gray-800 text-white p-4 rounded-lg overflow-x-auto my-4;
+}
+
+/* Enhance navbar styling */
+nav {
+  @apply shadow-md;
+}
+
+nav a {
+  @apply transition-colors duration-200;
+}
+
+/* Add some spacing between sections */
+main {
+  @apply py-8;
+}
+
+/* Add a subtle max-width to the container */
+.container {
+  @apply max-w-7xl;
+} 

@@ -1,16 +1,16 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
+import ReactMarkdown from 'react-markdown';
+import Layout from '../components/Layout';
 
 export default function Home({ content }) {
   return (
-    <main className="prose mx-auto p-4">
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </main>
+    <Layout>
+      <main className="prose mx-auto p-4">
+        <ReactMarkdown>{content}</ReactMarkdown>
+      </main>
+    </Layout>
   );
 }
 
@@ -19,15 +19,9 @@ export async function getStaticProps() {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { content } = matter(fileContent);
 
-  const processedContent = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(content);
-
   return {
     props: {
-      content: processedContent.toString(),
+      content,
     },
   };
 }
