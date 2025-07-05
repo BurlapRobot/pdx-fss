@@ -58,3 +58,11 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "body", widget: "markdown"}
 
+      - file: "content/hero-section.md"
+        label: "Hero Section"
+        name: "hero-section"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
+          - {label: "Background Image", name: "backgroundImage", widget: "image"}

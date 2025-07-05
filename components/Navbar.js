@@ -1,25 +1,20 @@
-import Link from 'next/link';
+import React from "react";
 
-export default function Navbar() {
-  return (
-    <nav className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto flex space-x-6">
-        <Link href="/" className="hover:text-gray-300">
-          Welcome
-        </Link>
-        <Link href="/about" className="hover:text-gray-300">
-          About
-        </Link>
-        <Link href="/mission" className="hover:text-gray-300">
-          Mission
-        </Link>
-        <Link href="/stats" className="hover:text-gray-300">
-          Stats
-        </Link>
-        <Link href="/get-involved" className="hover:text-gray-300">
-          Get Involved
-        </Link>
-      </div>
-    </nav>
-  );
-} 
+const Navbar = () => (
+  <nav className="bg-black text-yellow-300 px-4 py-2 flex items-center justify-between w-full">
+    <div className="flex items-center space-x-2">
+      <span className="font-bold text-sm">SAFE</span>
+      <span className="text-xs">Families for Safe Streets Portland</span>
+    </div>
+    <ul className="flex space-x-6 text-xs">
+      <li><a href="#" className="hover:underline">Safe Streets Now</a></li>
+      <li><a href="#" className="hover:underline">Advocacy</a></li>
+      <li><a href="#" className="hover:underline">Get Involved</a></li>
+      <li><a href="#" className="hover:underline">Services & Support</a></li>
+      <li><a href="#" className="hover:underline">News</a></li>
+    </ul>
+    <div className="text-white cursor-pointer">🔍</div>
+  </nav>
+);
+
+export default Navbar; 

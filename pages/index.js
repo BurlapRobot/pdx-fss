@@ -1,27 +1,36 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
-import Layout from '../components/Layout';
+import AlertBar from '../components/AlertBar';
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import StatsSection from '../components/StatsSection';
+import ContentGrid from '../components/ContentGrid';
+import NewsletterSignup from '../components/NewsletterSignup';
+import Footer from '../components/Footer';
 
-export default function Home({ content }) {
+export default function Home({ heroSection }) {
   return (
-    <Layout>
-      <main className="prose mx-auto p-4">
-        <ReactMarkdown>{content}</ReactMarkdown>
-      </main>
-    </Layout>
+    <div className="min-h-screen flex flex-col">
+      <AlertBar />
+      <Navbar />
+      <HeroSection {...heroSection} />
+      <StatsSection />
+      <ContentGrid />
+      <NewsletterSignup />
+      <Footer />
+    </div>
   );
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'content', 'welcome.md');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  const { content } = matter(fileContent);
+  const heroPath = path.join(process.cwd(), 'content', 'hero-section.md');
+  const heroContent = fs.readFileSync(heroPath, 'utf8');
+  const { data } = matter(heroContent);
 
   return {
     props: {
-      content,
+      heroSection: data,
     },
   };
 }
