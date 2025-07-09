@@ -1,9 +1,9 @@
 import React from "react";
 
-const Navbar = () => (
+const Navbar = ({test}) => (
   <nav className="bg-black text-yellow-300 px-4 py-2 flex items-center justify-between w-full">
     <div className="flex items-center space-x-2">
-      <span className="font-bold text-sm">SAFE</span>
+      <span className="font-bold text-sm">SAFE{test}</span>
       <span className="text-xs">Families for Safe Streets Portland</span>
     </div>
     <ul className="flex space-x-6 text-xs">
