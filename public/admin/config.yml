@@ -1,0 +1,83 @@
+backend:
+  name: github
+  repo: BurlapRobot/sample-cms
+  branch: main
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
+    uploadMedia: '[skip ci] Upload "{{path}}"'
+    deleteMedia: '[skip ci] Delete "{{path}}"'
+
+local_backend: true
+
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/welcome.md"
+        label: "Welcome Page"
+        name: "welcome"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - file: "content/mission.md"
+        label: "Mission Page"
+        name: "mission"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - file: "content/stats.md"
+        label: "Stats Page"
+        name: "stats"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - file: "content/get-involved.md"
+        label: "Get Involved Page"
+        name: "get-involved"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - file: "content/hero-section.md"
+        label: "Hero Section"
+        name: "hero-section"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
+          - {label: "Background Image", name: "backgroundImage", widget: "image"}
+
+      # NOTE: This file doesn't seem connected to /admin
+      # - file: "content/navbar.md"
+      #   label: "Navigation Bar"
+      #   name: "navbar"
+      #   fields:
+      #     - {label: "Title", name: "title", widget: "string"}
+      #     - {label: "Subtitle", name: "subtitle", widget: "string"}
+      #     - label: "Navigation Links"
+      #       name: "links"
+      #       widget: "list"
+      #       fields:
+      #         - {label: "Link Text", name: "text", widget: "string"}
+      #         - {label: "Link URL", name: "url", widget: "string"}
