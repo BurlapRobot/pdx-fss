@@ -2,15 +2,24 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
-import Layout from '../components/Layout';
+import AlertBar from '../components/AlertBar';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-export default function Home({ content }) {
+export default function About({ content }) {
   return (
-    <Layout>
-      <main className="prose mx-auto p-4">
-        <ReactMarkdown>{content}</ReactMarkdown>
+    <div className="min-h-screen flex flex-col">
+      <AlertBar />
+      <Navbar />
+      <main className="flex-1 bg-white">
+        <div className="max-w-4xl mx-auto py-8 px-4">
+          <div className="prose prose-lg mx-auto">
+            <ReactMarkdown>{content}</ReactMarkdown>
+          </div>
+        </div>
       </main>
-    </Layout>
+      <Footer />
+    </div>
   );
 }
 

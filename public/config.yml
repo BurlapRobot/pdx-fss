@@ -18,46 +18,6 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/welcome.md"
-        label: "Welcome Page"
-        name: "welcome"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-
-      - file: "content/about.md"
-        label: "About Page"
-        name: "about"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-
-      - file: "content/mission.md"
-        label: "Mission Page"
-        name: "mission"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-
-      - file: "content/stats.md"
-        label: "Stats Page"
-        name: "stats"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-
-      - file: "content/get-involved.md"
-        label: "Get Involved Page"
-        name: "get-involved"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-
       - file: "content/hero-section.md"
         label: "Hero Section"
         name: "hero-section"
@@ -66,3 +26,21 @@ collections:
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Button Text", name: "buttonText", widget: "string"}
           - {label: "Background Image", name: "backgroundImage", widget: "image"}
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/get-involved.md"
+        label: "Get Involved Page"
+        name: "get-involved"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Intro", name: "intro", widget: "markdown"}
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - {label: "Section Title", name: "sectionTitle", widget: "string"}
+              - {label: "Section Body", name: "sectionBody", widget: "markdown"}
