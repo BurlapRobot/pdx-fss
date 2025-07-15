@@ -13,14 +13,32 @@ const Navbar = ({logo, title, menu}) => {
             <button className="flex items-center px-4 py-2 hover:bg-yellow-300 hover:text-black">
               {menuItem.text}
               {menuItem.links && menuItem.links.length > 0 && (
-                <span className="ml-1 text-yellow-300 transition-transform duration-200 group-hover:text-black group-hover:rotate-180">▼</span>
+                <span className={`
+                  ml-1
+                  text-yellow-300
+                  transition-transform
+                  duration-200
+                  group-hover:text-black group-hover:rotate-180`}>
+                    ▼
+                </span>
               )}
             </button>
             {menuItem.links && menuItem.links.length > 0 && (
               <ul className="hidden group-hover:block absolute bg-gray-800 w-[241px] shadow-lg z-50 list-none m-0 p-0">
                 {menuItem.links.map((link, index) => (
                   <li key={index}>
-                    <a href={link.url} className="text-white block hover:bg-black hover:text-yellow-300 text-left px-4 py-2">{link.text}</a></li>
+                    <a
+                      href={link.url}
+                      className={`
+                        text-white
+                        block
+                        hover:bg-black hover:text-yellow-300
+                        text-left
+                        px-4
+                        py-2`}>
+                      {link.text}
+                    </a>
+                  </li>
                 ))}
               </ul>
             )}
