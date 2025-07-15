@@ -13,7 +13,7 @@ const Navbar = ({logo, title, menu}) => {
             <button className="flex items-center px-4 py-2 hover:bg-yellow-300 hover:text-black">
               {menuItem.text}
               {menuItem.links && menuItem.links.length > 0 && (
-                <span className="ml-1 text-yellow-300">▼</span>
+                <span className="ml-1 text-yellow-300 transition-transform duration-200 group-hover:text-black group-hover:rotate-180">▼</span>
               )}
             </button>
             {menuItem.links && menuItem.links.length > 0 && (
