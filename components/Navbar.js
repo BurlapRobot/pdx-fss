@@ -12,13 +12,13 @@ const Navbar = ({logo, title, menu}) => {
           <li key={index} className="group relative">
             <button className="flex items-center px-4 py-2 hover:bg-yellow-300 hover:text-black">
               {menuItem.text}
-              {menuItem.items && menuItem.items.length > 0 && (
+              {menuItem.links && menuItem.links.length > 0 && (
                 <span className="ml-1 text-yellow-300">▼</span>
               )}
             </button>
-            {menuItem.items && menuItem.items.length > 0 && (
+            {menuItem.links && menuItem.links.length > 0 && (
               <ul className="hidden group-hover:block absolute bg-gray-800 w-[241px] shadow-lg z-50 list-none m-0 p-0">
-                {menuItem.items.map((link, index) => (
+                {menuItem.links.map((link, index) => (
                   <li key={index}>
                     <a href={link.url} className="text-white block hover:bg-black hover:text-yellow-300 text-left px-4 py-2">{link.text}</a></li>
                 ))}

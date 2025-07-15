@@ -4,7 +4,7 @@ logo: SAFE
 title: Families for Safe Streets Portland
 menu:
   - text: Safe Streets Now
-    items:
+    links:
       - text: Why it Matters
         url: "#matters"
       - text: Dangerous Areas
@@ -14,13 +14,13 @@ menu:
       - text: Remembering Victims
         url: "#victims"
   - text: Advocacy
-    items:
+    links:
       - text: Legislation
         url: "#legislation"
       - text: Our Partners
         url: "#partners"
   - text: Get Involved
-    items:
+    links:
       - text: Take Action
         url: "#action"
       - text: Volunteer Opportunities
@@ -30,7 +30,7 @@ menu:
       - text: Day of Remembrance
         url: "#remembrance"
   - text: Services & Support
-    items:
+    links:
       - text: Get Support
         url: "#support"
       - text: Peer Mentorship
