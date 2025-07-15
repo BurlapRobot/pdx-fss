@@ -45,7 +45,7 @@ const Navbar = ({logo, title, menu}) => {
           </li>
         ))}
       </ul>
-      <div className="text-xs cursor-pointer text-nowrap">🔍</div>
+      {/* <div className="text-xs cursor-pointer text-nowrap">🔍</div> */}
     </nav>
   );
 };
