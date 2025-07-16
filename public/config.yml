@@ -49,14 +49,14 @@ collections:
     label: "Victims"
     folder: "content/victims"
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
     fields:
       - {label: "Name", name: "name", widget: "string", required: true}
       - {label: "Age", name: "age", widget: "number", required: true}
       - {label: "Victim Type", name: "victimType", widget: "select", options: ["Pedestrian", "Bicyclist", "Motorcyclist", "Driver"], required: true}
       - {label: "Location", name: "location", widget: "string", required: true}
-      - {label: "Date", name: "date", widget: "string", required: true}
-      - {label: "Time", name: "time", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "datetime", date_format: "MM/DD/YYYY", time_format: false, required: true}
+      - {label: "Time", name: "time", widget: "datetime", date_format: false, time_format: "HH:mm", required: true}
       - {label: "Photo Credit", name: "photoCredit", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "body", widget: "markdown", required: true}
