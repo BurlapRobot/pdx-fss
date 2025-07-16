@@ -1,163 +1,29 @@
 import { useRouter } from 'next/router';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import AlertBar from '../../components/AlertBar';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 
-// Sample victim data - this would typically come from a CMS or API
-const sampleVictims = [
-  {
-    id: 1,
-    name: "Jasper Collins",
-    age: 34,
-    victimType: "Pedestrian",
-    location: "Columbia Avenue",
-    date: "August 15, 2021",
-    time: "9:50 AM",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: null,
-    photoCredit: "Photo courtesy of the Collins family"
-  },
-  {
-    id: 2,
-    name: "Sophia Taylor",
-    age: 31,
-    victimType: "Bicyclist",
-    location: "Division Street",
-    date: "September 22, 2021",
-    time: "7:30 PM",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image: null,
-    photoCredit: "Photo courtesy of the Taylor family"
-  },
-  {
-    id: 3,
-    name: "Marcus Rodriguez",
-    age: 28,
-    victimType: "Motorcyclist",
-    location: "Burnside Bridge",
-    date: "October 8, 2021",
-    time: "11:15 AM",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    image: null,
-    photoCredit: "Photo courtesy of the Rodriguez family"
-  },
-  {
-    id: 4,
-    name: "Emma Johnson",
-    age: 42,
-    victimType: "Driver",
-    location: "SE Powell Boulevard",
-    date: "November 3, 2021",
-    time: "3:45 PM",
-    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    image: null,
-    photoCredit: "Photo courtesy of the Johnson family"
-  },
-  {
-    id: 5,
-    name: "David Chen",
-    age: 29,
-    victimType: "Pedestrian",
-    location: "NW 23rd Avenue",
-    date: "December 12, 2021",
-    time: "6:20 PM",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-    image: null,
-    photoCredit: "Photo courtesy of the Chen family"
-  },
-  {
-    id: 6,
-    name: "Lisa Thompson",
-    age: 35,
-    victimType: "Bicyclist",
-    location: "SE Hawthorne Boulevard",
-    date: "January 7, 2022",
-    time: "8:10 AM",
-    description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-    image: null,
-    photoCredit: "Photo courtesy of the Thompson family"
-  },
-  {
-    id: 7,
-    name: "Robert Wilson",
-    age: 45,
-    victimType: "Motorcyclist",
-    location: "NE Sandy Boulevard",
-    date: "February 14, 2022",
-    time: "4:30 PM",
-    description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    image: null,
-    photoCredit: "Photo courtesy of the Wilson family"
-  },
-  {
-    id: 8,
-    name: "Sarah Davis",
-    age: 33,
-    victimType: "Pedestrian",
-    location: "SW Morrison Street",
-    date: "March 5, 2022",
-    time: "10:25 AM",
-    description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-    image: null,
-    photoCredit: "Photo courtesy of the Davis family"
-  },
-  {
-    id: 9,
-    name: "Michael Brown",
-    age: 38,
-    victimType: "Driver",
-    location: "NE Broadway",
-    date: "April 18, 2022",
-    time: "2:15 PM",
-    description: "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. Nisi ut aliquid ex ea commodi consequatur?",
-    image: null,
-    photoCredit: "Photo courtesy of the Brown family"
-  },
-  {
-    id: 10,
-    name: "Jennifer Lee",
-    age: 27,
-    victimType: "Bicyclist",
-    location: "SE Belmont Street",
-    date: "May 9, 2022",
-    time: "5:40 PM",
-    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-    image: null,
-    photoCredit: "Photo courtesy of the Lee family"
-  },
-  {
-    id: 11,
-    name: "Christopher Garcia",
-    age: 41,
-    victimType: "Pedestrian",
-    location: "NW Glisan Street",
-    date: "June 22, 2022",
-    time: "7:55 PM",
-    description: "Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-    image: null,
-    photoCredit: "Photo courtesy of the Garcia family"
-  },
-  {
-    id: 12,
-    name: "Amanda White",
-    age: 36,
-    victimType: "Motorcyclist",
-    location: "SE Stark Street",
-    date: "July 11, 2022",
-    time: "1:20 PM",
-    description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus.",
-    image: null,
-    photoCredit: "Photo courtesy of the White family"
-  }
-];
-
-export default function VictimDetail() {
+export default function VictimDetail({ victim }) {
   const router = useRouter();
-  const { id } = router.query;
 
-  // Find the victim by ID
-  const victim = sampleVictims.find(v => v.id === parseInt(id));
+  if (router.isFallback) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <AlertBar />
+        <Navbar />
+        <main className="flex-1 bg-white">
+          <div className="max-w-4xl mx-auto py-8 px-4">
+            <h1 className="text-2xl font-bold mb-4">Loading...</h1>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!victim) {
     return (
@@ -262,4 +128,68 @@ export default function VictimDetail() {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticPaths() {
+  const victimsDirectory = path.join(process.cwd(), 'content/victims');
+  const filenames = fs.readdirSync(victimsDirectory);
+
+  const paths = filenames
+    .filter(filename => filename.endsWith('.md'))
+    .map((filename, index) => {
+      return {
+        params: {
+          id: (index + 1).toString(),
+        },
+      };
+    });
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const victimsDirectory = path.join(process.cwd(), 'content/victims');
+  const filenames = fs.readdirSync(victimsDirectory);
+
+  const markdownFiles = filenames
+    .filter(filename => filename.endsWith('.md'))
+    .sort(); // Sort alphabetically for consistent ordering
+
+  const requestedId = parseInt(params.id);
+  const fileIndex = requestedId - 1; // Convert ID to 0-based index
+
+  if (fileIndex < 0 || fileIndex >= markdownFiles.length) {
+    return {
+      props: {
+        victim: null,
+      },
+    };
+  }
+
+  const filename = markdownFiles[fileIndex];
+  const filePath = path.join(victimsDirectory, filename);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const { data, content } = matter(fileContents);
+
+  const victim = {
+    id: requestedId,
+    name: data.name || '',
+    age: data.age || 0,
+    victimType: data.victimType || '',
+    location: data.location || '',
+    date: data.date || '',
+    time: data.time || '',
+    image: data.image || null, // Ensure image is null if undefined
+    photoCredit: data.photoCredit || '',
+    description: content.trim() || ''
+  };
+
+  return {
+    props: {
+      victim,
+    },
+  };
 } 

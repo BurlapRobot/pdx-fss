@@ -1,150 +1,17 @@
 import { useState } from 'react';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import AlertBar from '../components/AlertBar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import VictimCard from '../components/VictimCard';
 
-// Sample victim data - this would typically come from a CMS or API
-const sampleVictims = [
-  {
-    id: 1,
-    name: "Jasper Collins",
-    age: 34,
-    victimType: "Pedestrian",
-    location: "Columbia Avenue",
-    date: "August 15, 2021",
-    time: "9:50 AM",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: null
-  },
-  {
-    id: 2,
-    name: "Sophia Taylor",
-    age: 31,
-    victimType: "Bicyclist",
-    location: "Division Street",
-    date: "September 22, 2021",
-    time: "7:30 PM",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: null
-  },
-  {
-    id: 3,
-    name: "Marcus Rodriguez",
-    age: 28,
-    victimType: "Motorcyclist",
-    location: "Burnside Bridge",
-    date: "October 8, 2021",
-    time: "11:15 AM",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: null
-  },
-  {
-    id: 4,
-    name: "Emma Johnson",
-    age: 42,
-    victimType: "Driver",
-    location: "SE Powell Boulevard",
-    date: "November 3, 2021",
-    time: "3:45 PM",
-    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image: null
-  },
-  {
-    id: 5,
-    name: "David Chen",
-    age: 29,
-    victimType: "Pedestrian",
-    location: "NW 23rd Avenue",
-    date: "December 12, 2021",
-    time: "6:20 PM",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    image: null
-  },
-  {
-    id: 6,
-    name: "Lisa Thompson",
-    age: 35,
-    victimType: "Bicyclist",
-    location: "SE Hawthorne Boulevard",
-    date: "January 7, 2022",
-    time: "8:10 AM",
-    description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    image: null
-  },
-  {
-    id: 7,
-    name: "Robert Wilson",
-    age: 45,
-    victimType: "Motorcyclist",
-    location: "NE Sandy Boulevard",
-    date: "February 14, 2022",
-    time: "4:30 PM",
-    description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
-    image: null
-  },
-  {
-    id: 8,
-    name: "Sarah Davis",
-    age: 33,
-    victimType: "Pedestrian",
-    location: "SW Morrison Street",
-    date: "March 5, 2022",
-    time: "10:25 AM",
-    description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    image: null
-  },
-  {
-    id: 9,
-    name: "Michael Brown",
-    age: 38,
-    victimType: "Driver",
-    location: "NE Broadway",
-    date: "April 18, 2022",
-    time: "2:15 PM",
-    description: "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-    image: null
-  },
-  {
-    id: 10,
-    name: "Jennifer Lee",
-    age: 27,
-    victimType: "Bicyclist",
-    location: "SE Belmont Street",
-    date: "May 9, 2022",
-    time: "5:40 PM",
-    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-    image: null
-  },
-  {
-    id: 11,
-    name: "Christopher Garcia",
-    age: 41,
-    victimType: "Pedestrian",
-    location: "NW Glisan Street",
-    date: "June 22, 2022",
-    time: "7:55 PM",
-    description: "Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate.",
-    image: null
-  },
-  {
-    id: 12,
-    name: "Amanda White",
-    age: 36,
-    victimType: "Motorcyclist",
-    location: "SE Stark Street",
-    date: "July 11, 2022",
-    time: "1:20 PM",
-    description: "Velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-    image: null
-  }
-];
-
-export default function Victims() {
+export default function Victims({ victims }) {
   const [sortBy, setSortBy] = useState('');
   const [displayCount, setDisplayCount] = useState(12);
 
-  const sortedVictims = [...sampleVictims].sort((a, b) => {
+  const sortedVictims = [...victims].sort((a, b) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
@@ -155,7 +22,7 @@ export default function Victims() {
       case 'type':
         return a.victimType.localeCompare(b.victimType);
       default:
-        return 0;
+        return a.id - b.id; // Default sort by ID (order)
     }
   });
 
@@ -259,4 +126,38 @@ export default function Victims() {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const victimsDirectory = path.join(process.cwd(), 'content/victims');
+  const filenames = fs.readdirSync(victimsDirectory);
+
+  const victims = filenames
+    .filter(filename => filename.endsWith('.md'))
+    .map((filename, index) => {
+      const filePath = path.join(victimsDirectory, filename);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(fileContents);
+      
+      return {
+        id: index + 1, // Auto-generate ID based on order
+        name: data.name || '',
+        age: data.age || 0,
+        victimType: data.victimType || '',
+        location: data.location || '',
+        date: data.date || '',
+        time: data.time || '',
+        image: data.image || null, // Ensure image is null if undefined
+        photoCredit: data.photoCredit || '',
+        description: content.trim() || '',
+        slug: filename.replace('.md', '') // Store filename for reference
+      };
+    })
+    .sort((a, b) => a.id - b.id); // Sort by generated ID
+
+  return {
+    props: {
+      victims,
+    },
+  };
 } 

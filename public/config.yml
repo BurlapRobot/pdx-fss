@@ -44,3 +44,19 @@ collections:
             fields:
               - {label: "Section Title", name: "sectionTitle", widget: "string"}
               - {label: "Section Body", name: "sectionBody", widget: "markdown"}
+
+  - name: "victims"
+    label: "Victims"
+    folder: "content/victims"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Age", name: "age", widget: "number", required: true}
+      - {label: "Victim Type", name: "victimType", widget: "select", options: ["Pedestrian", "Bicyclist", "Motorcyclist", "Driver"], required: true}
+      - {label: "Location", name: "location", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "string", required: true}
+      - {label: "Time", name: "time", widget: "string", required: true}
+      - {label: "Photo Credit", name: "photoCredit", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: true}
