@@ -49,7 +49,7 @@ collections:
     label: "Victims"
     folder: "content/victims"
     create: true
-    slug: "{{name}}"
+    slug: "{{name}}-{{date}}"
     fields:
       - {label: "Name", name: "name", widget: "string", required: true}
       - {label: "Age", name: "age", widget: "number", required: true}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -10,6 +10,9 @@ import VictimCard from '../components/VictimCard';
 export default function Victims({ victims }) {
   const [sortBy, setSortBy] = useState('');
   const [displayCount, setDisplayCount] = useState(12);
+  const [isLoading, setIsLoading] = useState(false);
+  const observerRef = useRef();
+  const loadingRef = useRef();
 
   const sortedVictims = [...victims].sort((a, b) => {
     switch (sortBy) {
@@ -27,6 +30,47 @@ export default function Victims({ victims }) {
   });
 
   const displayedVictims = sortedVictims.slice(0, displayCount);
+
+  // Load more victims function
+  const loadMore = useCallback(() => {
+    if (displayCount < sortedVictims.length && !isLoading) {
+      setIsLoading(true);
+      // Simulate a small delay for better UX
+      setTimeout(() => {
+        setDisplayCount(prev => Math.min(prev + 8, sortedVictims.length));
+        setIsLoading(false);
+      }, 300);
+    }
+  }, [displayCount, sortedVictims.length, isLoading]);
+
+  // Intersection observer for infinite scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && displayCount < sortedVictims.length) {
+          loadMore();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (loadingRef.current) {
+      observer.observe(loadingRef.current);
+    }
+
+    observerRef.current = observer;
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [loadMore, displayCount, sortedVictims.length]);
+
+  // Reset display count when sorting changes
+  useEffect(() => {
+    setDisplayCount(12);
+  }, [sortBy]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -109,15 +153,29 @@ export default function Victims({ victims }) {
               ))}
             </div>
 
-            {/* Load More Button */}
+            {/* Loading Indicator */}
             {displayCount < sortedVictims.length && (
-              <div className="text-center mt-8">
-                <button
-                  onClick={() => setDisplayCount(prev => Math.min(prev + 12, sortedVictims.length))}
-                  className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors"
-                >
-                  Load more
-                </button>
+              <div 
+                ref={loadingRef}
+                className="text-center mt-8 py-4"
+              >
+                {isLoading ? (
+                  <div className="flex items-center justify-center space-x-2">
+                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900"></div>
+                    <span className="text-gray-600">Loading more victims...</span>
+                  </div>
+                ) : (
+                  <div className="h-4"></div> // Invisible element for intersection observer
+                )}
+              </div>
+            )}
+
+            {/* End of results indicator */}
+            {displayCount >= sortedVictims.length && sortedVictims.length > 0 && (
+              <div className="text-center mt-8 py-4">
+                <p className="text-gray-500 text-sm">
+                  Showing all {sortedVictims.length} victims
+                </p>
               </div>
             )}
           </div>
