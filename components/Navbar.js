@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const Navbar = ({logo, title, menu}) => {
   return (
@@ -8,11 +9,11 @@ const Navbar = ({logo, title, menu}) => {
         <span className="text-xs">{title}</span>
       </div>
       <ul className="flex space-x-6 text-xs text-white">
-        {menu.map((menuItem, index) => (
+        {menu?.map((menuItem, index) => (
           <li key={index} className="group relative">
             <button className="flex items-center px-4 py-2 hover:bg-yellow-300 hover:text-black">
               {menuItem.text}
-              {menuItem.links && menuItem.links.length > 0 && (
+              {menuItem.links && (
                 <span className={`
                   ml-1
                   text-yellow-300
@@ -48,6 +49,18 @@ const Navbar = ({logo, title, menu}) => {
       {/* <div className="text-xs cursor-pointer text-nowrap">🔍</div> */}
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  logo: PropTypes.string,
+  title: PropTypes.string,
+  menu: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string,
+    links: PropTypes.arrayOf(PropTypes.shape({
+      text: PropTypes.string,
+      url: PropTypes.string,
+    })),
+  })),
 };
 
 export default Navbar;
