@@ -30,6 +30,7 @@ collections:
         label: "About Page"
         name: "about"
         fields:
+          - {label: "Logo Icon", name: "logo", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "content/get-involved.md"
@@ -44,3 +45,15 @@ collections:
             fields:
               - {label: "Section Title", name: "sectionTitle", widget: "string"}
               - {label: "Section Body", name: "sectionBody", widget: "markdown"}
+
+          - label: "Navigation Buttons"
+            name: "menu"
+            widget: "list"
+            fields:
+            - {label: "Text", name: "text", widget: "string"}
+            - label: "Dropdown Items"
+              name: "links"
+              widget: "list"
+              fields:
+                - {label: "Link Text", name: "text", widget: "string"}
+                - {label: "Link URL", name: "url", widget: "string"}

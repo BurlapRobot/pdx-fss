@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable max-len */
 import ContentCard from "./ContentCard";
 
 const cardData = [
@@ -40,4 +40,4 @@ const ContentGrid = () => (
   </section>
 );
 
-export default ContentGrid; 
+export default ContentGrid;
