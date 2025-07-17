@@ -9,14 +9,14 @@ import Navbar from "../components/Navbar";
 import NewsletterSignup from "../components/NewsletterSignup";
 import StatsSection from "../components/StatsSection";
 
-export default function Home({ navbar, heroSection }) {
+export default function Home({ navbar, heroSection, contentGrid }) {
   return (
     <div className="min-h-screen flex flex-col">
       <AlertBar />
       <Navbar {...navbar} />
       <HeroSection {...heroSection} />
       <StatsSection />
-      <ContentGrid />
+      <ContentGrid {...contentGrid} />
       <NewsletterSignup />
       <Footer />
     </div>
@@ -32,10 +32,16 @@ export async function getStaticProps() {
   const navContent = fs.readFileSync(navPath, "utf8");
   const { data: navData } = matter(navContent);
 
+  const contentGridPath = path.join(process.cwd(), "content", "content-grid.md");
+  const contentGridContent = fs.readFileSync(contentGridPath, "utf8");
+  const { data: contentGridData } = matter(contentGridContent);
+
+
   return {
     props: {
       heroSection: data,
       navbar: navData,
+      contentGrid: contentGridData,
     },
   };
 }
