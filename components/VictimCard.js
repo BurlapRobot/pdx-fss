@@ -1,12 +1,18 @@
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const VictimCard = ({ id, image, name, age, victimType, location, date, time, description }) => (
   <Link href={`/victim/${id}`} className="block">
     <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer">
       <div className="aspect-w-16 aspect-h-12 bg-gray-200">
         {image ? (
-          <img src={image} alt={name} className="w-full h-48 object-cover" />
+          <Image 
+            src={image} 
+            alt={name} 
+            width={400}
+            height={300}
+            className="w-full h-48 object-cover"
+          />
         ) : (
           <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
             <div className="text-gray-400 text-sm">No image available</div>

@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import Image from 'next/image';
 import AlertBar from '../../components/AlertBar';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -33,7 +34,7 @@ export default function VictimDetail({ victim }) {
         <main className="flex-1 bg-white">
           <div className="max-w-4xl mx-auto py-8 px-4">
             <h1 className="text-2xl font-bold mb-4">Victim Not Found</h1>
-            <p className="mb-4">The victim you're looking for could not be found.</p>
+            <p className="mb-4">The victim you&apos;re looking for could not be found.</p>
             <Link href="/victims" className="text-blue-600 hover:text-blue-800">
               ← Back to Victims Memorial
             </Link>
@@ -63,7 +64,13 @@ export default function VictimDetail({ victim }) {
             <div>
               <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
                 {victim.image ? (
-                  <img src={victim.image} alt={victim.name} className="w-full h-full object-cover" />
+                  <Image 
+                    src={victim.image} 
+                    alt={victim.name} 
+                    width={600}
+                    height={600}
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="w-full h-full bg-gray-200 flex items-center justify-center">
                     <div className="text-gray-400 text-sm">No image available</div>
