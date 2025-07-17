@@ -59,7 +59,16 @@ collections:
           - {label: "Button Text", name: "buttonText", widget: "string"}
           - {label: "Background Image", name: "backgroundImage", widget: "image"}
 
-      # - file: "content/stats-section.md"
+      - file: "content/stats-section.md"
+        label: "Stats Section"
+        name: "stats-section"
+        fields:
+          - {label: "Image", name: "image", widget: "string"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Subheading", name: "subheading", widget: "string"}
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "CTA", name: "cta", widget: "string"}
+          - {label: "CTA Link", name: "ctaLink", widget: "string"}
 
       - file: "content/content-grid.md"
         label: "Content Grid - Card Data"
