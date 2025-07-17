@@ -45,15 +45,37 @@ collections:
             fields:
               - {label: "Section Title", name: "sectionTitle", widget: "string"}
               - {label: "Section Body", name: "sectionBody", widget: "markdown"}
-
-          - label: "Navigation Buttons"
+      - file: "content/navbar.md"
+        label: "Navbar"
+        name: "navbar"
+        fields:
+          - {label: "Logo", name: "logo", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: "Menu"
             name: "menu"
             widget: "list"
             fields:
-            - {label: "Text", name: "text", widget: "string"}
-            - label: "Dropdown Items"
-              name: "links"
-              widget: "list"
-              fields:
-                - {label: "Link Text", name: "text", widget: "string"}
-                - {label: "Link URL", name: "url", widget: "string"}
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "URL", name: "url", widget: "string", required: false}
+              - label: "Dropdown Items"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Link Text", name: "text", widget: "string"}
+                  - {label: "Link URL", name: "url", widget: "string"}
+  - name: "victims"
+    label: "Victims"
+    folder: "content/victims"
+    create: true
+    slug: "{{name}}-{{date}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Age", name: "age", widget: "number", required: true}
+      - {label: "Victim Type", name: "victimType", widget: "select", options: ["Pedestrian", "Bicyclist", "Motorcyclist", "Driver"], required: true}
+      - {label: "Location", name: "location", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "datetime", date_format: "MM/DD/YYYY", time_format: false, required: true}
+      - {label: "Time", name: "time", widget: "datetime", date_format: false, time_format: "HH:mm", required: true}
+      - {label: "Photo Credit", name: "photoCredit", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: true}
