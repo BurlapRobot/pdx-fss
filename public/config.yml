@@ -46,21 +46,19 @@ collections:
               - {label: "Section Title", name: "sectionTitle", widget: "string"}
               - {label: "Section Body", name: "sectionBody", widget: "markdown"}
       - file: "content/navbar.md"
-        label: "Navbar"
+        label: "Navigation Buttons"
         name: "navbar"
         fields:
           - {label: "Logo", name: "logo", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
-          - label: "Menu"
+          - label: "Navigation Menu"
             name: "menu"
             widget: "list"
             fields:
               - {label: "Text", name: "text", widget: "string"}
-              - {label: "URL", name: "url", widget: "string", required: false}
-              - label: "Dropdown Items"
+              - label: "Dropdown Links"
                 name: "links"
                 widget: "list"
-                required: false
                 fields:
                   - {label: "Link Text", name: "text", widget: "string"}
                   - {label: "Link URL", name: "url", widget: "string"}
@@ -79,3 +77,13 @@ collections:
       - {label: "Photo Credit", name: "photoCredit", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "body", widget: "markdown", required: true}
+
+      - file: "content/content-grid.md"
+        label: "Content Grid"
+        name: "content grid"
+        fields:
+          - {label: "Image", name: "image", widget: "string"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "CTA", name: "cta", widget: "string"}
+          - {label: "CTA Link", name: "ctaLink", widget: "string"}
