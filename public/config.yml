@@ -26,6 +26,7 @@ collections:
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Button Text", name: "buttonText", widget: "string"}
           - {label: "Background Image", name: "backgroundImage", widget: "image"}
+
       - file: "content/about.md"
         label: "About Page"
         name: "about"
@@ -33,6 +34,7 @@ collections:
           - {label: "Logo Icon", name: "logo", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+
       - file: "content/get-involved.md"
         label: "Get Involved Page"
         name: "get-involved"
@@ -45,6 +47,7 @@ collections:
             fields:
               - {label: "Section Title", name: "sectionTitle", widget: "string"}
               - {label: "Section Body", name: "sectionBody", widget: "markdown"}
+
       - file: "content/navbar.md"
         label: "Navigation Buttons"
         name: "navbar"
@@ -79,11 +82,15 @@ collections:
       - {label: "Description", name: "body", widget: "markdown", required: true}
 
       - file: "content/content-grid.md"
-        label: "Content Grid"
-        name: "content grid"
+        label: "Content Grid - Card Data"
+        name: "content-grid"
         fields:
-          - {label: "Image", name: "image", widget: "string"}
-          - {label: "Heading", name: "heading", widget: "string"}
-          - {label: "Text", name: "text", widget: "string"}
-          - {label: "CTA", name: "cta", widget: "string"}
-          - {label: "CTA Link", name: "ctaLink", widget: "string"}
+          - label: "Card Data"
+            name: "cardData"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "CTA", name: "cta", widget: "string"}
+              - {label: "CTA Link", name: "ctaLink", widget: "string"}
