@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const Footer = () => (
   <footer className="bg-black text-yellow-300 text-xs py-6 px-4 mt-8">
@@ -12,7 +12,7 @@ const Footer = () => (
       </div>
       <div className="mt-2 md:mt-0 flex flex-col md:flex-row md:space-x-6">
         <div>
-          <div>About Us</div>
+          <div><Link href="/about">About Us</Link></div>
           <div className="text-gray-400">Who We Are</div>
           <div className="text-gray-400">Leadership</div>
           <div className="text-gray-400">Contact Us</div>
@@ -23,4 +23,4 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer; 
+export default Footer;

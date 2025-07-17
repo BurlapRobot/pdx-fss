@@ -5,7 +5,7 @@ menu:
   - text: Safe Streets Now
     links:
       - text: Why it Matters
-        url: "#"
+        url: /about
       - text: Dangerous Areas
         url: "#"
       - text: Our Approach
@@ -21,7 +21,7 @@ menu:
   - text: Get Involved
     links:
       - text: Take Action
-        url: "#"
+        url: /get-involved
       - text: Volunteer Opportunities
         url: "#"
       - text: Event Calendar
