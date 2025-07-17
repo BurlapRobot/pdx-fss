@@ -10,7 +10,6 @@ backend:
 
 local_backend: true
 
-
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
@@ -18,36 +17,6 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/hero-section.md"
-        label: "Hero Section"
-        name: "hero-section"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Button Text", name: "buttonText", widget: "string"}
-          - {label: "Background Image", name: "backgroundImage", widget: "image"}
-
-      - file: "content/about.md"
-        label: "About Page"
-        name: "about"
-        fields:
-          - {label: "Logo Icon", name: "logo", widget: "string"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-
-      - file: "content/get-involved.md"
-        label: "Get Involved Page"
-        name: "get-involved"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Intro", name: "intro", widget: "markdown"}
-          - label: "Sections"
-            name: "sections"
-            widget: "list"
-            fields:
-              - {label: "Section Title", name: "sectionTitle", widget: "string"}
-              - {label: "Section Body", name: "sectionBody", widget: "markdown"}
-
       - file: "content/navbar.md"
         label: "Navigation Buttons"
         name: "navbar"
@@ -81,6 +50,17 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "body", widget: "markdown", required: true}
 
+      - file: "content/hero-section.md"
+        label: "Hero Section"
+        name: "hero-section"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
+          - {label: "Background Image", name: "backgroundImage", widget: "image"}
+
+      # - file: "content/stats-section.md"
+
       - file: "content/content-grid.md"
         label: "Content Grid - Card Data"
         name: "content-grid"
@@ -94,3 +74,25 @@ collections:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "CTA", name: "cta", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"}
+
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Logo Icon", name: "logo", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "content/get-involved.md"
+        label: "Get Involved Page"
+        name: "get-involved"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Intro", name: "intro", widget: "markdown"}
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - {label: "Section Title", name: "sectionTitle", widget: "string"}
+              - {label: "Section Body", name: "sectionBody", widget: "markdown"}
+
