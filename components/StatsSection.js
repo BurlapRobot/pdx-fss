@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 
-const StatsSection = () => (
+const StatsSection = ({ image, heading, subheading, text, ctaLink, cta }) => (
   <section className="bg-yellow-300 py-8 px-4 flex flex-col md:flex-row items-center justify-center gap-8">
     <div className={`
       bg-gray-100
@@ -13,18 +14,23 @@ const StatsSection = () => (
       text-gray-500
       text-lg
       font-semibold`}>
-      IMAGE TBD
+      {image}
     </div>
     <div className="max-w-lg">
-      <h2 className="font-bold text-lg mb-2">The faces behind the statistics</h2>
-      <p className="font-semibold mb-1">Oregon lives needlessly lost in preventable crashes on Portland roads</p>
-      <p className="text-sm mb-2">
-        The Families for Safe Streets Portland online memorial project honors and remembers lives lost to
-        vehicle crashes and those who have suffered life-changing injuries on the streets of Portland, Oregon.
-      </p>
-      <a href="#" className="text-xs underline">[Remembering Victims Memorial CTA]</a>
+      <h2 className="font-bold text-lg mb-2">{heading}</h2>
+      <p className="font-semibold mb-1">{subheading}</p>
+      <p className="text-sm mb-2">{text}</p>
+      <a href={ctaLink} className="text-xs underline">{cta}</a>
     </div>
   </section>
 );
+
+StatsSection.propTypes = {
+  image: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  ctaLink: PropTypes.string,
+  cta: PropTypes.string
+}
 
 export default StatsSection;
