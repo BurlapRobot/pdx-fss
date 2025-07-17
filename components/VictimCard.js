@@ -3,7 +3,8 @@ import Image from "next/image";
 
 const VictimCard = ({ id, image, name, age, victimType, location, date, time, description }) => (
   <Link href={`/victim/${id}`} className="block">
-    <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer">
+    <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md 
+      transition-shadow cursor-pointer">
       <div className="aspect-w-16 aspect-h-12 bg-gray-200">
         {image ? (
           <Image 

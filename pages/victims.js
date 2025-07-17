@@ -16,16 +16,16 @@ export default function Victims({ victims }) {
 
   const sortedVictims = [...victims].sort((a, b) => {
     switch (sortBy) {
-      case 'name':
-        return a.name.localeCompare(b.name);
-      case 'date':
-        return new Date(a.date) - new Date(b.date);
-      case 'age':
-        return a.age - b.age;
-      case 'type':
-        return a.victimType.localeCompare(b.victimType);
-      default:
-        return a.id - b.id; // Default sort by ID (order)
+    case 'name':
+      return a.name.localeCompare(b.name);
+    case 'date':
+      return new Date(a.date) - new Date(b.date);
+    case 'age':
+      return a.age - b.age;
+    case 'type':
+      return a.victimType.localeCompare(b.victimType);
+    default:
+      return a.id - b.id; // Default sort by ID (order)
     }
   });
 
@@ -85,7 +85,9 @@ export default function Victims({ victims }) {
           
           {/* Intro Text */}
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
 
           {/* Action Sections */}
@@ -104,7 +106,8 @@ export default function Victims({ victims }) {
               <h2 className="text-xl font-semibold mb-3">Nationwide Story Map</h2>
               <p className="text-gray-700">
                 <a href="#" className="text-blue-600 hover:text-blue-800">
-                  Families for Safe Streets maintains a map of crashes across the country.
+                  Families for Safe Streets maintains a map of crashes across the 
+                  country.
                 </a>
               </p>
             </div>
@@ -124,7 +127,8 @@ export default function Victims({ victims }) {
                   id="sort"
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm 
+                    focus:outline-none focus:ring-2ocus:ring-blue-500"
                 >
                   <option value="">Select a sorting method...</option>
                   <option value="name">Name</option>
