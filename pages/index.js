@@ -26,7 +26,7 @@ export default function Home({ navbar, heroSection, statsSection, contentGrid })
 export async function getStaticProps() {
   const heroPath = path.join(process.cwd(), "content", "hero-section.md");
   const heroContent = fs.readFileSync(heroPath, "utf8");
-  const { data } = matter(heroContent);
+  const { data: heroData } = matter(heroContent);
 
   const navPath = path.join(process.cwd(), "content", "navbar.md");
   const navContent = fs.readFileSync(navPath, "utf8");
@@ -43,7 +43,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      heroSection: data,
+      heroSection: heroData,
       navbar: navData,
       statsSection: statsData,
       contentGrid: contentGridData,
