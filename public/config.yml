@@ -34,22 +34,6 @@ collections:
                 fields:
                   - {label: "Link Text", name: "text", widget: "string"}
                   - {label: "Link URL", name: "url", widget: "string"}
-  - name: "victims"
-    label: "Victims"
-    folder: "content/victims"
-    create: true
-    slug: "{{name}}-{{date}}"
-    fields:
-      - {label: "Name", name: "name", widget: "string", required: true}
-      - {label: "Age", name: "age", widget: "number", required: true}
-      - {label: "Victim Type", name: "victimType", widget: "select", options: ["Pedestrian", "Bicyclist", "Motorcyclist", "Driver"], required: true}
-      - {label: "Location", name: "location", widget: "string", required: true}
-      - {label: "Date", name: "date", widget: "datetime", date_format: "MM/DD/YYYY", time_format: false, required: true}
-      - {label: "Time", name: "time", widget: "datetime", date_format: false, time_format: "HH:mm", required: true}
-      - {label: "Photo Credit", name: "photoCredit", widget: "string"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "body", widget: "markdown", required: true}
-
       - file: "content/hero-section.md"
         label: "Hero Section"
         name: "hero-section"
@@ -58,7 +42,6 @@ collections:
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Button Text", name: "buttonText", widget: "string"}
           - {label: "Background Image", name: "backgroundImage", widget: "image"}
-
       - file: "content/stats-section.md"
         label: "Stats Section"
         name: "stats-section"
@@ -69,7 +52,6 @@ collections:
           - {label: "Text", name: "text", widget: "string"}
           - {label: "CTA", name: "cta", widget: "string"}
           - {label: "CTA Link", name: "ctaLink", widget: "string"}
-
       - file: "content/content-grid.md"
         label: "Content Grid - Card Data"
         name: "content-grid"
@@ -83,7 +65,6 @@ collections:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "CTA", name: "cta", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"}
-
       - file: "content/about.md"
         label: "About Page"
         name: "about"
@@ -104,4 +85,28 @@ collections:
             fields:
               - {label: "Section Title", name: "sectionTitle", widget: "string"}
               - {label: "Section Body", name: "sectionBody", widget: "markdown"}
+
+  - name: "victims"
+    label: "Victims"
+    folder: "content/victims"
+    create: true
+    slug: "{{name}}-{{date}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Age", name: "age", widget: "number", required: true}
+      - {label: "Victim Type", name: "victimType", widget: "select", options: ["Pedestrian", "Bicyclist", "Motorcyclist", "Driver"], required: true}
+      - {label: "Location", name: "location", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "datetime", date_format: "MM/DD/YYYY", time_format: false, required: true}
+      - {label: "Time", name: "time", widget: "datetime", date_format: false, time_format: "HH:mm", required: true}
+      - {label: "Photo Credit", name: "photoCredit", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: true}
+
+
+
+
+
+
+
+
 
