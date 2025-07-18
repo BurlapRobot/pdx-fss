@@ -6,7 +6,7 @@ const StatsSection = ({ image, heading, subheading, text, ctaLink, cta }) => (
   <section className="bg-yellow-300 py-8 px-4 flex flex-col md:flex-row items-center justify-center gap-8">
     <Image
       src={image}
-      alt='placeholder image'
+      alt={heading}
       width={256}
       height={160}
       className={`
