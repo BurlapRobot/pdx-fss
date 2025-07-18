@@ -46,7 +46,7 @@ collections:
         label: "Stats Section"
         name: "stats-section"
         fields:
-          - {label: "Image", name: "image", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Subheading", name: "subheading", widget: "string"}
           - {label: "Text", name: "text", widget: "string"}
