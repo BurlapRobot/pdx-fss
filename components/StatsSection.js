@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 const StatsSection = ({ image, heading, subheading, text, ctaLink, cta }) => (
@@ -20,7 +21,7 @@ const StatsSection = ({ image, heading, subheading, text, ctaLink, cta }) => (
       <h2 className="font-bold text-lg mb-2">{heading}</h2>
       <p className="font-semibold mb-1">{subheading}</p>
       <p className="text-sm mb-2">{text}</p>
-      <a href={ctaLink} className="text-xs underline">{cta}</a>
+      <Link href={ctaLink} className="text-xs underline">{cta}</Link>
     </div>
   </section>
 );

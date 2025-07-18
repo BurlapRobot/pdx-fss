@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 const Navbar = ({logo, title, menu}) => {
@@ -39,7 +40,7 @@ const Navbar = ({logo, title, menu}) => {
                   p-0">
                 {menuItem.links.map((link, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={link.url}
                       className={`
                         text-white
@@ -49,7 +50,7 @@ const Navbar = ({logo, title, menu}) => {
                         px-4
                         py-2`}>
                       {link.text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
