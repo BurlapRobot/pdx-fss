@@ -1,40 +1,39 @@
 ---
-# TODO: will be a logo instead of 'safe'
 logo: SAFE
 title: Families for Safe Streets Portland
 menu:
   - text: Safe Streets Now
     links:
       - text: Why it Matters
-        url: "#matters"
+        url: /about
       - text: Dangerous Areas
-        url: "#dangerous"
+        url: "#"
       - text: Our Approach
-        url: "#approach"
+        url: "#"
       - text: Remembering Victims
-        url: "#victims"
+        url: /victims
   - text: Advocacy
     links:
       - text: Legislation
-        url: "#legislation"
+        url: "#"
       - text: Our Partners
-        url: "#partners"
+        url: "#"
   - text: Get Involved
     links:
       - text: Take Action
-        url: "#action"
+        url: /get-involved
       - text: Volunteer Opportunities
-        url: "#volunteer"
+        url: "#"
       - text: Event Calendar
-        url: "#calendar"
+        url: "#"
       - text: Day of Remembrance
-        url: "#remembrance"
+        url: "#"
   - text: Services & Support
     links:
       - text: Get Support
-        url: "#support"
+        url: "#"
       - text: Peer Mentorship
-        url: "#mentorship"
+        url: "#"
   - text: News
-    url: "#news"
+    url: "#"
 ---

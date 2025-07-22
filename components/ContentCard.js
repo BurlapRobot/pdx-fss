@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const ContentCard = ({ image, heading, text, cta, ctaLink }) => (
   <div className="bg-gray-50 border border-gray-200 rounded shadow p-4 flex flex-col h-full">
-    <Image 
-      src={image} 
-      alt={heading} 
+    <Image
+      src={image}
+      alt={heading}
       width={400}
       height={160}
       className="w-full h-40 object-cover rounded mb-4"

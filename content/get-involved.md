@@ -1,8 +1,6 @@
 ---
 title: Get Involved
-intro: Join us in making Portland's streets safer for everyone. Explore the ways
-  you can take action, volunteer, attend events, and honor those impacted by
-  traffic violence.
+intro: Join us in making Portland's streets safer for everyone. Explore the ways you can take action, volunteer, attend events, and honor those impacted by traffic violence.
 sections:
   - sectionTitle: Take Action
     sectionBody: >

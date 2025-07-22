@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 const Navbar = ({logo, title, menu}) => {
@@ -25,10 +26,21 @@ const Navbar = ({logo, title, menu}) => {
               )}
             </button>
             {menuItem.links && menuItem.links.length > 0 && (
-              <ul className="hidden group-hover:block absolute bg-gray-800 w-[241px] shadow-lg z-50 list-none m-0 p-0">
+              <ul
+                className="hidden
+                  group-hover:block
+                  absolute
+                  bg-neutral_20
+                  border-primary_5
+                  w-[241px]
+                  shadow-lg
+                  z-50
+                  list-none
+                  m-0
+                  p-0">
                 {menuItem.links.map((link, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={link.url}
                       className={`
                         text-white
@@ -38,7 +50,7 @@ const Navbar = ({logo, title, menu}) => {
                         px-4
                         py-2`}>
                       {link.text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

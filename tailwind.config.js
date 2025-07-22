@@ -1,3 +1,5 @@
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,12 +7,17 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'neutral_20': '#333333',
+        'primary_5': '#241C00'
+      },
+    },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    typography,
   ],
   future: {
     hoverOnlyWhenSupported: true,
   },
-} 
+}
