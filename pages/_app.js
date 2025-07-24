@@ -1,10 +1,13 @@
 import '../styles/globals.css';
 import PreviewProvider from '../components/PreviewProvider';
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (
     <PreviewProvider>
-      <Component {...pageProps} />
+      <Layout navbar={pageProps.navbar}>
+        <Component {...pageProps} />
+      </Layout>
     </PreviewProvider>
   );
 }

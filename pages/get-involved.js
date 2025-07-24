@@ -2,15 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
-import AlertBar from '../components/AlertBar';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 export default function GetInvolved({ title, intro, sections }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <AlertBar />
-      <Navbar />
       <main className="flex-1 bg-white">
         <div className="max-w-4xl mx-auto py-8 px-4 space-y-12">
           <section>
@@ -29,7 +24,6 @@ export default function GetInvolved({ title, intro, sections }) {
           ))}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
@@ -39,11 +33,16 @@ export async function getStaticProps() {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { data } = matter(fileContent);
 
+  const navPath = path.join(process.cwd(), "content", "navbar.md");
+  const navContent = fs.readFileSync(navPath, "utf8");
+  const { data: navData } = matter(navContent);
+
   return {
     props: {
       title: data.title || '',
       intro: data.intro || '',
       sections: data.sections || [],
+      navbar: navData,
     },
   };
 }
