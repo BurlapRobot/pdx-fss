@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 
 const Navbar = ({logo, title, menu}) => {
   return (
-    <nav className="bg-black text-yellow-300 px-4 py-2 flex items-center justify-between w-full">
+    <nav className="bg-neutral_0 text-primary_50 px-4 py-2 flex items-center justify-between w-full">
       <div className="flex items-center space-x-2">
         {/* TODO: add logo icon */}
         <span className="font-bold text-sm">{logo}</span>
         <span className="text-xs">{title}</span>
       </div>
-      <ul className="flex space-x-6 text-xs text-white">
+      <ul className="flex space-x-6 text-xs text-neutral_95">
         {menu?.map((menuItem, index) => (
           <li key={index} className="group relative">
-            <button className="flex items-center px-4 py-2 hover:bg-yellow-300 hover:text-black">
+            <button className="flex items-center px-4 py-2 hover:bg-primary_50 hover:text-neutral_0">
               {menuItem.text}
               {menuItem.links && (
                 <span className={`
                   ml-1
-                  text-yellow-300
+                  text-primary_50
                   transition-transform
                   duration-200
                   group-hover:text-black group-hover:rotate-180`}>
@@ -43,9 +43,9 @@ const Navbar = ({logo, title, menu}) => {
                     <Link
                       href={link.url}
                       className={`
-                        text-white
+                        text-neutral_95
                         block
-                        hover:bg-black hover:text-yellow-300
+                        hover:bg- hover:text-primary_50
                         text-left
                         px-4
                         py-2`}>

@@ -25,7 +25,7 @@ module.exports = {
         'primary_50': '#FFCA08',
         'primary_65': '#FFDB57',
         'primary_80': '#FFEBA3',
-        'primay_95': '#FFFCF0',
+        'primary_95': '#FFFCF0',
       },
     },
   },

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 const StatsSection = ({ image, heading, subheading, text, ctaLink, cta }) => (
-  <section className="bg-yellow-300 py-8 px-4 flex flex-col md:flex-row items-center justify-center gap-8">
+  <section className="bg-primary_65 py-8 px-4 flex flex-col md:flex-row items-center justify-center gap-8">
     <Image
       src={image}
       alt={heading}

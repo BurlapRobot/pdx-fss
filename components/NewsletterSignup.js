@@ -8,7 +8,7 @@ const NewsletterSignup = () => (
     </p>
     <form className="flex items-center space-x-2">
       <input type="email" placeholder="email@email.com" className="px-2 py-1 border border-gray-300 rounded text-xs" />
-      <button type="submit" className="bg-yellow-300 text-black px-3 py-1 rounded text-xs font-semibold">Submit</button>
+      <button type="submit" className="bg-primary_50 text-black px-3 py-1 rounded text-xs font-semibold">Submit</button>
     </form>
   </section>
 );
