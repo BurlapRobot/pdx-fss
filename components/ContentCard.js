@@ -11,7 +11,7 @@ const ContentCard = ({ image, heading, text, cta, ctaLink }) => (
     />
     <h3 className="font-bold text-lg mb-2">{heading}</h3>
     <p className="text-sm mb-4 flex-1">{text}</p>
-    <a href={ctaLink} className="inline-block mt-auto bg-yellow-300 text-black px-3 py-1 rounded text-xs font-semibold">
+    <a href={ctaLink} className="inline-block mt-auto bg-primary_50 text-black px-3 py-1 rounded text-xs font-semibold">
       {cta}
     </a>
   </div>
