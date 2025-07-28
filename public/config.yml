@@ -98,6 +98,12 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/calendar.md"
+        label: "Event Calendar Page"
+        name: "calendar"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "victims"
     label: "Victims"
