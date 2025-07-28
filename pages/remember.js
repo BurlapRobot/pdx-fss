@@ -2,15 +2,10 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import ReactMarkdown from 'react-markdown';
-import AlertBar from "../components/AlertBar";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 
 export default function Remember({ title, body }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <AlertBar />
-      <Navbar />
       <main className="flex-1 bg-white">
         <div className="max-w-4xl mx-auto py-8 px-4 space-y-12">
           <section>
@@ -21,7 +16,6 @@ export default function Remember({ title, body }) {
           </section>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }
@@ -29,12 +23,17 @@ export default function Remember({ title, body }) {
 export async function getStaticProps() {
   const rememberPath = path.join(process.cwd(), 'content', 'remember.md');
   const rememberContent = fs.readFileSync(rememberPath, 'utf8');
-  const { data } = matter(rememberContent);
+  const { data: rememberData } = matter(rememberContent);
+
+  const navPath = path.join(process.cwd(), "content", "navbar.md");
+  const navContent = fs.readFileSync(navPath, "utf8");
+  const { data: navData } = matter(navContent);
 
   return {
     props: {
-      title: data.title,
-      body: data.body,
+      title: rememberData.title,
+      body: rememberData.body,
+      navbar: navData,
     },
   };
 }
