@@ -104,6 +104,12 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/remember.md"
+        label: "Day of Remembrance Page"
+        name: "remember"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "victims"
     label: "Victims"
