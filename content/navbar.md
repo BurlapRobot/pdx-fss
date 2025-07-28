@@ -21,13 +21,13 @@ menu:
   - text: Get Involved
     links:
       - text: Take Action
-        url: /get-involved
+        url: /action
       - text: Volunteer Opportunities
-        url: "#"
+        url: /volunteer
       - text: Event Calendar
-        url: "#"
+        url: /calendar
       - text: Day of Remembrance
-        url: "#"
+        url: /remember
   - text: Services & Support
     links:
       - text: Get Support
