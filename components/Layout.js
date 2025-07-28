@@ -1,10 +1,16 @@
+import AlertBar from './AlertBar';
+import NewsletterSignup from './NewsletterSignup';
+import Footer from './Footer';
 import Navbar from './Navbar';
 
-export default function Layout({ children }) {
+export default function Layout({ children, navbar }) {
   return (
-    <div>
-      <Navbar />
+    <div className="min-h-screen flex flex-col">
+      <AlertBar />
+      <Navbar {...navbar} />
       {children}
+      <NewsletterSignup />
+      <Footer />
     </div>
   );
 } 

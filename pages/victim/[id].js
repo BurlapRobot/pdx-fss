@@ -3,9 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Image from 'next/image';
-import AlertBar from '../../components/AlertBar';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import Link from 'next/link';
 
 export default function VictimDetail({ victim }) {
@@ -14,14 +11,11 @@ export default function VictimDetail({ victim }) {
   if (router.isFallback) {
     return (
       <div className="min-h-screen flex flex-col">
-        <AlertBar />
-        <Navbar />
         <main className="flex-1 bg-white">
           <div className="max-w-4xl mx-auto py-8 px-4">
             <h1 className="text-2xl font-bold mb-4">Loading...</h1>
           </div>
         </main>
-        <Footer />
       </div>
     );
   }
@@ -29,8 +23,6 @@ export default function VictimDetail({ victim }) {
   if (!victim) {
     return (
       <div className="min-h-screen flex flex-col">
-        <AlertBar />
-        <Navbar />
         <main className="flex-1 bg-white">
           <div className="max-w-4xl mx-auto py-8 px-4">
             <h1 className="text-2xl font-bold mb-4">Victim Not Found</h1>
@@ -40,15 +32,12 @@ export default function VictimDetail({ victim }) {
             </Link>
           </div>
         </main>
-        <Footer />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AlertBar />
-      <Navbar />
       <main className="flex-1 bg-white">
         <div className="max-w-6xl mx-auto py-8 px-4">
           {/* Breadcrumb */}
@@ -132,7 +121,6 @@ export default function VictimDetail({ victim }) {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
@@ -168,10 +156,15 @@ export async function getStaticProps({ params }) {
   const requestedId = parseInt(params.id);
   const fileIndex = requestedId - 1; // Convert ID to 0-based index
 
+  const navPath = path.join(process.cwd(), 'content', 'navbar.md');
+  const navContent = fs.readFileSync(navPath, 'utf8');
+  const { data: navData } = matter(navContent);
+  
   if (fileIndex < 0 || fileIndex >= markdownFiles.length) {
     return {
       props: {
         victim: null,
+        navbar: navData,
       },
     };
   }
@@ -197,6 +190,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       victim,
+      navbar: navData,
     },
   };
 } 

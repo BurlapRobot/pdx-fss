@@ -2,9 +2,6 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import AlertBar from '../components/AlertBar';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import VictimCard from '../components/VictimCard';
 
 export default function Victims({ victims }) {
@@ -74,8 +71,6 @@ export default function Victims({ victims }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AlertBar />
-      <Navbar />
       <main className="flex-1 bg-white">
         <div className="max-w-6xl mx-auto py-8 px-4">
           {/* Page Title */}
@@ -185,7 +180,6 @@ export default function Victims({ victims }) {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
@@ -217,9 +211,15 @@ export async function getStaticProps() {
     })
     .sort((a, b) => a.id - b.id); // Sort by generated ID
 
+  // Load navbar frontmatter
+  const navPath = path.join(process.cwd(), 'content', 'navbar.md');
+  const navContent = fs.readFileSync(navPath, 'utf8');
+  const { data: navData } = matter(navContent);
+
   return {
     props: {
       victims,
+      navbar: navData,
     },
   };
 } 

@@ -1,24 +1,16 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import AlertBar from "../components/AlertBar";
 import ContentGrid from "../components/ContentGrid";
-import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-import Navbar from "../components/Navbar";
-import NewsletterSignup from "../components/NewsletterSignup";
 import StatsSection from "../components/StatsSection";
 
-export default function Home({ navbar, heroSection, statsSection, contentGrid }) {
+export default function Home({ heroSection, statsSection, contentGrid }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <AlertBar />
-      <Navbar {...navbar} />
       <HeroSection {...heroSection} />
       <StatsSection {...statsSection} />
       <ContentGrid {...contentGrid} />
-      <NewsletterSignup />
-      <Footer />
     </div>
   );
 }
