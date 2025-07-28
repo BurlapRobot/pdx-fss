@@ -72,20 +72,7 @@ collections:
           - {label: "Logo Icon", name: "logo", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-# this will be removed when other pages stubbed out
-      - file: "content/get-involved.md"
-        label: "Get Involved Page"
-        name: "get-involved"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Intro", name: "intro", widget: "markdown"}
-          - label: "Sections"
-            name: "sections"
-            widget: "list"
-            fields:
-              - {label: "Section Title", name: "sectionTitle", widget: "string"}
-              - {label: "Section Body", name: "sectionBody", widget: "markdown"}
-
+      # Get Involved Tab
       - file: "content/action.md"
         label: "Take Action Page"
         name: "action"
