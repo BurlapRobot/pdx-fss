@@ -31,7 +31,7 @@ menu:
   - text: Services & Support
     links:
       - text: Get Support
-        url: "#"
+        url: /get-support
       - text: Peer Mentorship
         url: "#"
   - text: News

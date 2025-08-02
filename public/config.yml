@@ -97,6 +97,13 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      # Services & Support Tab -- should we have this as a collection?
+      - file: "content/get-support.md"
+        label: "Get Support Page"
+        name: "get-support"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "victims"
     label: "Victims"
