@@ -72,19 +72,31 @@ collections:
           - {label: "Logo Icon", name: "logo", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-
-      - file: "content/get-involved.md"
-        label: "Get Involved Page"
-        name: "get-involved"
+      # Get Involved Tab
+      - file: "content/action.md"
+        label: "Take Action Page"
+        name: "action"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Intro", name: "intro", widget: "markdown"}
-          - label: "Sections"
-            name: "sections"
-            widget: "list"
-            fields:
-              - {label: "Section Title", name: "sectionTitle", widget: "string"}
-              - {label: "Section Body", name: "sectionBody", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/volunteer.md"
+        label: "Volunteer Opportunities Page"
+        name: "volunteer"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/calendar.md"
+        label: "Event Calendar Page"
+        name: "calendar"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/remember.md"
+        label: "Day of Remembrance Page"
+        name: "remember"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "victims"
     label: "Victims"

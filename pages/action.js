@@ -1,9 +1,9 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
+import path from 'path';
 import ReactMarkdown from 'react-markdown';
 
-export default function GetInvolved({ title, intro, sections }) {
+export default function TakeAction({ title, body }) {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 bg-white">
@@ -11,17 +11,9 @@ export default function GetInvolved({ title, intro, sections }) {
           <section>
             <h1 className="text-3xl font-bold mb-4">{title}</h1>
             <div className="mb-6 text-lg prose prose-lg">
-              <ReactMarkdown>{intro}</ReactMarkdown>
+              <ReactMarkdown>{body}</ReactMarkdown>
             </div>
           </section>
-          {sections && sections.map((section, idx) => (
-            <section key={idx}>
-              <h2 className="text-2xl font-semibold mb-2">{section.sectionTitle}</h2>
-              <div className="prose prose-lg">
-                <ReactMarkdown>{section.sectionBody}</ReactMarkdown>
-              </div>
-            </section>
-          ))}
         </div>
       </main>
     </div>
@@ -29,21 +21,20 @@ export default function GetInvolved({ title, intro, sections }) {
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'content', 'get-involved.md');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  const { data } = matter(fileContent);
+  const actionPath = path.join(process.cwd(), 'content', 'action.md');
+  const actionContent = fs.readFileSync(actionPath, 'utf8');
+  const { data: actionData } = matter(actionContent);
 
   const navPath = path.join(process.cwd(), "content", "navbar.md");
   const navContent = fs.readFileSync(navPath, "utf8");
   const { data: navData } = matter(navContent);
 
+
   return {
     props: {
-      title: data.title || '',
-      intro: data.intro || '',
-      sections: data.sections || [],
+      title: actionData.title,
+      body: actionData.body,
       navbar: navData,
     },
   };
 }
-
