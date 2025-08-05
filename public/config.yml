@@ -65,13 +65,18 @@ collections:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "CTA", name: "cta", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"}
-      - file: "content/about.md"
-        label: "About Page"
-        name: "about"
+      - file: "content/why-it-matters.md"
+        label: "Why It Matters Page"
+        name: "why-it-matters"
         fields:
-          - {label: "Logo Icon", name: "logo", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Content", name: "content", widget: "markdown"}
+      - file: "content/dangerous-areas.md"
+        label: "Dangerous Areas Page"
+        name: "dangerous-areas"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
       # Get Involved Tab
       - file: "content/action.md"
         label: "Take Action Page"

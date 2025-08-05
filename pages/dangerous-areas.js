@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
-export default function About({ content }) {
+export default function DangerousAreas({ content }) {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 bg-white">
@@ -18,9 +18,9 @@ export default function About({ content }) {
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'content', 'about.md');
+  const filePath = path.join(process.cwd(), 'content', 'dangerous-areas.md');
   const fileContent = fs.readFileSync(filePath, 'utf8');
-  const { content } = matter(fileContent);
+  const { data } = matter(fileContent);
 
   const navPath = path.join(process.cwd(), "content", "navbar.md");
   const navContent = fs.readFileSync(navPath, "utf8");
@@ -28,7 +28,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      content,
+      content: data.content,
       navbar: navData,
     },
   };

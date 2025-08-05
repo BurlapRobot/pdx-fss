@@ -12,7 +12,7 @@ const Footer = () => (
       </div>
       <div className="mt-2 md:mt-0 flex flex-col md:flex-row md:space-x-6">
         <div>
-          <div><Link href="/about">About Us</Link></div>
+          <div><Link href="/why-it-matters">Why It Matters</Link></div>
           <div className="text-neutral_100">Who We Are</div>
           <div className="text-neutral_100">Leadership</div>
           <div className="text-neutral_100">Contact Us</div>
