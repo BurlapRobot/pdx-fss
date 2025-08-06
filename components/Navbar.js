@@ -1,13 +1,15 @@
-import Link from 'next/link';
-import PropTypes from 'prop-types';
+import Link from "next/link";
+import PropTypes from "prop-types";
 
-const Navbar = ({logo, title, menu}) => {
+const Navbar = ({ logo, title, menu }) => {
   return (
     <nav className="bg-neutral_0 text-primary_50 px-4 py-2 flex items-center justify-between w-full">
       <div className="flex items-center space-x-2">
-        {/* TODO: add logo icon */}
-        <span className="font-bold text-sm">{logo}</span>
-        <span className="text-xs">{title}</span>
+        <Link href="/">
+          {/* TODO: add logo icon */}
+          <span className="font-bold text-sm">{logo}</span>
+          <span className="text-xs">{title}</span>
+        </Link>
       </div>
       <ul className="flex space-x-6 text-xs text-neutral_95">
         {menu?.map((menuItem, index) => (
@@ -15,13 +17,15 @@ const Navbar = ({logo, title, menu}) => {
             <button className="flex items-center px-4 py-2 hover:bg-primary_50 hover:text-neutral_0">
               {menuItem.text}
               {menuItem.links && (
-                <span className={`
+                <span
+                  className={`
                   ml-1
                   text-primary_50
                   transition-transform
                   duration-200
-                  group-hover:text-black group-hover:rotate-180`}>
-                    ▼
+                  group-hover:text-black group-hover:rotate-180`}
+                >
+                  ▼
                 </span>
               )}
             </button>
@@ -37,7 +41,8 @@ const Navbar = ({logo, title, menu}) => {
                   z-50
                   list-none
                   m-0
-                  p-0">
+                  p-0"
+              >
                 {menuItem.links.map((link, index) => (
                   <li key={index}>
                     <Link
@@ -48,7 +53,8 @@ const Navbar = ({logo, title, menu}) => {
                         hover:bg- hover:text-primary_50
                         text-left
                         px-4
-                        py-2`}>
+                        py-2`}
+                    >
                       {link.text}
                     </Link>
                   </li>
@@ -66,13 +72,17 @@ const Navbar = ({logo, title, menu}) => {
 Navbar.propTypes = {
   logo: PropTypes.string,
   title: PropTypes.string,
-  menu: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string,
-    links: PropTypes.arrayOf(PropTypes.shape({
+  menu: PropTypes.arrayOf(
+    PropTypes.shape({
       text: PropTypes.string,
-      url: PropTypes.string,
-    })),
-  })),
+      links: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+          url: PropTypes.string,
+        })
+      ),
+    })
+  ),
 };
 
 export default Navbar;
