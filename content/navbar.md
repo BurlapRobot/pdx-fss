@@ -1,6 +1,6 @@
 ---
-logo: SAFE
-title: Families for Safe Streets Portland
+title: Families for Safe Streets
+subtitle: Portland
 menu:
   - text: Safe Streets Now
     links:
