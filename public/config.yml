@@ -134,6 +134,14 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+      # News Page (NOTE: Should probably be a collection?)
+      - file: "content/news.md"
+        label: "News Page"
+        folder: "content/news"
+        name: "news"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
   # Collection: Victims Page
   - name: "victims"
     label: "Victims"

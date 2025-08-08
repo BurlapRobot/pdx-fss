@@ -35,5 +35,5 @@ menu:
       - text: Peer Mentorship
         url: /peer-mentorship
   - text: News
-    url: "#"
+    url: /news
 ---
