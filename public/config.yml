@@ -14,26 +14,11 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  # Collection: Pages
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/navbar.md"
-        label: "Navigation Buttons"
-        name: "navbar"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - label: "Navigation Menu"
-            name: "menu"
-            widget: "list"
-            fields:
-              - { label: "Text", name: "text", widget: "string" }
-              - label: "Dropdown Links"
-                name: "links"
-                widget: "list"
-                fields:
-                  - { label: "Link Text", name: "text", widget: "string" }
-                  - { label: "Link URL", name: "url", widget: "string" }
+      # Hero Section
       - file: "content/hero-section.md"
         label: "Hero Section"
         name: "hero-section"
@@ -46,6 +31,7 @@ collections:
               name: "backgroundImage",
               widget: "image",
             }
+      # Stats Section
       - file: "content/stats-section.md"
         label: "Stats Section"
         name: "stats-section"
@@ -56,6 +42,7 @@ collections:
           - { label: "Text", name: "text", widget: "string" }
           - { label: "CTA", name: "cta", widget: "string" }
           - { label: "CTA Link", name: "ctaLink", widget: "string" }
+      # Content grid section
       - file: "content/content-grid.md"
         label: "Content Grid - Card Data"
         name: "content-grid"
@@ -74,6 +61,39 @@ collections:
         name: "about"
         fields:
           - { label: "Logo Icon", name: "logo", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      # Nav Bar dropdown text and links
+      - file: "content/navbar.md"
+        label: "Navigation Labels and Links"
+        name: "navbar"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Navigation Menu"
+            name: "menu"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - label: "Dropdown Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Link Text", name: "text", widget: "string" }
+                  - { label: "Link URL", name: "url", widget: "string" }
+      # Safe Street Now Tab
+      ### TODO: Will hold 'why it matters', 'dangerous areas', 'our approach', 'victims'
+      # Advocacy Tab
+      - file: "content/legislation.md"
+        label: "Legislation Page"
+        name: "legislation"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "content/partners.md"
+        label: "Our Partners Page"
+        name: "partners"
+        fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       # Get Involved Tab
@@ -101,7 +121,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      # Services & Support Tab -- should we have this as a collection?
+      # Services & Support Tab
       - file: "content/get-support.md"
         label: "Get Support Page"
         name: "get-support"
@@ -114,7 +134,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-
+  # Collection: Victims Page
   - name: "victims"
     label: "Victims"
     folder: "content/victims"

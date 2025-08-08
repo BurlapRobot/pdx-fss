@@ -15,9 +15,9 @@ menu:
   - text: Advocacy
     links:
       - text: Legislation
-        url: "#"
+        url: /legislation
       - text: Our Partners
-        url: "#"
+        url: /partners
   - text: Get Involved
     links:
       - text: Take Action
