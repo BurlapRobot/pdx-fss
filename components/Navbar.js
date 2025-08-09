@@ -1,15 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
 
-const Navbar = ({ logo, title, menu }) => {
+const Navbar = ({ title, subtitle, menu }) => {
   return (
     <nav className="bg-neutral_0 text-primary_50 px-4 py-2 flex items-center justify-between w-full">
-      <div className="flex items-center space-x-2">
+      <div className="flex flex-row items-center space-x-2">
         <Link href="/">
-          {/* TODO: add logo icon */}
-          <span className="font-bold text-sm">{logo}</span>
-          <span className="text-xs">{title}</span>
+          <Image
+            src="/images/FSS-assets/FSS-Logo.svg"
+            alt="FSS Logo"
+            width={64}
+            height={64}
+          />
         </Link>
+        <div className="flex flex-col">
+          <span className="text-sm">{title}</span>
+          <span className="text-xs font-thin">{subtitle}</span>
+        </div>
       </div>
       <ul className="flex space-x-6 text-xs text-neutral_95">
         {menu?.map((menuItem, index) => (
