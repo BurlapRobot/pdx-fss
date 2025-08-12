@@ -1,6 +1,6 @@
 ---
-logo: SAFE
-title: Families for Safe Streets Portland
+title: Families for Safe Streets
+subtitle: Portland
 menu:
   - text: Safe Streets Now
     links:
@@ -15,9 +15,9 @@ menu:
   - text: Advocacy
     links:
       - text: Legislation
-        url: "#"
+        url: /legislation
       - text: Our Partners
-        url: "#"
+        url: /partners
   - text: Get Involved
     links:
       - text: Take Action
@@ -31,9 +31,9 @@ menu:
   - text: Services & Support
     links:
       - text: Get Support
-        url: "#"
+        url: /get-support
       - text: Peer Mentorship
-        url: "#"
+        url: /peer-mentorship
   - text: News
-    url: "#"
+    url: /news
 ---

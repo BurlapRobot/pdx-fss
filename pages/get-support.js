@@ -3,8 +3,9 @@ import matter from "gray-matter";
 import path from "path";
 import ReactMarkdown from "react-markdown";
 
-export default function Remember({ title, body }) {
+export default function GetSupport({ title, body }) {
   return (
+    // NOTE: will this hold a generic page component like in figma? are we waiting on content?
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 bg-white">
         <div className="max-w-4xl mx-auto py-8 px-4 space-y-12">
@@ -21,9 +22,9 @@ export default function Remember({ title, body }) {
 }
 
 export async function getStaticProps() {
-  const rememberPath = path.join(process.cwd(), "content", "remember.md");
-  const rememberContent = fs.readFileSync(rememberPath, "utf8");
-  const { data: rememberData } = matter(rememberContent);
+  const filePath = path.join(process.cwd(), "content", "get-support.md");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  const { data: fileData } = matter(fileContent);
 
   const navPath = path.join(process.cwd(), "content", "navbar.md");
   const navContent = fs.readFileSync(navPath, "utf8");
@@ -31,8 +32,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: rememberData.title,
-      body: rememberData.body,
+      title: fileData.title,
+      body: fileData.body,
       navbar: navData,
     },
   };

@@ -12,14 +12,14 @@ const Footer = () => (
       </div>
       <div className="mt-2 md:mt-0 flex flex-col md:flex-row md:space-x-6">
         <div>
-          <div><Link href="/why-it-matters">Why It Matters</Link></div>
+          <div><Link href="/about">About Us</Link></div>
           <div className="text-neutral_100">Who We Are</div>
           <div className="text-neutral_100">Leadership</div>
           <div className="text-neutral_100">Contact Us</div>
         </div>
       </div>
     </div>
-    <div className="text-neutral_100 mt-2">© 2023 Families for Safe Streets, Portland</div>
+    <div className="text-neutral_100 mt-2">© 2025 Families for Safe Streets, Portland</div>
   </footer>
 );
 
