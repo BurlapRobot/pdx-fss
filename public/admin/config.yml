@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: "https://github.com/BurlapRobot/pdx-fss/"
+  repo: "BurlapRobot/pdx-fss/"
   branch: main
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
