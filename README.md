@@ -14,7 +14,7 @@ A Next.js-based content management system using Decap CMS (formerly Netlify CMS)
 ## Pages
 
 - **Hero Section** (`/`) - Front page
-- **About** (`/about`) - About page
+- **Why It Matters** (`/why-it-matters`) - Why It Matters page
 - **Get Involved** (`/get-involved`) - How to participate
 
 ## Getting Started
@@ -74,8 +74,18 @@ All content is stored in Markdown files in the `content/` directory:
 ```
 content/
 ├── hero-section.md
-├── about.md
-└── get-involved.md
+├── why-it-matters.md
+├── dangerous-areas.md
+├── our-approach.md
+├── action.md
+├── volunteer.md
+├── calendar.md
+├── remember.md
+├── stats-section.md
+├── content-grid.md
+├── navbar.md
+└── victims/
+    └── [victim files]
 ```
 
 Each file follows this structure:
