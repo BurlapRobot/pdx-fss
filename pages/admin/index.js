@@ -31,7 +31,7 @@ export default function Admin() {
       <Head>
         <title>Content Manager</title>
       </Head>
-      <link href="admin/config.yml" type="text/yaml" rel="cms-config-url" />
+      <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
       <div id="nc-root" />
     </>
   );
