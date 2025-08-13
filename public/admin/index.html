@@ -21,12 +21,9 @@
       }
     </script>
     <script>
-      window.CMS_CONFIG = {
-        config: {
-          load_config_file: true,
-          config_path: '/config.yml'
-        }
-      };
+      DecapCMS.init({
+        config_url: '/config.yml'
+      });
     </script>
   </body>
 </html>
