@@ -19,7 +19,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="text-neutral_100 mt-2">© 2023 Families for Safe Streets, Portland</div>
+    <div className="text-neutral_100 mt-2">© 2025 Families for Safe Streets, Portland</div>
   </footer>
 );
 

@@ -51,16 +51,27 @@ collections:
             name: "cardData"
             widget: "list"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-              - { label: "CTA", name: "cta", widget: "string" }
-              - { label: "CTA Link", name: "ctaLink", widget: "string" }
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "CTA", name: "cta", widget: "string"}
+              - {label: "CTA Link", name: "ctaLink", widget: "string"}
+      - file: "content/why-it-matters.md"
+        label: "Why It Matters Page"
+        name: "why-it-matters"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
+      - file: "content/dangerous-areas.md"
+        label: "Dangerous Areas Page"
+        name: "dangerous-areas"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
       - file: "content/about.md"
         label: "About Page"
         name: "about"
         fields:
-          - { label: "Logo Icon", name: "logo", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       # Nav Bar dropdown text and links

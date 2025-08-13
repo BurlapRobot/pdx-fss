@@ -5,11 +5,11 @@ menu:
   - text: Safe Streets Now
     links:
       - text: Why it Matters
-        url: /about
+        url: /why-it-matters
       - text: Dangerous Areas
-        url: "#"
+        url: /dangerous-areas
       - text: Our Approach
-        url: "#"
+        url: /our-approach
       - text: Remembering Victims
         url: /victims
   - text: Advocacy
