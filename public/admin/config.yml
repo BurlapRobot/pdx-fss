@@ -1,10 +1,11 @@
 backend:
-  name: git-gateway
+  name: github
   repo: BurlapRobot/pdx-fss
   branch: main
   api_root: https://api.github.com
   base_url: https://api.netlify.com
   auth_endpoint: auth
+  site_domain: pdxfreesafestreets.netlify.app
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
