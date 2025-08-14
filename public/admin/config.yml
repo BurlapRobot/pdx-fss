@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: BurlapRobot/pdx-fss/
   branch: main
   commit_messages:
