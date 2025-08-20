@@ -5,7 +5,7 @@ title: About Portland Families for Safe Streets
 
 Portland Families for Safe Streets (PFSS) is a grassroots organization dedicated to preventing traffic violence and supporting those who have been affected by it. We believe that no one should lose their life or be seriously injured while walking, biking, or driving on our streets.
 
-## Our Mission
+###### Our Mission
 
 We advocate for life-saving changes throughout our transportation system that will prevent crashes and create safer streets for everyone. Through education, advocacy, and support, we work to ensure that Portland's streets are safe for all users.
 
