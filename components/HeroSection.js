@@ -1,6 +1,6 @@
 import React from "react";
 
-const HeroSection = ({ title, subtitle, buttonText, backgroundImage }) => (
+const HeroSection = ({ title, subtitle, buttonText, backgroundImage, buttonUrl }) => (
   <section
     className="relative h-96 flex items-center justify-center bg-cover bg-center"
     style={{ backgroundImage: `url('${backgroundImage}')` }}
@@ -16,7 +16,7 @@ const HeroSection = ({ title, subtitle, buttonText, backgroundImage }) => (
         ))}
       </h1>
       <p className="text-white mb-4">{subtitle}</p>
-      <button className="bg-primary_65 text-black font-semibold px-4 py-2 rounded shadow">{buttonText}</button>
+      <a href={buttonUrl} className="bg-primary_65 text-black font-semibold px-4 py-2 rounded shadow">{buttonText}</a>
     </div>
   </section>
 );

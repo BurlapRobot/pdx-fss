@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 function MyApp({ Component, pageProps }) {
   return (
     <PreviewProvider>
-      <Layout navbar={pageProps.navbar}>
+      <Layout navbar={pageProps.navbar} alertBar={pageProps.alertBar}>
         <Component {...pageProps} />
       </Layout>
     </PreviewProvider>
