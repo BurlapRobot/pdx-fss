@@ -32,6 +32,9 @@ export async function getStaticProps() {
   const contentGridContent = fs.readFileSync(contentGridPath, "utf8");
   const { data: contentGridData } = matter(contentGridContent);
 
+  const alertBarPath = path.join(process.cwd(), "content", "alert-bar.md");
+  const alertBarContent = fs.readFileSync(alertBarPath, "utf8");
+  const { data: alertBarData } = matter(alertBarContent);
 
   return {
     props: {
@@ -39,6 +42,7 @@ export async function getStaticProps() {
       navbar: navData,
       statsSection: statsData,
       contentGrid: contentGridData,
+      alertBar: alertBarData,
     },
   };
 }

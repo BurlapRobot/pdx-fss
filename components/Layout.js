@@ -3,10 +3,10 @@ import NewsletterSignup from './NewsletterSignup';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-export default function Layout({ children, navbar }) {
+export default function Layout({ children, navbar, alertBar }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <AlertBar />
+      <AlertBar {...alertBar} />
       <Navbar {...navbar} />
       {children}
       <NewsletterSignup />
