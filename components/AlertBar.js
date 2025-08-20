@@ -4,7 +4,8 @@ const AlertBar = ({ alertText, linkText, linkUrl, buttonText, buttonUrl }) => (
     <span>
       {alertText} <a href={linkUrl} className="underline">{linkText}</a>
     </span>
-    <a href={buttonUrl} className="ml-4 bg-black text-primary_50 px-2 py-1 rounded text-xs hover:bg-gray-800 transition-colors">
+    <a href={buttonUrl} 
+      className="ml-4 bg-black text-primary_50 px-2 py-1 rounded text-xs hover:bg-gray-800 transition-colors">
       {buttonText}
     </a>
   </div>
