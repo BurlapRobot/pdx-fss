@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import ReactMarkdown from 'react-markdown';
+import { getCommonPageProps } from '../utils/getPageProps';
 
 export default function EventCalendar({ title, body }) {
   return (
@@ -25,15 +26,13 @@ export async function getStaticProps() {
   const eventCalendarContent = fs.readFileSync(eventCalendarPath, 'utf8');
   const { data: calendarData } = matter(eventCalendarContent);
 
-  const navPath = path.join(process.cwd(), "content", "navbar.md");
-  const navContent = fs.readFileSync(navPath, "utf8");
-  const { data: navData } = matter(navContent);
+  const commonProps = await getCommonPageProps();
 
   return {
     props: {
       title: calendarData.title,
       body: calendarData.body,
-      navbar: navData,
+      ...commonProps,
     },
   };
 }

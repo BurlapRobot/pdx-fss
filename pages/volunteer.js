@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import ReactMarkdown from 'react-markdown';
+import { getCommonPageProps } from '../utils/getPageProps';
 
 export default function Volunteer({ title, body }) {
   return (
@@ -25,15 +26,13 @@ export async function getStaticProps() {
   const volunteerContent = fs.readFileSync(volunteerPath, 'utf8');
   const { data: volunteerData } = matter(volunteerContent);
 
-  const navPath = path.join(process.cwd(), "content", "navbar.md");
-  const navContent = fs.readFileSync(navPath, "utf8");
-  const { data: navData } = matter(navContent);
+  const commonProps = await getCommonPageProps();
 
   return {
     props: {
       title: volunteerData.title,
       body: volunteerData.body,
-      navbar: navData,
+      ...commonProps,
     },
   };
 }
