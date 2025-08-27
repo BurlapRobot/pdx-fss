@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import VictimCard from '../components/VictimCard';
+import { getCommonPageProps } from '../utils/getPageProps';
 
 export default function Victims({ victims }) {
   const [sortBy, setSortBy] = useState('');
@@ -211,15 +212,12 @@ export async function getStaticProps() {
     })
     .sort((a, b) => a.id - b.id); // Sort by generated ID
 
-  // Load navbar frontmatter
-  const navPath = path.join(process.cwd(), 'content', 'navbar.md');
-  const navContent = fs.readFileSync(navPath, 'utf8');
-  const { data: navData } = matter(navContent);
+  const commonProps = await getCommonPageProps();
 
   return {
     props: {
       victims,
-      navbar: navData,
+      ...commonProps,
     },
   };
 } 
