@@ -8,6 +8,11 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>PDX Families for Safe Streets</title>
+        <link
+          rel="icon"
+          href="/images/FSS-assets/FSS-Logo.svg"
+          type="image/svg+xml"
+        />
       </Head>
       <PreviewProvider>
         <Layout navbar={pageProps.navbar} alertBar={pageProps.alertBar}>
