@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>PDX Families for Safe Streets</title>
+        <title>PDX FSS</title>
         <link
           rel="icon"
           href="/images/FSS-assets/FSS-Logo.svg"
