@@ -29,6 +29,7 @@ collections:
         name: "alert-bar"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
           - { label: "Alert Text", name: "alertText", widget: "string" }
           - { label: "Link Text", name: "linkText", widget: "string" }
           - { label: "Link URL", name: "linkUrl", widget: "string" }

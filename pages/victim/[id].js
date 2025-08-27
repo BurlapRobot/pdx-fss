@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getCommonPageProps } from '../../utils/getPageProps';
 
 export default function VictimDetail({ victim }) {
   const router = useRouter();
@@ -156,15 +157,13 @@ export async function getStaticProps({ params }) {
   const requestedId = parseInt(params.id);
   const fileIndex = requestedId - 1; // Convert ID to 0-based index
 
-  const navPath = path.join(process.cwd(), 'content', 'navbar.md');
-  const navContent = fs.readFileSync(navPath, 'utf8');
-  const { data: navData } = matter(navContent);
+  const commonProps = await getCommonPageProps();
   
   if (fileIndex < 0 || fileIndex >= markdownFiles.length) {
     return {
       props: {
         victim: null,
-        navbar: navData,
+        ...commonProps,
       },
     };
   }
@@ -190,7 +189,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       victim,
-      navbar: navData,
+      ...commonProps,
     },
   };
 } 

@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import ReactMarkdown from 'react-markdown';
+import { getCommonPageProps } from '../utils/getPageProps';
 
 export default function TakeAction({ title, body }) {
   return (
@@ -22,19 +23,16 @@ export default function TakeAction({ title, body }) {
 
 export async function getStaticProps() {
   const actionPath = path.join(process.cwd(), 'content', 'action.md');
-  const actionContent = fs.readFileSync(actionPath, 'utf8');
+  const actionContent = fs.readFileSync(actionPath, "utf8");
   const { data: actionData } = matter(actionContent);
 
-  const navPath = path.join(process.cwd(), "content", "navbar.md");
-  const navContent = fs.readFileSync(navPath, "utf8");
-  const { data: navData } = matter(navContent);
-
+  const commonProps = await getCommonPageProps();
 
   return {
     props: {
       title: actionData.title,
       body: actionData.body,
-      navbar: navData,
+      ...commonProps,
     },
   };
 }
