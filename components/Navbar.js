@@ -15,8 +15,16 @@ const Navbar = ({ title, subtitle, menu }) => {
           />
         </Link>
         <div className="flex flex-col">
-          <span className="text-sm">{title}</span>
-          <span className="text-xs font-thin">{subtitle}</span>
+          <span className="text-sm">
+            <Link href="/">
+              {title}
+            </Link>
+          </span>
+          <span className="text-xs font-thin">
+            <Link href="/">
+              {subtitle}
+            </Link>
+          </span>
         </div>
       </div>
       <ul className="flex space-x-6 text-xs text-neutral_95">
