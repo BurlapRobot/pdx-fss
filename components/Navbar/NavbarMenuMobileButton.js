@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const NavbarMenuMobileButton = ({ menuItem, isOpenMenu }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  console.log(isExpanded);
 
   return (
     <li className={`${isOpenMenu ? "static" : "hidden"}`}>
