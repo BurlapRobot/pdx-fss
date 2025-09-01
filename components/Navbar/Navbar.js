@@ -51,7 +51,6 @@ const Navbar = ({ title, subtitle, menu }) => {
           <NavMenu menu={menu} />
         )}
       </div>
-      {/* <div className="text-xs cursor-pointer text-nowrap">🔍</div> */}
     </nav>
   );
 };
