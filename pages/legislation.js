@@ -28,7 +28,6 @@ export async function getStaticProps() {
   return {
     props: {
       content: fileData.content,
-      navbar: navData,
       ...commonProps,
     },
   };
