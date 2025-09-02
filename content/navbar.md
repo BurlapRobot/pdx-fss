@@ -6,10 +6,10 @@ menu:
     links:
       - text: Why it Matters
         url: /why-it-matters
-      - text: Dangerous Areas
-        url: /dangerous-areas
       - text: Our Approach
         url: /our-approach
+      - text: Dangerous Areas
+        url: /dangerous-areas
       - text: Remembering Victims
         url: /victims
   - text: Advocacy

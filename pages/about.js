@@ -21,13 +21,13 @@ export default function About({ content }) {
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'content', 'about.md');
   const fileContent = fs.readFileSync(filePath, 'utf8');
-  const { content } = matter(fileContent);
+  const { data } = matter(fileContent);
 
   const commonProps = await getCommonPageProps();
 
   return {
     props: {
-      content,
+      content: data.content,
       ...commonProps,
     },
   };

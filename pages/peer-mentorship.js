@@ -4,7 +4,7 @@ import path from "path";
 import ReactMarkdown from "react-markdown";
 import { getCommonPageProps } from "../utils/getPageProps";
 
-export default function PeerMentorship({ title, body }) {
+export default function PeerMentorship({ title, content }) {
   return (
     // NOTE: will this hold a generic page component like in figma? are we waiting on content?
     <div className="min-h-screen flex flex-col">
@@ -13,7 +13,7 @@ export default function PeerMentorship({ title, body }) {
           <section>
             <h1 className="text-3xl font-bold mb-4">{title}</h1>
             <div className="mb-6 text-lg prose prose-lg">
-              <ReactMarkdown>{body}</ReactMarkdown>
+              <ReactMarkdown>{content}</ReactMarkdown>
             </div>
           </section>
         </div>
@@ -32,7 +32,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: fileData.title,
-      body: fileData.body,
+      content: fileData.content,
       ...commonProps,
     },
   };
