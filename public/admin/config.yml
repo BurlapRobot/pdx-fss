@@ -183,7 +183,14 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
-  # Collection: Victims Page
+      - file: "content/victims-content.md"
+        label: "Victims Main Page"
+        name: "victims-content"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "markdown" }
+
+  # Collection: Victims Page  
   - name: "victims"
     label: "Victims"
     folder: "content/victims"
