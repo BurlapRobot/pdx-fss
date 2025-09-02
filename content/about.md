@@ -7,7 +7,7 @@ content: >-
   Portland Families for Safe Streets is a small but growing road safety organization. Whether you have been directly impacted by road violence or an ally to the road safety movement, you are welcome to join our community of road-safety advocates. 
 
 
-  ## Our Mission
+  ## Mission
 
 
   Portland Families for Safe Streets advocates for life-saving changes throughout our transportation system that will prevent crashes.
@@ -32,7 +32,7 @@ content: >-
   ## Contact Us
 
 
-  Email contact
+  \[Email contact]
 
   Join our email list for information on upcoming events and opportunities. We anticipate one or two email messages per month.
 
