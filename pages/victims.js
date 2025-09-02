@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import VictimCard from '../components/VictimCard';
 import ReactMarkdown from "react-markdown";
+import Link from 'next/link';
 import { getCommonPageProps } from '../utils/getPageProps';
 
 export default function Victims({ title, intro, victims }) {
@@ -92,9 +93,9 @@ export default function Victims({ title, intro, victims }) {
               <h2 className="text-xl font-semibold mb-3">Report a Victim</h2>
               <p className="text-gray-700 mb-3">
                 Have you or someone you know been harmed by a crash in Portland? 
-                <a href="/contact-us" className="text-blue-600 hover:text-blue-800 ml-1">
+                <Link href="/contact-us" className="text-blue-600 hover:text-blue-800 ml-1">
                   Contact us to tell your story and help make a difference.
-                </a>
+                </Link>
               </p>
             </div>
             
