@@ -1,8 +1,25 @@
 import React from "react";
 
-const HeroSection = ({ title, subtitle, buttonText, backgroundImage, buttonUrl }) => (
+const HeroSection = ({
+  title,
+  subtitle,
+  buttonText,
+  backgroundImage,
+  buttonUrl,
+}) => (
   <section
-    className="relative min-h-96 aspect-[2.14/1]  flex items-center justify-center bg-cover bg-center "
+    className="
+        relative
+        aspect-[2.14/1]
+        h-96 
+        flex 
+        items-center 
+        justify-center 
+        bg-cover 
+        bg-center
+        w-full
+        max-w-[1728px]
+        mx-auto"
     style={{ backgroundImage: `url('${backgroundImage}')` }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -16,7 +33,12 @@ const HeroSection = ({ title, subtitle, buttonText, backgroundImage, buttonUrl }
         ))}
       </h1>
       <p className="text-white mb-4">{subtitle}</p>
-      <a href={buttonUrl} className="bg-primary_65 text-black font-semibold px-4 py-2 rounded shadow">{buttonText}</a>
+      <a
+        href={buttonUrl}
+        className="bg-primary_65 text-black font-semibold px-4 py-2 rounded shadow"
+      >
+        {buttonText}
+      </a>
     </div>
   </section>
 );

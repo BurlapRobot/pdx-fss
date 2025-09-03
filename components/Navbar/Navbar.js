@@ -12,7 +12,20 @@ const Navbar = ({ title, subtitle, menu }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   return (
-    <nav className="bg-neutral_0 text-primary_50 px-2 md:px-4 py-2 flex items-center justify-between w-full">
+    <nav
+      className="
+          bg-neutral_0
+          text-primary_50
+          px-2 
+          md:px-4 
+          py-2
+          flex 
+          items-center
+          justify-between
+          w-full
+          max-w-[1728px]
+          mx-auto"
+    >
       <div className="flex flex-row items-center space-x-2">
         <Link href="/">
           <Image
