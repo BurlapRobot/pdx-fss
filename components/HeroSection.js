@@ -9,7 +9,8 @@ const HeroSection = ({
 }) => (
   <section
     className="
-        relative 
+        relative
+        aspect-[2.14/1]
         h-96 
         flex 
         items-center 
