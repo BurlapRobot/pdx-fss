@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = ({ title, subtitle, buttonText, backgroundImage, buttonUrl }) => (
   <section
-    className="relative h-96 flex items-center justify-center bg-cover bg-center"
+    className="relative min-h-96 aspect-[2.14/1]  flex items-center justify-center bg-cover bg-center "
     style={{ backgroundImage: `url('${backgroundImage}')` }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-60"></div>
