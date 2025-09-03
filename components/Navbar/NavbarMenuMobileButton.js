@@ -1,9 +1,15 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NavbarMenuMobileButton = ({ menuItem, isOpenMenu }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [pathname]);
 
   return (
     <li className={`${isOpenMenu ? "static" : "hidden"}`}>
