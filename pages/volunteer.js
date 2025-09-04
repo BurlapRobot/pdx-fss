@@ -4,7 +4,7 @@ import path from 'path';
 import ReactMarkdown from 'react-markdown';
 import { getCommonPageProps } from '../utils/getPageProps';
 
-export default function Volunteer({ title, body }) {
+export default function Volunteer({ title, content }) {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 bg-white">
@@ -12,7 +12,7 @@ export default function Volunteer({ title, body }) {
           <section>
             <h1 className="text-3xl font-bold mb-4">{title}</h1>
             <div className="mb-6 text-lg prose prose-lg">
-              <ReactMarkdown>{body}</ReactMarkdown>
+              <ReactMarkdown>{content}</ReactMarkdown>
             </div>
           </section>
         </div>
@@ -31,7 +31,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: volunteerData.title,
-      body: volunteerData.body,
+      content: volunteerData.content,
       ...commonProps,
     },
   };

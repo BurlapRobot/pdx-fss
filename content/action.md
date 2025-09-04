@@ -1,4 +1,16 @@
 ---
 title: Take Action
-body: Find out how you can advocate for safer streets, contact your representatives, and support policy changes.
+content: >-
+  # Take Action
+
+
+
+
+  We encourage those who have been directly affected by road-traffic violence and allies to our work to get involved.
+
+
+  \[Link to email sign-up form]
+
+
+  \[Link to donation form]
 ---

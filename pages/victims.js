@@ -3,9 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import VictimCard from '../components/VictimCard';
+import ReactMarkdown from "react-markdown";
+import Link from 'next/link';
 import { getCommonPageProps } from '../utils/getPageProps';
 
-export default function Victims({ victims }) {
+export default function Victims({ title, intro, victims }) {
   const [sortBy, setSortBy] = useState('');
   const [displayCount, setDisplayCount] = useState(12);
   const [isLoading, setIsLoading] = useState(false);
@@ -76,15 +78,14 @@ export default function Victims({ victims }) {
         <div className="max-w-6xl mx-auto py-8 px-4">
           {/* Page Title */}
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Remembering Victims of Unsafe Streets in Portland
+            <ReactMarkdown>{title}</ReactMarkdown>
           </h1>
           
           {/* Intro Text */}
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+          {<div className="text-lg text-gray-700 mb-8 leading-relaxed">
+            {<ReactMarkdown>{intro}</ReactMarkdown>}
+          </div> }
+
 
           {/* Action Sections */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -92,16 +93,16 @@ export default function Victims({ victims }) {
               <h2 className="text-xl font-semibold mb-3">Report a Victim</h2>
               <p className="text-gray-700 mb-3">
                 Have you or someone you know been harmed by a crash in Portland? 
-                <a href="#" className="text-blue-600 hover:text-blue-800 ml-1">
+                <Link href="/contact-us" className="text-blue-600 hover:text-blue-800 ml-1">
                   Contact us to tell your story and help make a difference.
-                </a>
+                </Link>
               </p>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg">
               <h2 className="text-xl font-semibold mb-3">Nationwide Story Map</h2>
               <p className="text-gray-700">
-                <a href="#" className="text-blue-600 hover:text-blue-800">
+                <a href="https://www.familiesforsafestreets.org/stories" className="text-blue-600 hover:text-blue-800">
                   Families for Safe Streets maintains a map of crashes across the 
                   country.
                 </a>
@@ -186,6 +187,10 @@ export default function Victims({ victims }) {
 }
 
 export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "content", "victims-content.md");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  const { data: fileData } = matter(fileContent);
+
   const victimsDirectory = path.join(process.cwd(), 'content/victims');
   const filenames = fs.readdirSync(victimsDirectory);
 
@@ -216,6 +221,8 @@ export async function getStaticProps() {
 
   return {
     props: {
+      title: fileData.title,
+      intro: fileData.intro,
       victims,
       ...commonProps,
     },
