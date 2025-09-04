@@ -3,13 +3,19 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import HamburgerMenuIcon from "../icons/HamburgerMenuIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavMenuMobile from "./NavbarMenuMobile";
 import NavMenu from "./NavbarMenu";
+import { usePathname } from "next/navigation";
 
 const Navbar = ({ title, subtitle, menu }) => {
   const isMobile = useIsMobile();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpenMenu(false);
+  }, [pathname]);
 
   return (
     <nav
