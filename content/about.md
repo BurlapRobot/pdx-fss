@@ -32,7 +32,7 @@ content: >-
   ## Contact Us
 
 
-  \[Email contact]
+  [Email contact]
 
   Join our email list for information on upcoming events and opportunities. We anticipate one or two email messages per month.
 
