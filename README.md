@@ -92,12 +92,11 @@ Each file follows this structure:
 ```markdown
 ---
 title: "Page Title"
-layout: "page"
----
-
+content: >-
 # Your content here
 
 This is the main content of the page.
+---
 ```
 
 ## Deployment
