@@ -8,22 +8,18 @@ const HeroSection = ({
   buttonUrl,
 }) => (
   <section
-    className="
-        relative
-        aspect-[2.14/1]
-        h-96 
-        flex 
-        items-center 
-        justify-center 
-        bg-cover 
-        bg-center
-        w-full
-        max-w-[1728px]
-        mx-auto"
-    style={{ backgroundImage: `url('${backgroundImage}')` }}
+    className="relative  min-h-96 sm:h-96
+     aspect-[2.14/1] max-w-[1728px] flex
+      flex-col items-center justify-center bg-cover bg-center w-full mx-auto"
   >
-    <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div className="relative z-10 text-left max-w-2xl px-6">
+    <div
+      className="w-full h-60 sm:absolute sm:inset-0 sm:h-full bg-cover bg-center"
+      style={{ backgroundImage: `url('${backgroundImage}')` }}
+    >
+      <div className="hidden sm:block absolute inset-0 bg-black bg-opacity-60"></div>
+    </div>
+
+    <div className="bg-black sm:bg-transparent relative z-10 text-left max-w-2xl px-2 sm:px-6 py-3">
       <h1 className="text-4xl md:text-5xl font-bold text-primary_65 leading-tight mb-2">
         {title.split("\n").map((line, idx) => (
           <React.Fragment key={idx}>
@@ -35,7 +31,7 @@ const HeroSection = ({
       <p className="text-white mb-4">{subtitle}</p>
       <a
         href={buttonUrl}
-        className="bg-primary_65 text-black font-semibold px-4 py-2 rounded shadow"
+        className="bg-primary_65 text-black font-semibold px-2 py-2 rounded shadow block sm:inline text-center text-lg"
       >
         {buttonText}
       </a>
