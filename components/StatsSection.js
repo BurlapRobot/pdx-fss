@@ -9,7 +9,7 @@ const StatsSection = ({ image, heading, subheading, text, ctaLink, cta }) => (
       alt={heading}
       width={320}
       height={240}
-      className="w-[320px] h-[240px] sm:w-[428px] sm:h-[280px] rounded"
+      className="aspect-[1.5/1] w-[320px] sm:w-[428px] sm:h-[280px] rounded"
     />
     <div className="max-w-lg">
       <h2 className="font-bold text-2xl mb-2">{heading}</h2>
