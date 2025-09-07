@@ -23,8 +23,10 @@ const Navbar = ({ title, subtitle, menu }) => {
           bg-neutral_0
           text-primary_50
           px-2 
+          h-[58px]
           md:px-4 
-          py-2
+          md:h-auto
+          md:py-2
           flex 
           items-center
           justify-between
@@ -36,28 +38,29 @@ const Navbar = ({ title, subtitle, menu }) => {
         <Link href="/">
           <Image
             src="/images/FSS-assets/FSS-Logo.svg"
+            className="w-[35px] h-[35px] sm:w-[64px] sm:h-[64px]"
             alt="FSS Logo"
             width={64}
             height={64}
           />
         </Link>
         <div className="flex flex-col">
-          <span className="text-sm">
+          <span className="text-sm font-semibold">
             <Link href="/">{title}</Link>
           </span>
-          <span className="text-xs font-thin">
+          <span className="text-sm font-normal">
             <Link href="/">{subtitle}</Link>
           </span>
         </div>
       </div>
-      <div className="flex flex-row md:flex-col items-center md:items-end space-x-3 md:space-y-2">
-        <button className="w-[65px] md:w-[80px] py-1.5 bg-primary_50 text-black text-sm text-center font-semibold">
+      <div className="flex flex-row md:flex-col items-center md:items-end space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]">
+        <button className="h-8 leading-4 w-[75px] h-[34px] md:w-[80px] py-2 bg-primary_50 text-black text-sm text-center font-semibold">
           Donate
         </button>
         {isMobile ? (
           <>
             <button
-              className="w-6 h-6"
+              className="w-8 h-8 grid place-items-center pl-[10px]"
               onClick={() => {
                 setIsOpenMenu((prev) => !prev);
               }}
