@@ -1,13 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SOCIAL_LINKS } from "../utils/constants";
 
 const Footer = () => {
-  const SOCIAL_LINKS = {
-    FACEBOOK: "https://www.facebook.com/ORSafeStreets",
-    INSTAGRAM: "https://www.instagram.com/fss_pdx/",
-    TWITTER: "#",
-  };
-
   return (
     <footer className="bg-neutral_0 text-primary_50 text-xs py-6 md:px-8 px-4 ">
       <div className="flex flex-col md:flex-row justify-between md:justify-normal md:items-start ">
