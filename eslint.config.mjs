@@ -13,10 +13,10 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      "indent": ["error", 2],
-      "max-len": ["error", 120]
-    }
-  }
+      indent: ["error", 2],
+      "max-len": ["error", 130],
+    },
+  },
 ];
 
 export default eslintConfig;
