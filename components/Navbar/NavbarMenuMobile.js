@@ -9,7 +9,7 @@ const NavMenuMobile = ({ menu, isOpenMenu }) => {
             flex-col
             right-0
             w-full
-            top-20
+            top-[60px]
             z-50
             bg-black
             absolute

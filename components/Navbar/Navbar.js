@@ -22,7 +22,7 @@ const Navbar = ({ title, subtitle, menu }) => {
           bg-neutral_0
           text-primary_50
           px-2 
-          h-[58px]
+          h-[60px]
           md:px-4 
           md:h-auto
           md:py-2
@@ -52,11 +52,13 @@ const Navbar = ({ title, subtitle, menu }) => {
           </span>
         </div>
       </div>
-      <div className="
+      <div
+        className="
         flex flex-row md:flex-col items-center md:items-end 
         space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
       >
-        <button className="
+        <button
+          className="
           leading-4 w-[75px] h-8 md:w-[80px] py-2
           bg-primary_50 text-black text-sm text-center font-semibold"
         >
@@ -65,7 +67,7 @@ const Navbar = ({ title, subtitle, menu }) => {
         {isMobile ? (
           <>
             <button
-              className="w-8 h-8 grid place-items-center pl-[10px]"
+              className="w-8 h-8 grid place-items-center ml-[10px]"
               onClick={() => {
                 setIsOpenMenu((prev) => !prev);
               }}

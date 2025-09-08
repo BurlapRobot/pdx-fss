@@ -5,7 +5,7 @@ export function useIsMobile() {
 
   useEffect(() => {
     const checkWindowSize = () => {
-      setIsMobile(window.matchMedia("(max-width:768px)").matches);
+      setIsMobile(window.matchMedia("(max-width:767px)").matches);
     };
 
     checkWindowSize();
