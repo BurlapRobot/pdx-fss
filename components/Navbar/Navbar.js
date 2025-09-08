@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import { useIsMobile } from "../../hooks/useIsMobile";
-import HamburgerMenuIcon from "../icons/HamburgerMenuIcon";
 import { useEffect, useState } from "react";
 import NavMenuMobile from "./NavbarMenuMobile";
 import NavMenu from "./NavbarMenu";
@@ -53,8 +52,14 @@ const Navbar = ({ title, subtitle, menu }) => {
           </span>
         </div>
       </div>
-      <div className="flex flex-row md:flex-col items-center md:items-end space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]">
-        <button className="h-8 leading-4 w-[75px] h-[34px] md:w-[80px] py-2 bg-primary_50 text-black text-sm text-center font-semibold">
+      <div className="
+        flex flex-row md:flex-col items-center md:items-end 
+        space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
+      >
+        <button className="
+          leading-4 w-[75px] h-8 md:w-[80px] py-2
+          bg-primary_50 text-black text-sm text-center font-semibold"
+        >
           Donate
         </button>
         {isMobile ? (
@@ -65,7 +70,12 @@ const Navbar = ({ title, subtitle, menu }) => {
                 setIsOpenMenu((prev) => !prev);
               }}
             >
-              <HamburgerMenuIcon />
+              <Image
+                src="/images/FSS-assets/icon-menu.svg"
+                alt="icon menu"
+                height={16}
+                width={20}
+              />
             </button>
             <NavMenuMobile menu={menu} isOpenMenu={isOpenMenu} />
           </>
