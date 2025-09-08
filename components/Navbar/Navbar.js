@@ -52,12 +52,14 @@ const Navbar = ({ title, subtitle, menu }) => {
           </span>
         </div>
       </div>
-      <div className="
+      <div
+        className="
         flex flex-row md:flex-col items-center md:items-end 
         space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
       >
-        <button className="
-          leading-4 w-[75px] h-8 md:w-[80px] py-2
+        <button
+          className="
+          hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
           bg-primary_50 text-black text-sm text-center font-semibold"
         >
           Donate
