@@ -1,17 +1,15 @@
 const HamburgerMenuIcon = () => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="16"
+      viewBox="0 0 20 16"
       fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="white"
-      className="size-6"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        d="M0.8125 0.125H19.1875V2.75H0.8125V0.125ZM0.8125 6.6875H19.1875V9.3125H0.8125V6.6875ZM19.1875 13.25V15.875H0.8125V13.25H19.1875Z"
+        fill="white"
       />
     </svg>
   );
