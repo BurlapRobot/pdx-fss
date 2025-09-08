@@ -10,7 +10,6 @@
 
 body {
   @apply bg-gray-50 text-gray-900;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -80,4 +79,4 @@ main {
 /* Add a subtle max-width to the container */
 .container {
   @apply max-w-7xl;
-} 
+}
