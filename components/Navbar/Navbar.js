@@ -22,7 +22,7 @@ const Navbar = ({ title, subtitle, menu }) => {
           bg-neutral_0
           text-primary_50
           px-2 
-          h-[58px]
+          h-[60px]
           md:px-4 
           md:h-auto
           md:py-2
@@ -67,7 +67,7 @@ const Navbar = ({ title, subtitle, menu }) => {
         {isMobile ? (
           <>
             <button
-              className="w-8 h-8 grid place-items-center pl-[10px]"
+              className="w-8 h-8 grid place-items-center ml-[10px]"
               onClick={() => {
                 setIsOpenMenu((prev) => !prev);
               }}
