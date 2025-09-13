@@ -59,7 +59,7 @@ const Navbar = ({ title, subtitle, menu }) => {
       >
         <button
           className="
-          leading-4 w-[75px] h-8 md:w-[80px] py-2
+          hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
           bg-primary_50 text-black text-sm text-center font-semibold"
         >
           Donate
