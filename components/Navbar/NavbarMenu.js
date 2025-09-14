@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
+import DownCarat from "./DownCarat";
 
 const NavMenu = ({ menu }) => {
   return (
@@ -8,18 +9,7 @@ const NavMenu = ({ menu }) => {
         <li key={index} className="group relative">
           <button className="flex items-center px-4 py-2 hover:bg-primary_50 hover:text-neutral_0">
             {menuItem.text}
-            {menuItem.links && (
-              <span
-                className={`
-                  ml-1
-                  text-primary_50
-                  transition-transform
-                  duration-200
-                  group-hover:text-black group-hover:rotate-180`}
-              >
-                ▼
-              </span>
-            )}
+            {menuItem.links && <DownCarat />}
           </button>
           {menuItem.links && menuItem.links.length > 0 && (
             <ul

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
+import DownCarat from "./DownCarat";
 
 const NavbarMenuMobileButton = ({ menuItem, isOpenMenu }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -26,17 +27,7 @@ const NavbarMenuMobileButton = ({ menuItem, isOpenMenu }) => {
         }}
       >
         {menuItem.text}
-        {menuItem.links && (
-          <span
-            className={`
-                  ml-1
-                  transition-transform
-                  duration-200
-                  ${isExpanded ? "text-black rotate-180" : "text-primary_50"}`}
-          >
-            ▼
-          </span>
-        )}
+        {menuItem.links && <DownCarat isExpanded={isExpanded} />}
       </button>
       {menuItem.links && menuItem.links.length > 0 && (
         <ul
