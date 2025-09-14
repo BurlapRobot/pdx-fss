@@ -1,6 +1,6 @@
-import Link from "next/link";
 import PropTypes from "prop-types";
 import DownCarat from "./DownCarat";
+import NavbarMenuItem from "./NavbarMenuItem";
 
 const NavMenu = ({ menu }) => {
   return (
@@ -14,32 +14,19 @@ const NavMenu = ({ menu }) => {
           {menuItem.links && menuItem.links.length > 0 && (
             <ul
               className="hidden
-                  group-hover:block
-                  absolute
-                  bg-neutral_20
-                  border-primary_5
-                  w-[241px]
-                  shadow-lg
-                  z-50
-                  list-none
-                  m-0
-                  p-0"
+                group-hover:block
+                absolute
+                bg-neutral_20
+                border-primary_5
+                w-[241px]
+                shadow-lg
+                z-50
+                list-none
+                m-0
+                p-0"
             >
               {menuItem.links.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.url}
-                    className={`
-                        text-neutral_95
-                        block
-                        hover:bg- hover:text-primary_50
-                        text-left
-                        px-4
-                        py-2`}
-                  >
-                    {link.text}
-                  </Link>
-                </li>
+                <NavbarMenuItem link={link} key={index} />
               ))}
             </ul>
           )}

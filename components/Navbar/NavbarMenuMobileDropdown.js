@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import DownCarat from "./DownCarat";
+import NavbarMenuItem from "./NavbarMenuItem";
 
-const NavbarMenuMobileButton = ({ menuItem, isOpenMenu }) => {
+const NavbarMenuMobileDropdown = ({ menuItem, isOpenMenu }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const pathname = usePathname();
 
@@ -32,33 +32,20 @@ const NavbarMenuMobileButton = ({ menuItem, isOpenMenu }) => {
       {menuItem.links && menuItem.links.length > 0 && (
         <ul
           className={`
-                  bg-neutral_20
-                  border-primary_5
-                  w-full
-                  shadow-lg
-                  z-50
-                  list-none
-                  m-0
-                  p-0
-                  transition-all
-                  duration-300
-                  ${isExpanded ? "h-[calc(100%-44px)]" : "h-0 hidden"}`}
+            bg-neutral_20
+            border-primary_5
+            w-full
+            shadow-lg
+            z-50
+            list-none
+            m-0
+            p-0
+            transition-all
+            duration-300
+            ${isExpanded ? "h-[calc(100%-44px)]" : "h-0 hidden"}`}
         >
           {menuItem.links.map((link, index) => (
-            <li key={index}>
-              <Link
-                href={link.url}
-                className={`
-                        text-neutral_95
-                        block
-                        hover:bg- hover:text-primary_50
-                        text-left
-                        px-4
-                        py-2`}
-              >
-                {link.text}
-              </Link>
-            </li>
+            <NavbarMenuItem link={link} key={index} />
           ))}
         </ul>
       )}
@@ -66,7 +53,7 @@ const NavbarMenuMobileButton = ({ menuItem, isOpenMenu }) => {
   );
 };
 
-NavbarMenuMobileButton.propTypes = {
+NavbarMenuMobileDropdown.propTypes = {
   menuItem: PropTypes.shape({
     text: PropTypes.string,
     links: PropTypes.arrayOf(
@@ -79,4 +66,4 @@ NavbarMenuMobileButton.propTypes = {
   isOpenMenu: PropTypes.bool,
 };
 
-export default NavbarMenuMobileButton;
+export default NavbarMenuMobileDropdown;

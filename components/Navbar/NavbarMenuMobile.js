@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import NavbarMenuMobileButton from "./NavbarMenuMobileButton";
+import NavbarMenuMobileDropdown from "./NavbarMenuMobileDropdown";
 
 const NavMenuMobile = ({ menu, isOpenMenu }) => {
   return (
@@ -20,7 +20,7 @@ const NavMenuMobile = ({ menu, isOpenMenu }) => {
             ${isOpenMenu ? "h-full" : "h-0"}`}
     >
       {menu?.map((menuItem, index) => (
-        <NavbarMenuMobileButton
+        <NavbarMenuMobileDropdown
           key={index}
           menuItem={menuItem}
           isOpenMenu={isOpenMenu}
