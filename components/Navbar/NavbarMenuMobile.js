@@ -5,19 +5,19 @@ const NavMenuMobile = ({ menu, isOpenMenu }) => {
   return (
     <ul
       className={`
-            flex
-            flex-col
-            right-0
-            w-full
-            top-[60px]
-            z-50
-            bg-black
-            absolute
-            text-lg
-            text-neutral_95
-            transition-all
-            duration-300
-            ${isOpenMenu ? "h-full" : "h-0"}`}
+        flex
+        flex-col
+        right-0
+        w-full
+        top-[60px]
+        z-50
+        bg-black
+        absolute
+        text-lg
+        text-neutral_95
+        transition-all
+        duration-300
+        ${isOpenMenu ? "h-full" : "h-0"}`}
     >
       {menu?.map((menuItem, index) => (
         <NavbarMenuMobileDropdown
