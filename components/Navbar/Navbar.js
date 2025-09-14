@@ -22,10 +22,8 @@ const Navbar = ({ title, subtitle, menu }) => {
           bg-neutral_0
           text-primary_50
           px-2 
-          h-[60px]
-          md:px-4 
-          md:h-auto
-          md:py-2
+          py-2
+          md:px-4
           flex 
           items-center
           justify-between
