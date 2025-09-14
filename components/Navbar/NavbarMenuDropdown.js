@@ -1,5 +1,6 @@
 import DownCarat from "./DownCarat";
 import NavbarMenuItem from "./NavbarMenuItem";
+import PropTypes from "prop-types";
 
 const NavbarMenuDropdown = ({ menuItem }) => {
   return (
