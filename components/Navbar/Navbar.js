@@ -31,7 +31,11 @@ const Navbar = ({ title, subtitle, menu }) => {
           justify-between
           w-full
           max-w-[1728px]
-          mx-auto"
+          mx-auto
+          border-t
+          large:border-t-2
+          border-primary_50
+      "
     >
       <div className="flex flex-row items-center space-x-2">
         <Link href="/">
