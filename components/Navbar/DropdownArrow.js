@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const DownCarat = ({ isExpanded }) => {
+const DropdownArrow = ({ isExpanded }) => {
   const caratStyles = isExpanded
     ? "fill-black stroke-black"
     : "group-hover:fill-black group-hover:stroke-black";
@@ -8,13 +8,9 @@ const DownCarat = ({ isExpanded }) => {
   return (
     <span
       className={`
-        flex
-        h-[24px]
-        w-[16px]
-        ml-1
+        flex h-[24px] w-[16px] ml-1
         ${isExpanded ? "rotate-180" : "group-hover:rotate-180"}
-        duration-200
-        transition-transform`}
+        duration-200 transition-transform`}
     >
       <svg
         viewBox="0 0 100 50"
@@ -41,8 +37,8 @@ const DownCarat = ({ isExpanded }) => {
   );
 };
 
-DownCarat.propTypes = {
+DropdownArrow.propTypes = {
   isExpanded: PropTypes.bool,
 };
 
-export default DownCarat;
+export default DropdownArrow;
