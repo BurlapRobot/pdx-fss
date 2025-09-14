@@ -24,8 +24,13 @@ const NavMenu = ({ menu }) => {
         }}
       >
         <Image
-          src="/images/FSS-assets/icon-menu.svg"
-          alt="icon menu"
+          src={
+            isOpenMenu
+              ? "/images/FSS-assets/icon-x.svg"
+              : "/images/FSS-assets/icon-menu.svg"
+          }
+          className="invert brightness-0"
+          alt="icon x"
           height={16}
           width={20}
         />
