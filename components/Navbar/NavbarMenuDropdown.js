@@ -3,7 +3,7 @@ import NavbarMenuItem from "./NavbarMenuItem";
 
 const NavbarMenuDropdown = ({ menuItem }) => {
   return (
-    <li key={index} className="group relative">
+    <li className="group relative">
       <button className="flex items-center px-4 py-2 hover:bg-primary_50 hover:text-neutral_0">
         {menuItem.text}
         {menuItem.links && <DownCarat />}
