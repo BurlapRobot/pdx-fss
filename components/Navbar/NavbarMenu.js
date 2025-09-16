@@ -6,7 +6,7 @@ import NavbarMenuMobileDropdown from "./NavbarMenuMobileDropdown";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-const NavMenu = ({ menu }) => {
+const NavMenu = ({ menu, navbarPosition }) => {
   const isMobile = useIsMobile();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const pathname = usePathname();
@@ -36,10 +36,13 @@ const NavMenu = ({ menu }) => {
         />
       </button>
       <ul
-        className={`flex flex-col right-0 w-full top-[60px] 
+        className={`flex flex-col right-0 w-full
           z-50 bg-black absolute text-lg text-neutral_95 
-          transition-all duration-300
-          ${isOpenMenu ? "h-full" : "h-0"}`}
+          transition-all duration-300`}
+        style={{
+          top: `${navbarPosition}px`,
+          height: `${isOpenMenu ? "100%" : "0"}`,
+        }}
       >
         {menu?.map((menuItem, index) => (
           <NavbarMenuMobileDropdown
@@ -71,6 +74,7 @@ NavMenu.propTypes = {
       ),
     })
   ),
+  navbarPosition: PropTypes.number,
 };
 
 export default NavMenu;

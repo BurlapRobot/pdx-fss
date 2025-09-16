@@ -2,48 +2,68 @@ import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import NavMenu from "./NavbarMenu";
+import { useEffect, useRef, useState } from "react";
 
-const Navbar = ({ title, subtitle, menu }) => (
-  <nav
-    className="bg-neutral_0 text-primary_50
-      px-2 h-[60px] md:px-4 md:h-auto md:py-2 w-full max-w-[1728px] mx-auto
+const Navbar = ({ title, subtitle, menu }) => {
+  const [navbarPosition, setNavbarPosition] = useState(null);
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+    if (!navbarRef.current && !isMobile) return;
+    const handleResize = (entries) => {
+      setNavbarPosition(entries[0]?.target.clientHeight);
+    };
+    const observer = new ResizeObserver(handleResize);
+    observer.observe(navbarRef.current);
+
+    setNavbarPosition(navbarRef.current.clientHeight);
+
+    return () => observer.disconnect();
+  }, [navbarRef]);
+
+  return (
+    <nav
+      className="bg-neutral_0 text-primary_50
+      px-2 py-2 md:px-4 w-full max-w-[1728px] mx-auto
       flex items-center justify-between"
-  >
-    <div className="flex flex-row items-center space-x-2">
-      <Link href="/">
-        <Image
-          src="/images/FSS-assets/FSS-Logo.svg"
-          className="w-[35px] h-[35px] md:w-[64px] md:h-[64px]"
-          alt="FSS Logo"
-          width={64}
-          height={64}
-        />
-      </Link>
-      <div className="flex flex-col">
-        <span className="text-sm font-semibold">
-          <Link href="/">{title}</Link>
-        </span>
-        <span className="text-sm font-normal">
-          <Link href="/">{subtitle}</Link>
-        </span>
+      ref={navbarRef}
+    >
+      <div className="flex flex-row items-center space-x-2">
+        <Link href="/">
+          <Image
+            src="/images/FSS-assets/FSS-Logo.svg"
+            className="w-[35px] h-[35px] md:w-[64px] md:h-[64px]"
+            alt="FSS Logo"
+            width={64}
+            height={64}
+          />
+        </Link>
+        <div className="flex flex-col">
+          <span className="text-sm font-semibold">
+            <Link href="/">{title}</Link>
+          </span>
+          <span className="text-sm font-normal">
+            <Link href="/">{subtitle}</Link>
+          </span>
+        </div>
       </div>
-    </div>
-    <div
-      className="
+      <div
+        className="
         flex flex-row md:flex-col items-center md:items-end 
         space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
-    >
-      <button
-        className="
+      >
+        <button
+          className="
           hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
           bg-primary_50 text-black text-sm text-center font-semibold"
-      >
-        Donate
-      </button>
-      <NavMenu menu={menu} />
-    </div>
-  </nav>
-);
+        >
+          Donate
+        </button>
+        <NavMenu menu={menu} navbarPosition={navbarPosition} />
+      </div>
+    </nav>
+  );
+};
 
 Navbar.propTypes = {
   logo: PropTypes.string,
