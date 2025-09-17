@@ -8,7 +8,7 @@ const HeroSection = ({
   buttonUrl,
 }) => (
   <section
-    className="relative  min-h-96 sm:h-96
+    className="relative  min-h-96 
      aspect-[2.14/1] max-w-[1728px] flex
       flex-col items-center justify-center bg-cover bg-center w-full mx-auto"
   >
