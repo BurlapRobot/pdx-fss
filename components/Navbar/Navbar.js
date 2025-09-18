@@ -22,18 +22,11 @@ const Navbar = ({ title, subtitle, menu }) => {
   }, [navbarRef]);
 
   return (
-    <div
-      className="
-        w-full
-        border-t 
-        border-primary_50
-        large:border-t-2
-      "
-    >
+    <div className="w-full border-t border-primary_50 large:border-t-2">
       <nav
         className="bg-neutral_0 text-primary_50
-      px-2 py-2 md:px-4 w-full max-w-[1728px] mx-auto
-      flex items-center justify-between"
+          px-2 py-2 md:px-4 w-full max-w-[1728px] mx-auto
+          flex items-center justify-between"
         ref={navbarRef}
       >
         <div className="flex flex-row items-center space-x-2">
@@ -57,13 +50,13 @@ const Navbar = ({ title, subtitle, menu }) => {
         </div>
         <div
           className="
-          flex flex-row md:flex-col items-center md:items-end 
-          space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
+            flex flex-row md:flex-col items-center md:items-end 
+            space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
         >
           <button
             className="
-            hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
-            bg-primary_50 text-black text-sm text-center font-semibold"
+              hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
+              bg-primary_50 text-black text-sm text-center font-semibold"
           >
             Donate
           </button>
