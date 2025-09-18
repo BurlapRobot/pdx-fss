@@ -26,6 +26,9 @@ module.exports = {
         primary_80: "#FFEBA3",
         primary_95: "#FFFCF0",
       },
+      screens: {
+        'large': '1160px',
+      },
     },
   },
   plugins: [typography],
