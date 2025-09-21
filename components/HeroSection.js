@@ -16,7 +16,7 @@ const HeroSection = ({
       className="w-full h-60 sm:absolute sm:inset-0 sm:h-full bg-cover bg-center"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
-      <div className="hidden sm:block absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="hidden sm:block absolute inset-0 bg-black/60 "></div>
     </div>
 
     <div className="bg-black sm:bg-transparent relative z-10 text-left max-w-2xl px-2 sm:px-6 py-3">
