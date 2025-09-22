@@ -1,44 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
-import { useIsMobile } from "../../hooks/useIsMobile";
-import { useEffect, useState } from "react";
-import NavMenuMobile from "./NavbarMenuMobile";
 import NavMenu from "./NavbarMenu";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = ({ title, subtitle, menu }) => {
-  const isMobile = useIsMobile();
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const pathname = usePathname();
+  const [navbarPosition, setNavbarPosition] = useState(null);
+  const navbarRef = useRef(null);
 
   useEffect(() => {
-    setIsOpenMenu(false);
-  }, [pathname]);
+    if (!navbarRef.current && !isMobile) return;
+    const handleResize = (entries) => {
+      setNavbarPosition(entries[0]?.target.clientHeight);
+    };
+    const observer = new ResizeObserver(handleResize);
+    observer.observe(navbarRef.current);
+
+    setNavbarPosition(navbarRef.current.clientHeight);
+
+    return () => observer.disconnect();
+  }, [navbarRef]);
 
   return (
-    <div
-      className="
-        w-full
-        border-t 
-        border-primary_50
-        large:border-t-2
-      "
-    >
+    <div className="w-full border-t border-primary_50 large:border-t-2">
       <nav
-        className="
-          bg-neutral_0
-          text-primary_50
-          px-2 
-          py-2
-          md:px-4
-          flex 
-          items-center
-          justify-between
-          w-full
-          max-w-[1728px]
-          mx-auto
-        "
+        className="bg-neutral_0 text-primary_50
+          px-2 py-2 md:px-4 w-full max-w-[1728px] mx-auto
+          flex items-center justify-between"
+        ref={navbarRef}
       >
         <div className="flex flex-row items-center space-x-2">
           <Link href="/">
@@ -61,36 +50,17 @@ const Navbar = ({ title, subtitle, menu }) => {
         </div>
         <div
           className="
-          flex flex-row md:flex-col items-center md:items-end 
-          space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
+            flex flex-row md:flex-col items-center md:items-end 
+            space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
         >
           <button
             className="
-            hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
-            bg-primary_50 text-black text-sm text-center font-semibold"
+              hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
+              bg-primary_50 text-black text-sm text-center font-semibold"
           >
             Donate
           </button>
-          {isMobile ? (
-            <>
-              <button
-                className="w-8 h-8 grid place-items-center ml-[10px]"
-                onClick={() => {
-                  setIsOpenMenu((prev) => !prev);
-                }}
-              >
-                <Image
-                  src="/images/FSS-assets/icon-menu.svg"
-                  alt="icon menu"
-                  height={16}
-                  width={20}
-                />
-              </button>
-              <NavMenuMobile menu={menu} isOpenMenu={isOpenMenu} />
-            </>
-          ) : (
-            <NavMenu menu={menu} />
-          )}
+          <NavMenu menu={menu} navbarPosition={navbarPosition} />
         </div>
       </nav>
     </div>
