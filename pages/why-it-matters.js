@@ -1,12 +1,16 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
-import { getCommonPageProps } from '../utils/getPageProps';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import ReactMarkdown from "react-markdown";
+import { getCommonPageProps } from "../utils/getPageProps";
+import Head from "next/head";
 
-export default function WhyItMatters({ content }) {
+export default function WhyItMatters({ title, content }) {
   return (
     <div className="min-h-screen flex flex-col">
+      <Head>
+        <title>{title}</title>
+      </Head>
       <main className="flex-1 bg-white">
         <div className="max-w-4xl mx-auto py-8 px-4">
           <div className="prose prose-lg mx-auto">
@@ -19,8 +23,8 @@ export default function WhyItMatters({ content }) {
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'content', 'why-it-matters.md');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const filePath = path.join(process.cwd(), "content", "why-it-matters.md");
+  const fileContent = fs.readFileSync(filePath, "utf8");
   const { data } = matter(fileContent);
 
   const commonProps = await getCommonPageProps();
@@ -32,4 +36,3 @@ export async function getStaticProps() {
     },
   };
 }
-
