@@ -1,6 +1,7 @@
 ---
 title: Donate Page
----
-# Donate
+content: >-
+  # Donate
 
-Donate page stub
+  Donate page stub
+---

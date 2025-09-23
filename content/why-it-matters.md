@@ -1,6 +1,6 @@
 ---
 title: Why It Matters
-content: |-
+content: >-
   # Why It Matters
 
   stub for why it matters

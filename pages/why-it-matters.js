@@ -1,36 +1,18 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
 import { getCommonPageProps } from "../utils/getPageProps";
-import Head from "next/head";
+import ContentPageLayout from "../components/ContentPageLayout";
+import getStaticPropsData from "../utils/getStaticPropsHelper";
 
 export default function WhyItMatters({ title, content }) {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <main className="flex-1 bg-white">
-        <div className="max-w-4xl mx-auto py-8 px-4">
-          <div className="prose prose-lg mx-auto">
-            <ReactMarkdown>{content}</ReactMarkdown>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
+  return <ContentPageLayout title={title} content={content} />;
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "content", "why-it-matters.md");
-  const fileContent = fs.readFileSync(filePath, "utf8");
-  const { data } = matter(fileContent);
-
+  const data = getStaticPropsData("why-it-matters.md");
   const commonProps = await getCommonPageProps();
 
   return {
     props: {
+      title: data.title,
       content: data.content,
       ...commonProps,
     },

@@ -1,4 +1,7 @@
 ---
 title: Contact Us
-content: Contact us stub
+content: >-
+  # Contact Us
+
+  Contact us stub
 ---
