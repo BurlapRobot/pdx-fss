@@ -34,6 +34,10 @@ menu:
         url: /get-support
       - text: Peer Mentorship
         url: /peer-mentorship
+---
+
+<!--TODO: Re-implement News section to navbar once it's flushed out-->
+<!--
   - text: News
     url: /news
----
+-->
