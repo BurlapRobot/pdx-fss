@@ -29,5 +29,8 @@ content: >-
   Dive deeper into safety science via this insightful [video by safety expert and author of There are No Accidents, Jessie Singer](https://vimeo.com/1090254915)
 
 
+  ![](/images/uploads/headshot-final-web.jpg)
+
+
   [](https://vimeo.com/1090254915)
 ---
