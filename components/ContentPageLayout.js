@@ -1,5 +1,6 @@
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 export default function ContentPageLayout({ title, content }) {
   return (
@@ -12,7 +13,9 @@ export default function ContentPageLayout({ title, content }) {
         <div className="max-w-4xl mx-auto py-8 px-4 space-y-12">
           <section>
             <div className="mb-6 text-lg prose prose-lg">
-              <ReactMarkdown>{content}</ReactMarkdown>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {content}
+              </ReactMarkdown>
             </div>
           </section>
         </div>
