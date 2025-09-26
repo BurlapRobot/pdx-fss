@@ -15,6 +15,13 @@ const NavMenu = ({ menu, navbarPosition }) => {
     setIsOpenMenu(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpenMenu ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpenMenu]);
+
   return isMobile ? (
     <>
       <button
@@ -37,6 +44,7 @@ const NavMenu = ({ menu, navbarPosition }) => {
       </button>
       <ul
         className={`flex flex-col right-0 w-full
+          divide-y divide-neutral_20 border-t border-neutral_20
           z-50 bg-black absolute text-lg text-neutral_95 
           transition-all duration-300`}
         style={{
@@ -49,6 +57,7 @@ const NavMenu = ({ menu, navbarPosition }) => {
             key={index}
             menuItem={menuItem}
             isOpenMenu={isOpenMenu}
+            lastItem={index === menu.length - 1}
           />
         ))}
       </ul>
