@@ -2,33 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import NavMenu from "./NavbarMenu";
-import { useEffect, useRef, useState } from "react";
 import StyledButton from "../shared/StyledButton";
 
-const Navbar = ({ title, subtitle, menu }) => {
-  const [navbarPosition, setNavbarPosition] = useState(null);
-  const navbarRef = useRef(null);
-
-  useEffect(() => {
-    if (!navbarRef.current && !isMobile) return;
-    const handleResize = (entries) => {
-      setNavbarPosition(entries[0]?.target.clientHeight);
-    };
-    const observer = new ResizeObserver(handleResize);
-    observer.observe(navbarRef.current);
-
-    setNavbarPosition(navbarRef.current.clientHeight);
-
-    return () => observer.disconnect();
-  }, [navbarRef]);
-
+const Navbar = ({ title, subtitle, menu, componentPosition }) => {
   return (
     <div className="w-full border-t border-primary_50 large:border-t-2">
       <nav
         className="bg-neutral_0 text-primary_50
           px-2 py-2 md:px-4 w-full max-w-[1728px] mx-auto
           flex items-center justify-between"
-        ref={navbarRef}
       >
         <div className="flex flex-row items-center space-x-2">
           <Link href="/">
@@ -57,7 +39,7 @@ const Navbar = ({ title, subtitle, menu }) => {
           <StyledButton className="hidden min-[366px]:block leading-4">
             Donate
           </StyledButton>
-          <NavMenu menu={menu} navbarPosition={navbarPosition} />
+          <NavMenu menu={menu} navbarPosition={componentPosition} />
         </div>
       </nav>
     </div>

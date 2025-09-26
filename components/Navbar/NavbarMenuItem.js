@@ -6,7 +6,9 @@ const NavbarMenuItem = ({ link }) => {
     <li>
       <Link
         href={link.url}
-        className="block text-left px-4 py-2 text-neutral_95 hover:bg- hover:text-primary_50"
+        className="block text-left px-4 py-3
+          bg-neutral_20
+          text-neutral_95 hover:bg- hover:text-primary_50"
       >
         {link.text}
       </Link>
