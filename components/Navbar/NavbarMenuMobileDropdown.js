@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import DropdownArrow from "./DropdownArrow";
 import NavbarMenuItem from "./NavbarMenuItem";
 
-const NavbarMenuMobileDropdown = ({ menuItem, isOpenMenu }) => {
+const NavbarMenuMobileDropdown = ({ menuItem, isOpenMenu, lastItem }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const pathname = usePathname();
 
@@ -16,8 +16,9 @@ const NavbarMenuMobileDropdown = ({ menuItem, isOpenMenu }) => {
     <li className={`${isOpenMenu ? "static" : "hidden"}`}>
       <button
         className={`flex items-center
-          px-4 py-2 w-full
-          ${isExpanded ? "bg-primary_50 text-neutral_0" : ""}`}
+          px-4 py-3 w-full
+          ${lastItem === true ? "border-b border-neutral_20" : ""}
+          ${isExpanded ? "bg-primary_35 text-neutral_0" : ""}`}
         onClick={() => {
           setIsExpanded((prev) => !prev);
         }}
@@ -28,10 +29,10 @@ const NavbarMenuMobileDropdown = ({ menuItem, isOpenMenu }) => {
       {menuItem.links && menuItem.links.length > 0 && (
         <ul
           className={`
-            bg-neutral_20 border-primary_5 shadow-lg
+            bg-neutral_20 divide-y divide-primary_5
             w-full m-0 p-0 z-50
             list-none transition-all duration-300
-            ${isExpanded ? "h-[calc(100%-44px)]" : "h-0 hidden"}`}
+            ${isExpanded ? "h-[calc(100%-52px)]" : "h-0 hidden"}`}
         >
           {menuItem.links.map((link, index) => (
             <NavbarMenuItem link={link} key={index} />
