@@ -18,7 +18,7 @@ const NavbarMenuMobileDropdown = ({ menuItem, isOpenMenu, lastItem }) => {
         className={`flex items-center
           px-4 py-3 w-full
           ${lastItem === true ? "border-b border-neutral_20" : ""}
-          ${isExpanded ? "bg-primary_50 text-neutral_0" : ""}`}
+          ${isExpanded ? "bg-primary_35 text-neutral_0" : ""}`}
         onClick={() => {
           setIsExpanded((prev) => !prev);
         }}
