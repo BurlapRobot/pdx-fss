@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import NavMenu from "./NavbarMenu";
+import StyledButton from "../shared/StyledButton";
 
 const Navbar = ({ title, subtitle, menu, componentPosition }) => {
   return (
@@ -35,13 +36,9 @@ const Navbar = ({ title, subtitle, menu, componentPosition }) => {
             flex flex-row md:flex-col items-center md:items-end 
             space-x-2 md:space-x-0 md:space-y-2 pl-[15px] pr-[10px]"
         >
-          <button
-            className="
-              hidden min-[365px]:block leading-4 w-[75px] h-8 md:w-[80px] py-2
-              bg-primary_50 text-black text-sm text-center font-semibold"
-          >
+          <StyledButton className="hidden min-[366px]:block leading-4">
             Donate
-          </button>
+          </StyledButton>
           <NavMenu menu={menu} navbarPosition={componentPosition} />
         </div>
       </nav>

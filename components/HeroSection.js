@@ -1,4 +1,5 @@
 import React from "react";
+import StyledLink from "./shared/StyledLink";
 
 const HeroSection = ({
   title,
@@ -29,12 +30,7 @@ const HeroSection = ({
         ))}
       </h1>
       <p className="text-white mb-4">{subtitle}</p>
-      <a
-        href={buttonUrl}
-        className="bg-primary_50 text-black font-semibold px-2 py-2 rounded shadow block sm:inline text-center text-lg"
-      >
-        {buttonText}
-      </a>
+      <StyledLink href={buttonUrl}>{buttonText}</StyledLink>
     </div>
   </section>
 );
