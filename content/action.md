@@ -10,5 +10,5 @@ content: >-
   \[Link to email sign-up form]
 
 
-  \[Link to donation form]
+  [Donate!](/donate)
 ---
