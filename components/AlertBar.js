@@ -16,7 +16,7 @@ const AlertBar = ({
         {alertText}{" "}
         <a
           href={linkUrl}
-          className={`underline ${linkText.trim() === "" ? "hidden" : ""}`}
+          className={`underline ${linkText?.trim() === "" ? "hidden" : ""}`}
         >
           {linkText}
         </a>
@@ -25,7 +25,7 @@ const AlertBar = ({
         href={buttonUrl}
         className={`ml-4 bg-black text-primary_50 px-2 py-1 
           rounded text-xs hover:bg-gray-800 transition-colors
-          ${buttonText.trim() === "" ? "hidden" : ""}`}
+          ${buttonText?.trim() === "" ? "hidden" : ""}`}
       >
         {buttonText}
       </a>
