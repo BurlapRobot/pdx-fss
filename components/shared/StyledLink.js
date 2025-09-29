@@ -9,9 +9,8 @@ export default function StyledLink({ children, size, ...props }) {
         active:shadow-[-2px_-2px_0px_0px_#BD9400]
         text-center font-semibold
         ${size === "small" ? "text-sm" : "text-lg"}
-        block sm:inline
         py-2 px-4
-        ${props.className}`}
+        ${props.className ?? ""}`}
     >
       {children}
     </Link>

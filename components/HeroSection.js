@@ -30,7 +30,9 @@ const HeroSection = ({
         ))}
       </h1>
       <p className="text-white mb-4">{subtitle}</p>
-      <StyledLink href={buttonUrl}>{buttonText}</StyledLink>
+      <StyledLink className="block sm:inline" href={buttonUrl}>
+        {buttonText}
+      </StyledLink>
     </div>
   </section>
 );

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SOCIAL_LINKS } from "../utils/constants";
-import StyledButton from "./shared/StyledButton";
+import StyledLink from "./shared/StyledLink";
 
 const Footer = () => {
   return (
@@ -59,7 +59,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <StyledButton className="my-3 md:my-0">Donate</StyledButton>
+        <div className="my-3 md:my-0">
+          <StyledLink href="/donate" size="small">
+            Donate
+          </StyledLink>
+        </div>
       </div>
       <div className="text-neutral_100 mt-4 md:mt-8 lg:mt-12 ">
         © 2025 Families for Safe Streets, Portland

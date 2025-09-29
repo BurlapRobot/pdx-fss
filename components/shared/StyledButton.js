@@ -7,7 +7,7 @@ export default function StyledButton({ children, ...props }) {
         active:shadow-[-2px_-2px_0px_0px_#BD9400]
         text-center text-sm font-semibold
         w-16 h-8 md:w-[88px] md:h-9
-        ${props.className}`}
+        ${props.className ?? ""}`}
     >
       {children}
     </button>
