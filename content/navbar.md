@@ -24,8 +24,6 @@ menu:
         url: /action
       - text: Volunteer Opportunities
         url: /volunteer
-      - text: Event Calendar
-        url: /calendar
       - text: Day of Remembrance
         url: /remember
   - text: Services & Support
@@ -35,6 +33,11 @@ menu:
       - text: Peer Mentorship
         url: /peer-mentorship
 ---
+
+<!--TODO: Event Calendar link falls under Get Involved, but are temporarily removed
+  - text: Event Calendar
+    url: /calendar
+-->
 
 <!--TODO: Re-implement News section to navbar once it's flushed out-->
 <!--
