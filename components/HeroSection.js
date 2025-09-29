@@ -29,7 +29,7 @@ const HeroSection = ({
           </React.Fragment>
         ))}
       </h1>
-      <p className="text-white mb-4">{subtitle}</p>
+      <p className="text-2xl text-white mb-6">{subtitle}</p>
       <StyledLink className="block sm:inline" href={buttonUrl}>
         {buttonText}
       </StyledLink>
