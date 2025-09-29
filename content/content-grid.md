@@ -4,7 +4,7 @@ cardData:
     heading: Get Support
     text: No one should endure the physical and emotional trauma of traffic violence
       alone. Resources for those directly impacted by road violence.
-    cta: "[Support Call to Action]"
+    cta: Get Support
     ctaLink: /get-support
   - image: /images/mission.jpg
     heading: "[Mission Hed]"
