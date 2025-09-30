@@ -11,15 +11,15 @@ const ContentCard = ({ image, heading, text, cta, ctaLink }) => {
         height={320}
         className="w-full h-80 object-cover rounded mb-4"
       />
-      <h3 className="font-bold text-lg mb-2">{heading}</h3>
-      <p className="text-sm mb-4 flex-1">{text}</p>
+      <h3 className="font-bold text-3xl mb-2">{heading}</h3>
+      <p className="mb-4 flex-1">{text}</p>
       <div>
-        {cta === "[Donate CTA]" ? (
+        {ctaLink === "/donate" ? (
           <StyledLink href={ctaLink} size="small">
             {cta}
           </StyledLink>
         ) : (
-          <a href={ctaLink} className="text-black py-2 text-sm">
+          <a href={ctaLink} className="text-black py-2">
             {cta}
           </a>
         )}
