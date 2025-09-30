@@ -13,6 +13,7 @@ body {
   line-height: 1.6;
 }
 
+
 /* Enhance prose styling */
 .prose {
   @apply max-w-3xl;
@@ -35,7 +36,8 @@ body {
 }
 
 .prose a {
-  @apply text-blue-600 hover:text-blue-800 underline;
+  @apply  hover:bg-primary_65  transition-colors 
+  duration-200  focus:outline-neutral_65 font-normal text-gray-700;
 }
 
 .prose ul {
