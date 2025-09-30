@@ -15,7 +15,7 @@ const VictimCard = ({
   <Link href={`/victim/${id}`} className="block">
     <div
       className="bg-white overflow-hidden hover:shadow-md 
-        transition-shadow cursor-pointer h-[500px]"
+        transition-shadow cursor-pointer md:h-[500px]"
     >
       <div className="aspect-w-16 aspect-h-12 bg-gray-200">
         {image ? (
