@@ -16,16 +16,16 @@ export default function Victims({ title, intro, victims }) {
 
   const sortedVictims = [...victims].sort((a, b) => {
     switch (sortBy) {
-      case "name":
-        return a.name.localeCompare(b.name);
-      case "date":
-        return new Date(a.date) - new Date(b.date);
-      case "age":
-        return a.age - b.age;
-      case "type":
-        return a.victimType.localeCompare(b.victimType);
-      default:
-        return a.id - b.id; // Default sort by ID (order)
+    case "name":
+      return a.name.localeCompare(b.name);
+    case "date":
+      return new Date(a.date) - new Date(b.date);
+    case "age":
+      return a.age - b.age;
+    case "type":
+      return a.victimType.localeCompare(b.victimType);
+    default:
+      return a.id - b.id; // Default sort by ID (order)
     }
   });
 
@@ -185,12 +185,12 @@ export default function Victims({ title, intro, victims }) {
             {/* End of results indicator */}
             {displayCount >= sortedVictims.length &&
               sortedVictims.length > 0 && (
-                <div className="text-center mt-8 py-4">
-                  <p className="text-gray-500 text-sm">
+              <div className="text-center mt-8 py-4">
+                <p className="text-gray-500 text-sm">
                     Showing all {sortedVictims.length} victims
-                  </p>
-                </div>
-              )}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </main>
