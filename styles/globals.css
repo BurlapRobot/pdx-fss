@@ -13,7 +13,6 @@ body {
   line-height: 1.6;
 }
 
-
 /* Enhance prose styling */
 .prose {
   @apply max-w-3xl;
