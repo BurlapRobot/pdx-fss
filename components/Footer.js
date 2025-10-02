@@ -3,10 +3,11 @@ import Link from "next/link";
 import { SOCIAL_LINKS } from "../utils/constants";
 import StyledLink from "./shared/StyledLink";
 
+// TODO: Who We Are and Leadership links are comment out in case of future implementation
 const FOOTER_LINKS = [
   { name: "About Us", href: "/about-us" },
-  { name: "Who We Are", href: "/about-us" },
-  { name: "Leadership", href: "/about-us" },
+  // { name: "Who We Are", href: "/about-us" },
+  // { name: "Leadership", href: "/about-us" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 
@@ -36,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="my-2 space-y-4 flex flex-col text-white md:ml-8 md:my-0 ">
+          <div className="my-2 space-y-3 flex flex-col text-white md:ml-8 md:my-0 ">
             {FOOTER_LINKS.map((link) => (
               <div key={link.name}>
                 <Link href={link.href}>{link.name}</Link>
