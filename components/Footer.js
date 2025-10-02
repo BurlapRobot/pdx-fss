@@ -3,6 +3,13 @@ import Link from "next/link";
 import { SOCIAL_LINKS } from "../utils/constants";
 import StyledLink from "./shared/StyledLink";
 
+const FOOTER_LINKS = [
+  { name: "About Us", href: "/about-us" },
+  { name: "Who We Are", href: "/about-us" },
+  { name: "Leadership", href: "/about-us" },
+  { name: "Contact Us", href: "/contact-us" },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-neutral_0 text-primary_50 text-xs py-6 md:px-8 px-4 ">
@@ -17,46 +24,24 @@ const Footer = () => {
             </div>
 
             <div className="flex space-x-2 my-4">
-              <Link href={SOCIAL_LINKS.TWITTER} className="hover:underline">
-                <Image
-                  src="/images/FSS-assets/icon-twitter.svg"
-                  alt="twitter button"
-                  width={18}
-                  height={18}
-                />
-              </Link>
-              <Link href={SOCIAL_LINKS.FACEBOOK} className="hover:underline">
-                <Image
-                  src="/images/FSS-assets/icon-facebook.svg"
-                  alt="facebook button"
-                  width={18}
-                  height={18}
-                />
-              </Link>
-              <Link href={SOCIAL_LINKS.INSTAGRAM} className="hover:underline">
-                <Image
-                  src="/images/FSS-assets/icon-instagram.svg"
-                  alt="instagram button"
-                  width={18}
-                  height={18}
-                />
-              </Link>
+              {SOCIAL_LINKS.map((link) => (
+                <Link
+                  href={link.href}
+                  className="hover:underline"
+                  key={link.name}
+                >
+                  <Image src={link.src} alt={link.alt} width={18} height={18} />
+                </Link>
+              ))}
             </div>
           </div>
 
           <div className="my-2 space-y-4 flex flex-col text-white md:ml-8 md:my-0 ">
-            <div>
-              <Link href="/about">About Us</Link>
-            </div>
-            <div>
-              <Link href="/about">Who We Are</Link>
-            </div>
-            <div>
-              <Link href="/about">Leadership</Link>
-            </div>
-            <div>
-              <Link href="/contact-us">Contact Us</Link>
-            </div>
+            {FOOTER_LINKS.map((link) => (
+              <div key={link.name}>
+                <Link href={link.href}>{link.name}</Link>
+              </div>
+            ))}
           </div>
         </div>
         <div className="my-3 md:my-0">
