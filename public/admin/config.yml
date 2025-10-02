@@ -19,87 +19,6 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  # Main Navigation Sections
-  # Collection: Safe Streets Now, Advocacy, Get Involved, Services & Support
-  - name: "safe streets now pages"
-    label: "Safe Streets Now Pages"
-    files:
-      - file: "content/why-it-matters.md"
-        label: "Why It Matters Page"
-        name: "why-it-matters"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
-      - file: "content/our-approach.md"
-        label: "Our Approach Page"
-        name: "our-approach"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
-      - file: "content/dangerous-areas.md"
-        label: "Dangerous Areas Page"
-        name: "dangerous-areas"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"} 
-      - file: "content/victims-content.md"
-        label: "Victims Main Page"
-        name: "victims-content"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "markdown" }
-  - name: "advocacy pages"
-    label: "Advocacy Pages"
-    files:
-      - file: "content/legislation.md"
-        label: "Legislation Page"
-        name: "legislation"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
-      - file: "content/partners.md"
-        label: "Our Partners Page"
-        name: "partners"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {label: "Content", name: "content", widget: "markdown"}
-  - name: "get involved pages"
-    label: "Get Involved Pages"
-    files:
-      - file: "content/action.md"
-        label: "Take Action Page"
-        name: "action"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
-      - file: "content/volunteer.md"
-        label: "Volunteer Opportunities Page"
-        name: "volunteer"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
-      - file: "content/remember.md"
-        label: "Day of Remembrance Page"
-        name: "remember"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
-  - name: "services & support pages"
-    label: "Services & Support Pages"
-    files:
-      - file: "content/get-support.md"
-        label: "Get Support Page"
-        name: "get-support"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
-      - file: "content/peer-mentorship.md"
-        label: "Peer Mentorship Page"
-        name: "peer-mentorship"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
-
   # Sections related to page layout
   # Collection: Page Layout
   - name: "page layout"
@@ -181,6 +100,87 @@ collections:
               - {label: "CTA", name: "cta", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"} 
 
+  # Main Navigation Sections
+  # Collection: Safe Streets Now, Advocacy, Get Involved, Services & Support
+  - name: "safe streets now pages"
+    label: "Safe Streets Now Pages"
+    files:
+      - file: "content/why-it-matters.md"
+        label: "Why It Matters Page"
+        name: "why-it-matters"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
+      - file: "content/our-approach.md"
+        label: "Our Approach Page"
+        name: "our-approach"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
+      - file: "content/dangerous-areas.md"
+        label: "Dangerous Areas Page"
+        name: "dangerous-areas"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"} 
+      - file: "content/victims-content.md"
+        label: "Victims Main Page"
+        name: "victims-content"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "markdown" }
+  - name: "advocacy pages"
+    label: "Advocacy Pages"
+    files:
+      - file: "content/legislation.md"
+        label: "Legislation Page"
+        name: "legislation"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+      - file: "content/partners.md"
+        label: "Our Partners Page"
+        name: "partners"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {label: "Content", name: "content", widget: "markdown"}
+  - name: "get involved pages"
+    label: "Get Involved Pages"
+    files:
+      - file: "content/action.md"
+        label: "Take Action Page"
+        name: "action"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+      - file: "content/volunteer.md"
+        label: "Volunteer Opportunities Page"
+        name: "volunteer"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+      - file: "content/remember.md"
+        label: "Day of Remembrance Page"
+        name: "remember"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+  - name: "services & support pages"
+    label: "Services & Support Pages"
+    files:
+      - file: "content/get-support.md"
+        label: "Get Support Page"
+        name: "get-support"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+      - file: "content/peer-mentorship.md"
+        label: "Peer Mentorship Page"
+        name: "peer-mentorship"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+
   # Sections related to the organization navigable via footer
   # Collection: Organization Pages
   - name: "organization pages"
@@ -198,20 +198,21 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
-      - file: "content/calendar.md"
-        label: "Event Calendar Page"
-        name: "calendar"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
+      # TODO: Re-implementation in the future for Calendar and News pages
+      # - file: "content/calendar.md"
+      #   label: "Event Calendar Page"
+      #   name: "calendar"
+      #   fields:
+      #     - { label: "Title", name: "title", widget: "string" }
+      #     - { label: "Content", name: "content", widget: "markdown" }
       # News Page (NOTE: Should probably be a collection?)
-      - file: "content/news.md"
-        label: "News Page"
-        folder: "content/news"
-        name: "news"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
+      # - file: "content/news.md"
+      #   label: "News Page"
+      #   folder: "content/news"
+      #   name: "news"
+      #   fields:
+      #     - { label: "Title", name: "title", widget: "string" }
+      #     - { label: "Content", name: "content", widget: "markdown" }
 
   # Collection: Victims Page  
   - name: "victims"
