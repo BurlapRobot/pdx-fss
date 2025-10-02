@@ -5,9 +5,9 @@ import StyledLink from "./shared/StyledLink";
 
 // TODO: Who We Are and Leadership links are comment out in case of future implementation
 const FOOTER_LINKS = [
-  { name: "About Us", href: "/about-us" },
-  // { name: "Who We Are", href: "/about-us" },
-  // { name: "Leadership", href: "/about-us" },
+  { name: "About Us", href: "/about" },
+  // { name: "Who We Are", href: "/about" },
+  // { name: "Leadership", href: "/about" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 
