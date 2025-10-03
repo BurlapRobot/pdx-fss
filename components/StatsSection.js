@@ -15,9 +15,7 @@ const StatsSection = ({ image, heading, subheading, text, ctaLink, cta }) => (
       <h2 className="font-bold text-3xl mb-2">{heading}</h2>
       <h3 className="font-semibold text-2xl mb-1">{subheading}</h3>
       <p className="mb-2">{text}</p>
-      <Link href={ctaLink} className="underline">
-        {cta}
-      </Link>
+      <Link href={ctaLink}>{cta}</Link>
     </div>
   </section>
 );

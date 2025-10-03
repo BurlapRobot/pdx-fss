@@ -19,7 +19,7 @@ const ContentCard = ({ image, heading, text, cta, ctaLink }) => {
             {cta}
           </StyledLink>
         ) : (
-          <a href={ctaLink} className="text-black py-2">
+          <a href={ctaLink} className="py-2">
             {cta}
           </a>
         )}

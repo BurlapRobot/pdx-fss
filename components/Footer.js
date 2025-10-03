@@ -44,18 +44,26 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="my-2 space-y-4 flex flex-col text-white md:ml-8 md:my-0 ">
+          <div className="my-2 space-y-4 flex flex-col md:ml-8 md:my-0 ">
             <div>
-              <Link href="/about">About Us</Link>
+              <Link className="footer-link " href="/about">
+                About Us
+              </Link>
             </div>
             <div>
-              <Link href="/about">Who We Are</Link>
+              <Link className="footer-link" href="/about">
+                Who We Are
+              </Link>
             </div>
             <div>
-              <Link href="/about">Leadership</Link>
+              <Link className="footer-link" href="/about">
+                Leadership
+              </Link>
             </div>
             <div>
-              <Link href="/contact-us">Contact Us</Link>
+              <Link className="footer-link" href="/contact-us">
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>

@@ -9,8 +9,10 @@ export default function Home({ heroSection, statsSection, contentGrid }) {
   return (
     <div className="min-h-screen flex flex-col">
       <HeroSection {...heroSection} />
-      <StatsSection {...statsSection} />
-      <ContentGrid {...contentGrid} />
+      <div className="default-link">
+        <StatsSection {...statsSection} />
+        <ContentGrid {...contentGrid} />
+      </div>
     </div>
   );
 }
@@ -28,7 +30,11 @@ export async function getStaticProps() {
   const statsContent = fs.readFileSync(statsPath, "utf8");
   const { data: statsData } = matter(statsContent);
 
-  const contentGridPath = path.join(process.cwd(), "content", "content-grid.md");
+  const contentGridPath = path.join(
+    process.cwd(),
+    "content",
+    "content-grid.md",
+  );
   const contentGridContent = fs.readFileSync(contentGridPath, "utf8");
   const { data: contentGridData } = matter(contentGridContent);
 

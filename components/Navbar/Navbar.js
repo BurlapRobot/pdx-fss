@@ -16,7 +16,7 @@ const Navbar = ({ title, subtitle, menu, componentPosition }) => {
           <Link href="/">
             <Image
               src="/images/FSS-assets/FSS-Logo.svg"
-              className="w-[35px] h-[35px] md:w-[64px] md:h-[64px]"
+              className="w-[35px] h-[35px] md:w-[64px] md:h-[64px] "
               alt="FSS Logo"
               width={64}
               height={64}
@@ -60,9 +60,9 @@ Navbar.propTypes = {
         PropTypes.shape({
           text: PropTypes.string,
           url: PropTypes.string,
-        })
+        }),
       ),
-    })
+    }),
   ),
 };
 
