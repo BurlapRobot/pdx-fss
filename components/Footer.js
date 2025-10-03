@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="my-2 space-y-3 flex flex-col text-white md:ml-8 md:my-0 ">
             {FOOTER_LINKS.map((link) => (
               <div key={link.name}>
-                <Link href={link.href}>{link.name}</Link>
+                <Link className="footer-link" href={link.href}>{link.name}</Link>
               </div>
             ))}
           </div>

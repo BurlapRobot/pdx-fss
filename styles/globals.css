@@ -13,6 +13,16 @@ body {
   line-height: 1.6;
 }
 
+/* Style all anchors within the Layout content wrapper */
+.default-link a {
+  @apply hover:bg-primary_65  transition-colors 
+  duration-200  focus:outline-neutral_65 font-normal text-neutral_0 underline;
+}
+.footer-link {
+  @apply hover:text-primary_65  transition-colors 
+  duration-200  focus:outline-neutral_65 font-normal text-white hover:underline;
+}
+
 /* Enhance prose styling */
 .prose {
   @apply max-w-3xl;
@@ -35,7 +45,8 @@ body {
 }
 
 .prose a {
-  @apply text-blue-600 hover:text-blue-800 underline;
+  @apply hover:bg-primary_65  transition-colors 
+  duration-200  focus:outline-neutral_65 font-normal text-gray-700;
 }
 
 .prose ul {

@@ -20,7 +20,7 @@ export default function Layout({ children, navbar, alertBar }) {
         <AlertBar {...alertBar} />
         <Navbar {...navbar} componentPosition={componentPosition} />
       </div>
-      {children}
+      <div className="default-link">{children}</div>
       <NewsletterSignup />
       <Footer />
     </div>
