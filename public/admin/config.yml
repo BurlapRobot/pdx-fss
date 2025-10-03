@@ -260,3 +260,13 @@ collections:
           widget: "markdown",
           required: true,
         }
+
+  - name: "test page"
+    label: "Test Page"
+    files:
+      - file: "content/test.md"
+        label: "Test"
+        name: "test"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
