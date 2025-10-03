@@ -12,7 +12,7 @@ const VictimCard = ({
   time,
   description,
 }) => (
-  <Link href={`/victim/${id}`} className="block">
+  <Link href={`/victim/${id}`} className="block !no-underline">
     <div
       className="bg-white overflow-hidden hover:shadow-md 
         transition-shadow cursor-pointer md:h-[500px]"
