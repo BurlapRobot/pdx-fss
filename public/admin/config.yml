@@ -19,11 +19,12 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  # Collection: Pages
-  - name: "pages"
-    label: "Pages"
+  # Sections related to page layout
+  # Collection: Page Layout
+  - name: "page layout"
+    label: "Page Layout"
     files:
-      # Alert Bar
+      # Alert bar
       - file: "content/alert-bar.md"
         label: "Alert Bar"
         name: "alert-bar"
@@ -35,6 +36,30 @@ collections:
           - { label: "Link URL", name: "linkUrl", widget: "string", required: false }
           - { label: "Button Text", name: "buttonText", widget: "string", required: false }
           - { label: "Button URL", name: "buttonUrl", widget: "string", required: false }
+      # Nav Bar dropdown text and links
+      - file: "content/navbar.md"
+        label: "Navigation Labels and Links"
+        name: "navbar"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Navigation Menu"
+            name: "menu"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - label: "Dropdown Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Link Text", name: "text", widget: "string" }
+                  - { label: "Link URL", name: "url", widget: "string" }
+
+  # Sections related to Home Page
+  # Collection: Home Page
+  - name: "home page"
+    label: "Home Page"
+    files:
       # Hero Section
       - file: "content/hero-section.md"
         label: "Hero Section"
@@ -73,16 +98,16 @@ collections:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Text", name: "text", widget: "string"}
               - {label: "CTA", name: "cta", widget: "string"}
-              - {label: "CTA Link", name: "ctaLink", widget: "string"}
+              - {label: "CTA Link", name: "ctaLink", widget: "string"} 
+
+  # Main Navigation Sections
+  # Collection: Safe Streets Now, Advocacy, Get Involved, Services & Support
+  - name: "safe streets now pages"
+    label: "Safe Streets Now Pages"
+    files:
       - file: "content/why-it-matters.md"
         label: "Why It Matters Page"
         name: "why-it-matters"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
-      - file: "content/dangerous-areas.md"
-        label: "Dangerous Areas Page"
-        name: "dangerous-areas"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
@@ -92,39 +117,21 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
-      - file: "content/about.md"
-        label: "About Page"
-        name: "about"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
-      - file: "content/contact-us.md"
-        label: "Contact Us Page"
-        name: "contact-us"
+      - file: "content/dangerous-areas.md"
+        label: "Dangerous Areas Page"
+        name: "dangerous-areas"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
-      # Nav Bar dropdown text and links
-      - file: "content/navbar.md"
-        label: "Navigation Labels and Links"
-        name: "navbar"
+          - {label: "Content", name: "content", widget: "markdown"} 
+      - file: "content/victims-content.md"
+        label: "Victims Main Page"
+        name: "victims-content"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - label: "Navigation Menu"
-            name: "menu"
-            widget: "list"
-            fields:
-              - { label: "Text", name: "text", widget: "string" }
-              - label: "Dropdown Links"
-                name: "links"
-                widget: "list"
-                fields:
-                  - { label: "Link Text", name: "text", widget: "string" }
-                  - { label: "Link URL", name: "url", widget: "string" }
-      # Safe Street Now Tab
-      ### TODO: Will hold 'why it matters', 'dangerous areas', 'our approach', 'victims'
-      # Advocacy Tab
+          - { label: "Intro", name: "intro", widget: "markdown" }
+  - name: "advocacy pages"
+    label: "Advocacy Pages"
+    files:
       - file: "content/legislation.md"
         label: "Legislation Page"
         name: "legislation"
@@ -137,7 +144,9 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {label: "Content", name: "content", widget: "markdown"}
-      # Get Involved Tab
+  - name: "get involved pages"
+    label: "Get Involved Pages"
+    files:
       - file: "content/action.md"
         label: "Take Action Page"
         name: "action"
@@ -150,19 +159,15 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
-      - file: "content/calendar.md"
-        label: "Event Calendar Page"
-        name: "calendar"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/remember.md"
         label: "Day of Remembrance Page"
         name: "remember"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
-      # Services & Support Tab
+  - name: "services & support pages"
+    label: "Services & Support Pages"
+    files:
       - file: "content/get-support.md"
         label: "Get Support Page"
         name: "get-support"
@@ -175,20 +180,39 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
-      # News Page (NOTE: Should probably be a collection?)
-      - file: "content/news.md"
-        label: "News Page"
-        folder: "content/news"
-        name: "news"
+
+  # Sections related to the organization navigable via footer
+  # Collection: Organization Pages
+  - name: "organization pages"
+    label: "Organization Pages"
+    files:
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
-      - file: "content/victims-content.md"
-        label: "Victims Main Page"
-        name: "victims-content"
+      - file: "content/contact-us.md"
+        label: "Contact Us Page"
+        name: "contact-us"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "markdown" }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
+      # TODO: Re-implementation in the future for Calendar and News pages
+      # - file: "content/calendar.md"
+      #   label: "Event Calendar Page"
+      #   name: "calendar"
+      #   fields:
+      #     - { label: "Title", name: "title", widget: "string" }
+      #     - { label: "Content", name: "content", widget: "markdown" }
+      # News Page (NOTE: Should probably be a collection?)
+      # - file: "content/news.md"
+      #   label: "News Page"
+      #   folder: "content/news"
+      #   name: "news"
+      #   fields:
+      #     - { label: "Title", name: "title", widget: "string" }
+      #     - { label: "Content", name: "content", widget: "markdown" }
 
   # Collection: Victims Page  
   - name: "victims"
