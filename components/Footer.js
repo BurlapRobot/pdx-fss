@@ -37,27 +37,12 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="my-2 space-y-4 flex flex-col md:ml-8 md:my-0 ">
-            <div>
-              <Link className="footer-link " href="/about">
-                About Us
-              </Link>
-            </div>
-            <div>
-              <Link className="footer-link" href="/about">
-                Who We Are
-              </Link>
-            </div>
-            <div>
-              <Link className="footer-link" href="/about">
-                Leadership
-              </Link>
-            </div>
-            <div>
-              <Link className="footer-link" href="/contact-us">
-                Contact Us
-              </Link>
-            </div>
+          <div className="my-2 space-y-3 flex flex-col text-white md:ml-8 md:my-0 ">
+            {FOOTER_LINKS.map((link) => (
+              <div key={link.name}>
+                <Link className="footer-link" href={link.href}>{link.name}</Link>
+              </div>
+            ))}
           </div>
         </div>
         <div className="my-3 md:my-0">
