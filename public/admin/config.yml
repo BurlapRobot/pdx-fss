@@ -213,6 +213,12 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
+      - file: "content/email-signup.md"
+        label: "Email Signup Page"
+        name: "email-signup"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
       # TODO: Re-implementation in the future for Calendar and News pages
       # - file: "content/calendar.md"
       #   label: "Event Calendar Page"

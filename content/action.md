@@ -7,7 +7,7 @@ content: >-
   We encourage those who have been directly affected by road-traffic violence and allies to our work to get involved.
 
 
-  \[Link to email sign-up form]
+  [Link to email sign-up form](/email-signup)
 
 
   [Donate!](/donate)
