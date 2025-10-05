@@ -18,6 +18,8 @@ local_backend: true
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
+site_url: https://pdxfamiliesforsafestreets.org/
+
 collections:
   # Sections related to page layout
   # Collection: Page Layout
@@ -98,7 +100,7 @@ collections:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Text", name: "text", widget: "string"}
               - {label: "CTA", name: "cta", widget: "string"}
-              - {label: "CTA Link", name: "ctaLink", widget: "string"} 
+              - {label: "CTA Link", name: "ctaLink", widget: "string"}
 
   # Main Navigation Sections
   # Collection: Safe Streets Now, Advocacy, Get Involved, Services & Support
@@ -108,24 +110,28 @@ collections:
       - file: "content/why-it-matters.md"
         label: "Why It Matters Page"
         name: "why-it-matters"
+        preview_path: "why-it-matters"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
       - file: "content/our-approach.md"
         label: "Our Approach Page"
         name: "our-approach"
+        preview_path: "our-approach"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
       - file: "content/dangerous-areas.md"
         label: "Dangerous Areas Page"
         name: "dangerous-areas"
+        preview_path: "dangerous-areas"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"} 
+          - {label: "Content", name: "content", widget: "markdown"}
       - file: "content/victims-content.md"
         label: "Victims Main Page"
         name: "victims-content"
+        preview_path: "victims"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
@@ -135,12 +141,14 @@ collections:
       - file: "content/legislation.md"
         label: "Legislation Page"
         name: "legislation"
+        preview_path: "legislation"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/partners.md"
         label: "Our Partners Page"
         name: "partners"
+        preview_path: "partners"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {label: "Content", name: "content", widget: "markdown"}
@@ -150,18 +158,21 @@ collections:
       - file: "content/action.md"
         label: "Take Action Page"
         name: "action"
+        preview_path: "action"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/volunteer.md"
         label: "Volunteer Opportunities Page"
         name: "volunteer"
+        preview_path: "volunteer"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/remember.md"
         label: "Day of Remembrance Page"
         name: "remember"
+        preview_path: "remember"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
@@ -171,12 +182,14 @@ collections:
       - file: "content/get-support.md"
         label: "Get Support Page"
         name: "get-support"
+        preview_path: "get-support"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/peer-mentorship.md"
         label: "Peer Mentorship Page"
         name: "peer-mentorship"
+        preview_path: "peer-mentorship"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
@@ -189,12 +202,14 @@ collections:
       - file: "content/about.md"
         label: "About Page"
         name: "about"
+        preview_path: "about"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/contact-us.md"
         label: "Contact Us Page"
         name: "contact-us"
+        preview_path: "contact-us"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
@@ -214,12 +229,13 @@ collections:
       #     - { label: "Title", name: "title", widget: "string" }
       #     - { label: "Content", name: "content", widget: "markdown" }
 
-  # Collection: Victims Page  
+  # Collection: Victims Page
   - name: "victims"
     label: "Victims"
     folder: "content/victims"
     create: true
     slug: "{{name}}-{{date}}"
+    preview_path: "victims"
     fields:
       - { label: "Name", name: "name", widget: "string", required: true }
       - { label: "Age", name: "age", widget: "number", required: true }
@@ -267,6 +283,7 @@ collections:
       - file: "content/test.md"
         label: "Test"
         name: "test"
+        preview_path: "test"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
