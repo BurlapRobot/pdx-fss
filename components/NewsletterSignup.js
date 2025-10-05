@@ -13,16 +13,6 @@ const NewsletterSignup = () => (
         We anticipate one to two email messages per month.
       </p>
       <form className="flex justify-center">
-        {/* <fieldset className="w-full text-sm">
-          <legend className="mb-2 text-neutral_50 font-semibold">
-            Your Email Address
-          </legend>
-          <input
-            type="email"
-            placeholder="email@email.com"
-            className="px-2 py-1 h-8 md:h-9 border border-gray-300 rounded w-full"
-          />
-        </fieldset> */}
         <StyledLink size='small' href='/email-signup'>Sign Up</StyledLink>
       </form>
     </div>
