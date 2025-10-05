@@ -100,7 +100,7 @@ collections:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Text", name: "text", widget: "string"}
               - {label: "CTA", name: "cta", widget: "string"}
-              - {label: "CTA Link", name: "ctaLink", widget: "string"} 
+              - {label: "CTA Link", name: "ctaLink", widget: "string"}
 
   # Main Navigation Sections
   # Collection: Safe Streets Now, Advocacy, Get Involved, Services & Support
@@ -127,7 +127,7 @@ collections:
         preview_path: "dangerous-areas"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"} 
+          - {label: "Content", name: "content", widget: "markdown"}
       - file: "content/victims-content.md"
         label: "Victims Main Page"
         name: "victims-content"
@@ -229,7 +229,7 @@ collections:
       #     - { label: "Title", name: "title", widget: "string" }
       #     - { label: "Content", name: "content", widget: "markdown" }
 
-  # Collection: Victims Page  
+  # Collection: Victims Page
   - name: "victims"
     label: "Victims"
     folder: "content/victims"
@@ -283,6 +283,7 @@ collections:
       - file: "content/test.md"
         label: "Test"
         name: "test"
+        preview_path: "test"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
