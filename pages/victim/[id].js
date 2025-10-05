@@ -44,8 +44,18 @@ export default function VictimDetail({ victim }) {
       <main className="flex-1 bg-white">
         <div className="max-w-6xl mx-auto py-8 px-4">
           {/* Breadcrumb */}
-          <div className="mb-6">
-            <Link href="/victims">Portland Victims Memorial</Link>
+          <div className="mb-6 flex flex-row">
+            <Image
+              src="/images/FSS-assets/icon-caret-down.svg"
+              className="transform rotate-90"
+              alt="icon x"
+              height={21}
+              width={14}
+            />
+
+            <Link href="/victims" className="flex flex-row">
+              Portland Victims Memorial
+            </Link>
           </div>
 
           {/* Victim Profile */}
@@ -70,9 +80,7 @@ export default function VictimDetail({ victim }) {
                 )}
               </div>
               {victim.photoCredit && (
-                <p className=" mt-2">
-                  {victim.photoCredit}
-                </p>
+                <p className=" mt-2">{victim.photoCredit}</p>
               )}
             </div>
 
@@ -85,9 +93,7 @@ export default function VictimDetail({ victim }) {
                 <h3 className="text-nuetral-0">
                   Victim of Unsafe Streets in Portland
                 </h3>
-                <h4 className="mb-3 capitalize">
-                  {victim.victimType}
-                </h4>
+                <h4 className="mb-3 capitalize">{victim.victimType}</h4>
                 <h4>
                   <a href="#" className="">
                     {victim.location}
@@ -98,9 +104,7 @@ export default function VictimDetail({ victim }) {
               </div>
 
               <div className=" max-w-none">
-                <p className=" leading-relaxed mb-4">
-                  {victim.description}
-                </p>
+                <p className=" leading-relaxed mb-4">{victim.description}</p>
               </div>
 
               {/* Action Sections */}
@@ -112,10 +116,7 @@ export default function VictimDetail({ victim }) {
                   <p>
                     Have you or someone you know been harmed by a crash in
                     Portland?{" "}
-                    <a
-                      href="#"
-                      
-                    >
+                    <a href="#">
                       Contact us to tell your story and help make a difference.
                     </a>
                   </p>
@@ -126,10 +127,7 @@ export default function VictimDetail({ victim }) {
                     Nationwide Story Map
                   </h2>
                   <p>
-                    <a
-                      href="#"
-                     
-                    >
+                    <a href="#">
                       Families for Safe Streets maintains a map of crashes
                       across the country.
                     </a>
