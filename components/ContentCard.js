@@ -28,7 +28,7 @@ const ContentCard = ({ image, heading, text, cta, ctaLink }) => {
               {cta}
             </div>
           ) : (
-            <span className="hover:bg-primary_65  transition-colors duration-200 
+            <span className="hover:bg-primary_65 transition-colors duration-200 
             focus:outline-neutral_65 font-normal text-neutral_0 underline py-1"
             >
               {cta}
