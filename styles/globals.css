@@ -18,6 +18,9 @@ body {
   @apply hover:bg-primary_65  transition-colors 
   duration-200  focus:outline-neutral_65 font-normal text-neutral_0 underline;
 }
+.default-link a.no-link-style {
+  @apply hover:bg-transparent no-underline;
+}
 .footer-link {
   @apply hover:text-primary_65  transition-colors 
   duration-200  focus:outline-neutral_65 font-normal text-white hover:underline;
