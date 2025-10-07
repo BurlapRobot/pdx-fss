@@ -89,9 +89,9 @@ export default function VictimDetail({ victim }) {
                   {victim.victimType}
                 </p>
                 <p className="text-sm text-gray-600">
-                  <a href="#" className="">
+                  <span className="">
                     {victim.location}
-                  </a>
+                  </span>
                   , {victim.date}, {victim.time}
                 </p>
               </div>
@@ -126,7 +126,7 @@ export default function VictimDetail({ victim }) {
                   </h2>
                   <p className="text-gray-700">
                     <a
-                      href="#"
+                      href="https://www.familiesforsafestreets.org/stories"
                       className="text-blue-600 hover:text-blue-800 underline"
                     >
                       Families for Safe Streets maintains a map of crashes
