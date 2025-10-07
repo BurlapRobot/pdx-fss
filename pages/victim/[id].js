@@ -112,7 +112,7 @@ export default function VictimDetail({ victim }) {
                     Have you or someone you know been harmed by a crash in
                     Portland?{" "}
                     <a
-                      href="#"
+                      href={`mailto:${victim.email}`}
                       className="text-blue-600 hover:text-blue-800 underline"
                     >
                       Contact us to tell your story and help make a difference.
@@ -198,6 +198,7 @@ export async function getStaticProps({ params }) {
     location: data.location || "",
     date: data.date || "",
     time: data.time || "",
+    email: data.email || "",
     image: data.image || null, // Ensure image is null if undefined
     photoCredit: data.photoCredit || "",
     description: content.trim() || "",
