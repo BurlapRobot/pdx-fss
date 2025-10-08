@@ -1,7 +1,7 @@
 ---
 title: Donate Page
-content: >-
+content: |-
   # Donate
 
-  Donate page stub
+  Donate page stub. hi
 ---
