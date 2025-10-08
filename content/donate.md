@@ -3,5 +3,5 @@ title: Donate Page
 content: |-
   # Donate
 
-  Donate page stub. hi
+  Donate page stub
 ---
