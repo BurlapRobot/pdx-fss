@@ -1,6 +1,10 @@
 ---
 title: Test
 content: >-
+  <img src="/images/uploads/interpol-logo-1.jpg" alt="Description" style="float:
+  right; margin-left: 15px; width: 50%;">
+
+
   # Test
 
 
