@@ -44,15 +44,25 @@ export default function VictimDetail({ victim }) {
       <main className="flex-1 bg-white">
         <div className="max-w-6xl mx-auto py-8 px-4">
           {/* Breadcrumb */}
-          <div className="mb-6">
-            <Link href="/victims">Portland Victims Memorial</Link>
+          <div className="mb-6 flex flex-row">
+            <Image
+              src="/images/FSS-assets/icon-caret-down.svg"
+              className="transform rotate-90"
+              alt="icon x"
+              height={21}
+              width={14}
+            />
+
+            <Link href="/victims" className="flex flex-row">
+              Portland Victims Memorial
+            </Link>
           </div>
 
           {/* Victim Profile */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column - Image */}
             <div>
-              <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <div className="aspect-square bg-gray-200 overflow-hidden">
                 {victim.image ? (
                   <Image
                     src={victim.image}
@@ -70,65 +80,54 @@ export default function VictimDetail({ victim }) {
                 )}
               </div>
               {victim.photoCredit && (
-                <p className="text-sm text-gray-500 mt-2">
-                  {victim.photoCredit}
-                </p>
+                <p className=" mt-2">{victim.photoCredit}</p>
               )}
             </div>
 
             {/* Right Column - Details */}
-            <div className="space-y-6">
+            <div className="space-y-6 prose">
               <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                <h1 className="text-nuetral-0">
                   {victim.name}, {victim.age}
                 </h1>
-                <p className="text-lg font-semibold text-gray-900 mb-1">
+                <h3 className="text-nuetral-0">
                   Victim of Unsafe Streets in Portland
-                </p>
-                <p className="text-base text-gray-700 mb-3 capitalize">
-                  {victim.victimType}
-                </p>
-                <p className="text-sm text-gray-600">
+                </h3>
+                <h4 className="mb-3 capitalize">{victim.victimType}</h4>
+                <h4>
                   <a href="#" className="">
                     {victim.location}
                   </a>
-                  , {victim.date}, {victim.time}
-                </p>
+                  <br />
+                  {victim.date}, {victim.time}
+                </h4>
               </div>
 
-              <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {victim.description}
-                </p>
+              <div className=" max-w-none">
+                <p className=" leading-relaxed mb-4">{victim.description}</p>
               </div>
 
               {/* Action Sections */}
               <div className="space-y-6 pt-4">
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h2 className="text-xl font-semibold mb-3">
                     Report a Victim
                   </h2>
-                  <p className="text-gray-700">
+                  <p>
                     Have you or someone you know been harmed by a crash in
                     Portland?{" "}
-                    <a
-                      href="#"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
+                    <a href="#">
                       Contact us to tell your story and help make a difference.
                     </a>
                   </p>
                 </div>
 
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h2 className="text-xl font-semibold text-nuetral-0 mb-3">
                     Nationwide Story Map
                   </h2>
-                  <p className="text-gray-700">
-                    <a
-                      href="#"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
+                  <p>
+                    <a href="#">
                       Families for Safe Streets maintains a map of crashes
                       across the country.
                     </a>
