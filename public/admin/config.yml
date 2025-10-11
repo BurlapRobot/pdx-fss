@@ -216,6 +216,14 @@ collections:
       - file: "content/email-signup.md"
         label: "Email Signup Page"
         name: "email-signup"
+        preview_path: "email-signup"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "markdown"}
+      - file: "content/donate.md"
+        label: "Donate Page"
+        name: "donate"
+        preview_path: "donate"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "markdown"}
