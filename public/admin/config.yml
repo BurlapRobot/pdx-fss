@@ -274,13 +274,6 @@ collections:
           time_format: "HH:mm",
           required: true,
         }
-      - {
-          label: "Email",
-          name: "email",
-          widget: "string",
-          pattern: ["^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$", "Please enter a valid email address"],
-          required: true,
-        }
       - { label: "Photo Credit", name: "photoCredit", widget: "string" }
       - { label: "Image", name: "image", widget: "image", required: false }
       - {
