@@ -87,17 +87,17 @@ export default function VictimDetail({ victim }) {
             {/* Right Column - Details */}
             <div className="space-y-6 prose">
               <div>
-                <h1 className="text-nuetral-0">
+                <h1 className="text-neutral_0">
                   {victim.name}, {victim.age}
                 </h1>
-                <h3 className="text-nuetral-0">
+                <h3 className="text-neutral_0">
                   Victim of Unsafe Streets in Portland
                 </h3>
                 <h4 className="mb-3 capitalize">{victim.victimType}</h4>
                 <h4>
-                  <a href="#" className="">
+                  <span className="">
                     {victim.location}
-                  </a>
+                  </span>
                   <br />
                   {victim.date}, {victim.time}
                 </h4>
@@ -116,21 +116,27 @@ export default function VictimDetail({ victim }) {
                   <p>
                     Have you or someone you know been harmed by a crash in
                     Portland?{" "}
-                    <a href="#">
+                    <Link
+                      href="/contact-us"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
                       Contact us to tell your story and help make a difference.
-                    </a>
+                    </Link>
                   </p>
                 </div>
 
                 <div>
-                  <h2 className="text-xl font-semibold text-nuetral-0 mb-3">
+                  <h2 className="text-xl font-semibold text-neutral_0 mb-3">
                     Nationwide Story Map
                   </h2>
-                  <p>
-                    <a href="#">
+                  <p className="text-gray-700">
+                    <Link
+                      href="https://www.familiesforsafestreets.org/stories"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
                       Families for Safe Streets maintains a map of crashes
                       across the country.
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
