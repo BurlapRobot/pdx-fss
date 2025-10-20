@@ -1,12 +1,18 @@
 ---
 title: Test
 content: >-
+  <img src="/images/uploads/interpol-logo-1.jpg" alt="Description" style="float:
+  right; margin-left: 15px; width: 50%;">
+
+
   # Test
+
 
   This is a test page, you can use it to test out editing pages and seeing how your changes look once published. It uses markdown as syntax and can run HTML too. You can have as much content here as you want, so feel free to leave samples here for reference, or remove them if they won't be needed again.
 
 
   ## Image Layout Demo
+
 
   <img src="/images/uploads/rosie-riveter-gettyimages-653400252.avif" alt="Description" style="float: left; margin-right: 15px; width: 50%;">
 
