@@ -87,10 +87,10 @@ export default function VictimDetail({ victim }) {
             {/* Right Column - Details */}
             <div className="space-y-6 prose">
               <div>
-                <h1 className="text-neutral-0">
+                <h1 className="text-neutral_0">
                   {victim.name}, {victim.age}
                 </h1>
-                <h3 className="text-neutral-0">
+                <h3 className="text-neutral_0">
                   Victim of Unsafe Streets in Portland
                 </h3>
                 <h4 className="mb-3 capitalize">{victim.victimType}</h4>
@@ -126,7 +126,7 @@ export default function VictimDetail({ victim }) {
                 </div>
 
                 <div>
-                  <h2 className="text-xl font-semibold text-neutral-0 mb-3">
+                  <h2 className="text-xl font-semibold text-neutral_0 mb-3">
                     Nationwide Story Map
                   </h2>
                   <p className="text-gray-700">
