@@ -9,7 +9,7 @@ photoCredit: Ela Roth Capone
 image: /images/uploads/joeycapone-with-matilda-.jpg
 email: billy@doe.com
 ---
-Joes was 36 and married with a 2.5 year old daughter.
+Joey was 36 and married with a 2.5 year old daughter.
 
 A lifelong artist, Joey began acting at the age of three and evolved into a gifted filmmaker with a powerful creative voice. Together with his wife and daughter, he deepened his love for cinema - transforming it into a shared family journey. Through [TheoFilms.com](https://theofilms.com), their independent narratives and documentaries reached international audiences and were recognized at prestigious film festivals.
 
