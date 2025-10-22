@@ -1,11 +1,11 @@
 ---
-name: "David Chen"
-age: 29
-victimType: "Pedestrian"
-location: "NW 23rd Avenue"
-date: "December 12, 2021"
-time: "6:20 PM"
-photoCredit: "Photo courtesy of the Chen family"
+name: Jason Ruhmshottel
+age: 43
+victimType: Bicyclist
+location: North Portland Road
+date: 09/19/2023
+time: 05:57
+photoCredit: Sarah Risser
+image: /images/uploads/image6.jpg
 ---
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. 
+According to his sister, Jason loved playing video games, collecting Funko Pops, and reading. He loved 80's horror villains such as Freddy Kruger. His favorite author was Stephen King. He loved See's Candy and ice cream as well as coffee and would rave about a new ground he tried. - BikePortland. https://bikeportland.org/2024/01/16/2023s-sole-fatal-bicycle-collision-leaves-family-looking-for-answers-383182
