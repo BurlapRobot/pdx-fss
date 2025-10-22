@@ -1,5 +1,5 @@
 ---
-image: /images/support.jpg
+image: /images/uploads/o-callaghan.png
 heading: The faces behind the statistics
 subheading: Oregon lives needlessly lost in preventable crashes on Portland roads
 text: The Families for Safe Streets Portland online memorial project honors and
