@@ -14,14 +14,24 @@ content: >-
   ## Image Layout Demo
 
 
-  <img src="/images/uploads/rosie-riveter-gettyimages-653400252.avif" alt="Description" style="float: left; margin-right: 15px; width: 50%;">
+  <!-- this is an HTML comment, it won't be displayed to users but can be used to comment on the code to people looking at it in the future -->
+
+
+
+  <img src="/images/uploads/headshot-final-web.jpg" alt="Description" style="float: left; margin-right: 15px; width: 20%;">
 
   Text that wraps around the image on the right.
 
 
-  <p style="clear: both;">
+  Note the image specifies a custom width to make it smaller than the original photo resolution.
 
-  </p>
+
+  <!-- the next line specifies that following text should stop wrapping around the image --> 
+
+  <p style="clear: both;"></p>
+
+
+  <!-- the next line is a break, it adds just a bit of space on the page --> 
 
   <br>
 
