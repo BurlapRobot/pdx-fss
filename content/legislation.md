@@ -24,5 +24,8 @@ content: >-
   There is now a growing movement and push to adopt Intelligent Speed Assistance (ISA) policies across the country, powered by the voices of victims and survivors of traffic violence. The movement began in New York State, where FSS members were instrumental in introducing the first ISA-related bill in the U.S. Their efforts laid the groundwork for other local campaigns, including in Washington, D.C., where the local FSS chapter successfully advocated for the passage of the first ISA law in the country in 2024. This historic win marked the beginning of a growing national trend. Washington, Georgia, and Virginia have passed laws mandating ISA for super speeders and similar efforts are underway in Arizona, Maryland, California. FSS PDX recognizes ISA as a commonsense, targeted tool to prevent the most dangerous forms of speeding, one that should be adopted in Oregon.
 
 
+  [Download our one-pager](https://drive.google.com/file/d/1i9xS_v4-vpH-8aAcU3bB7zA2aPS-z8cZ/view?usp=drive_link) 
+
+
   [American Walks Webinar ‘How Technology can Stop Super Speeders](https://www.youtube.com/watch?v=k5jbSU47VhM&t=3s)
 ---
