@@ -111,7 +111,7 @@ export default function VictimDetail({ victim }) {
               <div className="space-y-6 pt-4">
                 <div>
                   <h2 className="text-xl font-semibold mb-3">
-                    Report a Victim
+                    Share a Victim's Story
                   </h2>
                   <p>
                     Have you or someone you know been harmed by a crash in

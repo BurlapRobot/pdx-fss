@@ -16,16 +16,16 @@ export default function Victims({ title, intro, victims }) {
 
   const sortedVictims = [...victims].sort((a, b) => {
     switch (sortBy) {
-    case "name":
-      return a.name.localeCompare(b.name);
-    case "date":
-      return new Date(a.date) - new Date(b.date);
-    case "age":
-      return a.age - b.age;
-    case "type":
-      return a.victimType.localeCompare(b.victimType);
-    default:
-      return a.id - b.id; // Default sort by ID (order)
+      case "name":
+        return a.name.localeCompare(b.name);
+      case "date":
+        return new Date(a.date) - new Date(b.date);
+      case "age":
+        return a.age - b.age;
+      case "type":
+        return a.victimType.localeCompare(b.victimType);
+      default:
+        return a.id - b.id; // Default sort by ID (order)
     }
   });
 
@@ -91,15 +91,15 @@ export default function Victims({ title, intro, victims }) {
           {/* Action Sections */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h2 className="text-xl font-semibold mb-3">Report a Victim</h2>
+              <h2 className="text-xl font-semibold mb-3">Share a Victim's Story</h2>
               <p className="text-gray-700 mb-3">
                 Have you or someone you know been harmed by a crash in Portland?
                 <Link
                   href="/contact-us"
                   className="text-blue-600 hover:text-blue-800 ml-1"
                 >
-                  Contact us to tell your story and help make a difference.
-                </Link>
+                  Contact us to tell your story and help make a difference
+                </Link>.
               </p>
             </div>
 
@@ -108,13 +108,11 @@ export default function Victims({ title, intro, victims }) {
                 Nationwide Story Map
               </h2>
               <p className="text-gray-700">
-                <a
+                Families for Safe Streets maintains a <Link
                   href="https://www.familiesforsafestreets.org/stories"
                   className="text-blue-600 hover:text-blue-800"
-                >
-                  Families for Safe Streets maintains a map of crashes across
-                  the country.
-                </a>
+                >map of crashes across the country
+                </Link>.
               </p>
             </div>
           </div>
@@ -136,7 +134,7 @@ export default function Victims({ title, intro, victims }) {
                   id="sort"
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm 
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm
                     focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Select a sorting method...</option>
@@ -185,12 +183,12 @@ export default function Victims({ title, intro, victims }) {
             {/* End of results indicator */}
             {displayCount >= sortedVictims.length &&
               sortedVictims.length > 0 && (
-              <div className="text-center mt-8 py-4">
-                <p className="text-gray-500 text-sm">
+                <div className="text-center mt-8 py-4">
+                  <p className="text-gray-500 text-sm">
                     Showing all {sortedVictims.length} victims
-                </p>
-              </div>
-            )}
+                  </p>
+                </div>
+              )}
           </div>
         </div>
       </main>
