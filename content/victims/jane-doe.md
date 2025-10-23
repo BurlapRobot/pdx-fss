@@ -4,7 +4,7 @@ age: 1
 victimType: Pedestrian
 location: N. Lombard St.
 date: 11/08/2010
-time: 0:00
+time: 11:00
 photoCredit: Photo
 image: /images/uploads/bb884033-3a90-4a14-8dc5-7feae930fbd1.jpeg
 ---
