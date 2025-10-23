@@ -26,11 +26,18 @@ content: >-
   By addressing these elements together, communities can create a forgiving road system that protects all road users. 
 
 
-  Dive deeper into safety science via this insightful [video by safety expert and author of There are No Accidents, Jessie Singer](https://vimeo.com/1090254915)
+  <img src="/images/uploads/headshot-final-web.jpg" alt="Description" style="float: left; margin-right: 15px; width: 20%;">
 
 
-  ![](/images/uploads/headshot-final-web.jpg)
+  Dive deeper into safety science via this insightful video by safety expert and author of There are No Accidents, Jessie Singer:
 
 
-  [](https://vimeo.com/1090254915)
+  <p style="clear: both;">
+
+  </p>
+
+  <br>
+
+
+  <iframe title="vimeo-player" src="https://player.vimeo.com/video/1090254915?h=2c8891cec5" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 ---
