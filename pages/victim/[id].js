@@ -111,7 +111,7 @@ export default function VictimDetail({ victim }) {
               <div className="space-y-6 pt-4">
                 <div>
                   <h2 className="text-xl font-semibold mb-3">
-                    Report a Victim
+                    Share a Victim's Story
                   </h2>
                   <p>
                     Have you or someone you know been harmed by a crash in
@@ -130,12 +130,11 @@ export default function VictimDetail({ victim }) {
                     Nationwide Story Map
                   </h2>
                   <p className="text-gray-700">
+                    Families for Safe Streets maintains
                     <Link
                       href="https://www.familiesforsafestreets.org/stories"
                       className="text-blue-600 hover:text-blue-800 underline"
-                    >
-                      Families for Safe Streets maintains a map of crashes
-                      across the country.
+                    > a map of crashes across the country.
                     </Link>
                   </p>
                 </div>

@@ -91,7 +91,7 @@ export default function Victims({ title, intro, victims }) {
           {/* Action Sections */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h2 className="text-xl font-semibold mb-3">Report a Victim</h2>
+              <h2 className="text-xl font-semibold mb-3">Share a Victim's Story</h2>
               <p className="text-gray-700 mb-3">
                 Have you or someone you know been harmed by a crash in Portland?
                 <Link
