@@ -98,8 +98,8 @@ export default function Victims({ title, intro, victims }) {
                   href="/contact-us"
                   className="text-blue-600 hover:text-blue-800 ml-1"
                 >
-                  Contact us to tell your story and help make a difference.
-                </Link>
+                  Contact us to tell your story and help make a difference
+                </Link>.
               </p>
             </div>
 
@@ -108,13 +108,13 @@ export default function Victims({ title, intro, victims }) {
                 Nationwide Story Map
               </h2>
               <p className="text-gray-700">
-                <a
+                Families for Safe Streets 
+                maintains <Link
                   href="https://www.familiesforsafestreets.org/stories"
                   className="text-blue-600 hover:text-blue-800"
                 >
-                  Families for Safe Streets maintains a map of crashes across
-                  the country.
-                </a>
+                  a map of crashes across the country
+                </Link>.
               </p>
             </div>
           </div>
