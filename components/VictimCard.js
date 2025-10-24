@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { normalizeCMSTime } from "../utils/timeHelper";
 
 const VictimCard = ({
   id,
@@ -39,7 +40,7 @@ const VictimCard = ({
         <p className="capitalize font-semibold">{victimType}</p>
         <p className="font-semibold">{location}</p>
         <p className="font-semibold">
-          {date}, {time}
+          {date}, {normalizeCMSTime(time)}
         </p>
         <p className="mt-1 leading-relaxed">{description}</p>
       </div>
