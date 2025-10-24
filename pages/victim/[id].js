@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
 import { getCommonPageProps } from "../../utils/getPageProps";
+import { normalizeCMSTime } from "../../utils/timeHelper";
 
 export default function VictimDetail({ victim }) {
   const router = useRouter();
@@ -99,7 +100,7 @@ export default function VictimDetail({ victim }) {
                     {victim.location}
                   </span>
                   <br />
-                  {victim.date}, {victim.time}
+                  {victim.date}, {normalizeCMSTime(victim.time)}
                 </h4>
               </div>
 
