@@ -4,6 +4,8 @@ import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import { getCommonPageProps } from "../../utils/getPageProps";
 
 export default function VictimDetail({ victim }) {
@@ -95,17 +97,15 @@ export default function VictimDetail({ victim }) {
                 </h3>
                 <h4 className="mb-3 capitalize">{victim.victimType}</h4>
                 <h4>
-                  <span className="">
-                    {victim.location}
-                  </span>
+                  <span className="">{victim.location}</span>
                   <br />
                   {victim.date}, {victim.time}
                 </h4>
               </div>
 
-              <div className=" max-w-none">
-                <p className=" leading-relaxed mb-4">{victim.description}</p>
-              </div>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {victim.description}
+              </ReactMarkdown>
 
               {/* Action Sections */}
               <div className="space-y-6 pt-4">
