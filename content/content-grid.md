@@ -20,10 +20,13 @@ cardData:
       communities.
     cta: Join Us
     ctaLink: /remember
-  - image: /images/donate.jpg
+  - image: /images/uploads/43-east-burnside-and-se-55th-kathryn-k-lakeya.jpg
     heading: Donate
-    text: Your donation ensures we can more effectively advocate for safe streets
-      and provide support to those directly impacted by traffic violence.
+    text: "Your donation will support FSS PDX's on-going memorial project, which
+      honors victims and raises awareness about traffic violence in Portland.
+      Donations will also be used to support victims and advocate for sound
+      policy solution. We are an all volunteer organization and appreciate you
+      support.  "
     cta: Support Us
     ctaLink: /donate
 ---
