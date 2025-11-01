@@ -1,6 +1,17 @@
 ---
 title: Donate Page
 content: >-
+  Portland Families for Safe Streets is 100% volunteer-powered. Your donation
+  helps cover:
+
+
+  * Business expenses (Zoom, Canva, website maintanance, email, storage space, etc.)
+
+  * T-shirts, hats, signs, posters
+
+  * Events and training for our members
+
+
   <script src="https://donorbox.org/widget.js" paypalExpress="false"></script> 
 
 
