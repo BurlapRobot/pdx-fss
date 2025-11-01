@@ -5,7 +5,7 @@ victimType: Pedestrian
 location: NW 22nd Ave & W Burnside
 date: 12/22/2022
 time: 18:10
-photoCredit: Ela Roth Capone
+photoCredit: Pam Capone
 image: /images/uploads/img_7322-copy.jpg-pam-capone.jpeg
 email: billy@doe.com
 ---
