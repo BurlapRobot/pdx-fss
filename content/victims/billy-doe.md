@@ -6,7 +6,7 @@ location: NW 22nd Ave & W Burnside
 date: 12/22/2022
 time: 18:10
 photoCredit: Ela Roth Capone
-image: /images/uploads/joeycapone-with-matilda-.jpg
+image: /images/uploads/img_7322-copy.jpg-pam-capone.jpeg
 email: billy@doe.com
 ---
 Joey was 36 and married with a 2.5 year old daughter.
