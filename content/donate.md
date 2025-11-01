@@ -1,8 +1,8 @@
 ---
 title: Donate Page
 content: >-
-  Portland Families for Safe Streets is 100% volunteer-powered. Your gift helps
-  us transform personal tragedy into public change. You support will fund:
+  Portland Families for Safe Streets is 100% volunteer-powered. Your gift will
+  help us transform personal tragedy into public change by funding:
 
 
   * **Basic Tools** to help us organize and stay connected - Zoom, Canva, website hosting, email, storage space, etc.
