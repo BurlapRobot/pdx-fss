@@ -22,11 +22,14 @@ content: >-
   ## Leadership
 
 
-  * Chair – Michelle DuBarry
+  * **Michelle DuBarry, Board Chair:** In 2010, Michelle's husband Eric and their one-year-old son Seamus were struck by a careless driver in a crosswalk. Eric survived, but Seamus died the following day. In 2019, she initiated and passed a Made Whole Statute in Oregon, which protects victims and survivors of car crashes from predatory insurance practices. She has published numerous essays about grief and loss, as well as op-eds advocating for policy and infrastructure changes to prevent other children and families from suffering similarly. More information about Made Whole legislation and links to her published work can be found on [her website](https://www.mdubarry.com/writing).
 
   * Secretary – Ted Beuhler
 
   * Treasurer – Sarah Risser
+
+
+  The current Board of Families for Safe Streets PDX wishes to acknowledge the vision and leadership of founding members Kristi Finney-Dunn, Kim Stone, Darla Sturdy, and David Sale. 
 
 
   ## Contact Us
