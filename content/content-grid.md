@@ -22,7 +22,7 @@ cardData:
     ctaLink: /remember
   - image: /images/uploads/41-ne-lombard-and-42ndb-copy.jpeg
     heading: Donate
-    text: "Your donation will support FSS PDX's on-going memorial project, which
+    text: "Your donation will support FSS PDX's ongoing memorial project, which
       honors victims and raises awareness about traffic violence in Portland.
       Donations will also be used to support victims and advocate for sound
       policy solutions. We are an all volunteer organization and appreciate you
