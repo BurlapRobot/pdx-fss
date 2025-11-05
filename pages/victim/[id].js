@@ -34,7 +34,7 @@ export default function VictimDetail({ victim }) {
               The victim you&apos;re looking for could not be found.
             </p>
             <Link href="/victims" className="text-blue-600 hover:text-blue-800">
-              ← Back to Victims Memorial
+              ← Back to Victims&apos; Memorial
             </Link>
           </div>
         </main>
@@ -57,7 +57,7 @@ export default function VictimDetail({ victim }) {
             />
 
             <Link href="/victims" className="flex flex-row">
-              Portland Victims Memorial
+              Portland Victims&apos; Memorial
             </Link>
           </div>
 

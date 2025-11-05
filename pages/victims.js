@@ -123,7 +123,7 @@ export default function Victims({ title, intro, victims }) {
           <div className="mb-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 md:mb-0">
-                Portland Victims Memorial
+                Portland Victims&apos; Memorial
               </h2>
               <div className="flex items-center space-x-2">
                 <label
