@@ -1,7 +1,7 @@
 ---
 title: Contact Us
-content: >-
+content: |-
   # Contact Us
 
-  Contact us stub
+  Contact us at info@pdxfss.org
 ---
