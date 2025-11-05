@@ -35,7 +35,7 @@ content: >-
   ## Contact Us
 
 
-  We welcome email at info@PDXFSS.org
+  We welcome email at [info@PDXFSS.org](mailto:info@PDXFSS.org).
 
 
   Join our email list for information on upcoming events and opportunities. We anticipate one or two email messages per month.
@@ -47,7 +47,7 @@ content: >-
   ## Donate
 
 
-  Your donation ensures we can more effectively advocate for safe streets and provide support to those directly impacted by traffic violence.
+  Your [donation](/donate) ensures we can more effectively advocate for safe streets and provide support to those directly impacted by traffic violence.
 
 
   Contact us to learn more about how you can help make Portland's streets safer for everyone.
