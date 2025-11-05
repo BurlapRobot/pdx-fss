@@ -1,7 +1,7 @@
 ---
-title: Contact Us - info@pdxfss.org
-content: |-
+title: Contact Us
+content: |
   # Contact Us
 
-  Contact us at info@pdxfss.org
+  We welcome your emails at [info@PDXFSS.org](mailto:info@PDXFSS.org).
 ---
