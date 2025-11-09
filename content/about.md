@@ -29,7 +29,7 @@ content: >-
 
   * Secretary – Ted Beuhler
 
-  * Treasurer – Sarah Risser
+  * **Sarah Risser, Treasurer:** In January of 2019, Sarah and her son Henry set off from St. Paul, MN for the upper peninsula of Michigan to ski for a few days. Near Spooner, Wisconsin a negligent driver crossed the centerline and struck their vehicle head on. Henry, who was behind the wheel took the brunt of the impact and died at the scene. Sarah was injured in the crash but survived. Sarah moved from Saint Paul to Portland in 2022.
 
 
   ## Contact Us
