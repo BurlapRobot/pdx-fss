@@ -1,5 +1,5 @@
 ---
-image: /images/uploads/o-callaghan.png
+image: /images/uploads/img_7322-copy.jpg-pam-capone.jpeg
 heading: The faces behind the statistics
 subheading: Human lives needlessly lost in preventable crashes on Portland roads
 text: The Families for Safe Streets Portland online memorial project honors and
