@@ -1,5 +1,5 @@
 ---
-image: /images/uploads/img_7322-copy.jpg-pam-capone.jpeg
+image: /images/uploads/sarah-pliner1_0160.jpg
 heading: The faces behind the statistics
 subheading: Human lives needlessly lost in preventable crashes on Portland roads
 text: The Families for Safe Streets Portland online memorial project honors and
