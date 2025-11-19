@@ -9,10 +9,12 @@ import { usePathname } from "next/navigation";
 const NavMenu = ({ menu, navbarPosition }) => {
   const isMobile = useIsMobile();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
   const pathname = usePathname();
 
   useEffect(() => {
     setIsOpenMenu(false);
+    setSelectedItem(null);
   }, [pathname]);
 
   useEffect(() => {
@@ -63,9 +65,14 @@ const NavMenu = ({ menu, navbarPosition }) => {
       </ul>
     </>
   ) : (
-    <ul className="flex items-center space-x-6 text-xs text-neutral_95">
+    <ul className="flex items-center space-x-0 lg:space-x-6 text-xs text-neutral_95">
       {menu?.map((menuItem, index) => (
-        <NavbarMenuDropdown menuItem={menuItem} key={index} />
+        <NavbarMenuDropdown
+          menuItem={menuItem}
+          key={index}
+          selectedItem={selectedItem}
+          setSelectedItem={setSelectedItem}
+        />
       ))}
     </ul>
   );
