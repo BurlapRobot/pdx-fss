@@ -1,14 +1,24 @@
-import Head from "next/head";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import { useRouter } from 'next/router';
+import { Meta } from './Meta';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
-export default function ContentPageLayout({ title, content }) {
+export default function ContentPageLayout({
+  title,
+  content,
+  description,
+  image,
+}) {
+  const router = useRouter();
+
   return (
-    // NOTE: will this hold a generic page component like in figma? are we waiting on content?
     <div className="min-h-screen flex flex-col">
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <Meta
+        title={title}
+        description={description}
+        image={image}
+        url={router.asPath}
+      />
       <main className="flex-1 bg-white">
         <div className="max-w-4xl mx-auto py-8 px-4 space-y-12">
           <section>

@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import { Meta } from "../components/Meta";
 import ContentGrid from "../components/ContentGrid";
 import HeroSection from "../components/HeroSection";
 import StatsSection from "../components/StatsSection";
@@ -8,6 +9,13 @@ import StatsSection from "../components/StatsSection";
 export default function Home({ heroSection, statsSection, contentGrid }) {
   return (
     <div className="min-h-screen flex flex-col">
+      <Meta
+        title="Home"
+        description="Families for Safe Streets Portland -
+        working to end traffic violence through advocacy, support, and community action."
+        image="/images/support.jpg"
+        url="/"
+      />
       <HeroSection {...heroSection} />
       <div className="default-link">
         <StatsSection {...statsSection} />
