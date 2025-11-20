@@ -21,7 +21,7 @@ NavbarMenuItem.propTypes = {
     PropTypes.shape({
       text: PropTypes.string,
       url: PropTypes.string,
-    }),
+    })
   ),
 };
 
