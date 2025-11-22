@@ -206,6 +206,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
       - file: "content/remember.md"
         label: "Day of Remembrance Page"
         name: "remember"
@@ -262,6 +274,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
       - file: "content/email-signup.md"
         label: "Email Signup Page"
         name: "email-signup"
