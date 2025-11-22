@@ -51,5 +51,4 @@ content: >-
 
 
   Contact us to learn more about how you can help make Portland's streets safer for everyone.
-metaDescription: testing 123
 ---
