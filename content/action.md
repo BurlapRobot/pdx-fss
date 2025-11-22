@@ -11,4 +11,6 @@ content: >-
 
 
   [Donate!](/donate)
+metaDescription: Get involved via email sign up or donation.
+metaImage: /images/support.jpg
 ---
