@@ -1,7 +1,5 @@
 ---
 title: About Portland Families for Safe Streets
-metaDescription: Learn about Portland Families for Safe Streets, our mission to advocate for life-saving transportation chagnes, and our leadership team.
-metaImage: /images/support.jpg
 content: >-
   # About Portland Families for Safe Streets
 
@@ -53,4 +51,6 @@ content: >-
 
 
   Contact us to learn more about how you can help make Portland's streets safer for everyone.
+metaDescription: Learn about Portland Families for Safe Streets, our mission to advocate for life-saving transportation changes, and our leadership team.
+metaImage: /images/support.jpg
 ---

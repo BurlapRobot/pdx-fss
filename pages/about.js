@@ -21,8 +21,8 @@ export async function getStaticProps() {
     props: {
       title: data.title,
       content: data.content,
-      metaDescription: data.metaDescription || null,
-      metaImage: data.metaImage || null,
+      metaDescription: data.metaDescription,
+      metaImage: data.metaImage,
       ...commonProps,
     },
   };

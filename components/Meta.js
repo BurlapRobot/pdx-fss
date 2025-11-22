@@ -26,7 +26,6 @@ export const Meta = ({
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
-      {/* <meta name="keywords" content="Portland, etc" /> */}
       {/* Canonical URL  */}
       {url && <link rel="canonical" href={fullUrl} />}
       {/* Robots  */}
