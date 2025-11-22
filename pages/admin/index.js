@@ -28,11 +28,9 @@ export default function Admin() {
 
   return (
     <>
-      <Head>
-        <title>Content Manager</title>
-      </Head>
+      <Meta title="Content Manager" noIndex />
       <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
       <div id="nc-root" />
     </>
   );
-} 
+}
