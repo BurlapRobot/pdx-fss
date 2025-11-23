@@ -2,12 +2,19 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { Meta } from "../components/Meta";
 import VictimCard from "../components/VictimCard";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import { getCommonPageProps } from "../utils/getPageProps";
 
-export default function Victims({ title, intro, victims }) {
+export default function Victims({
+  title,
+  intro,
+  victims,
+  metaDescription,
+  metaImage,
+}) {
   const [sortBy, setSortBy] = useState("");
   const [displayCount, setDisplayCount] = useState(12);
   const [isLoading, setIsLoading] = useState(false);
@@ -74,6 +81,7 @@ export default function Victims({ title, intro, victims }) {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Meta title={title} description={metaDescription} image={metaImage} />
       <main className="flex-1 bg-white">
         <div className="max-w-6xl mx-auto py-8 px-4">
           {/* Page Title */}
@@ -91,7 +99,9 @@ export default function Victims({ title, intro, victims }) {
           {/* Action Sections */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h2 className="text-xl font-semibold mb-3">Share a Victim&apos;s Story</h2>
+              <h2 className="text-xl font-semibold mb-3">
+                Share a Victim&apos;s Story
+              </h2>
               <p className="text-gray-700 mb-3">
                 Have you or someone you know been harmed by a crash in Portland?
                 <Link
@@ -235,6 +245,8 @@ export async function getStaticProps() {
     props: {
       title: fileData.title,
       intro: fileData.intro,
+      metaDescription: fileData.metaDescription,
+      metaImage: fileData.metaImage,
       victims,
       ...commonProps,
     },

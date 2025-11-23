@@ -11,7 +11,7 @@ export const Meta = ({
   const siteName = "Portland Families for Safe Streets";
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const defaultDescription =
-    "Families for Safe Streets Portland - memorials, resources and advocacy for safer streets.";
+    "Families for Safe Streets Portland - working to end traffic violence through advocacy, support, and community action.";
   const metaDescription = description ?? defaultDescription;
 
   const SITE_URL = "https://pdxfamiliesforsafestreets.org";

@@ -160,6 +160,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
   - name: "advocacy pages"
     label: "Advocacy Pages"
     files:

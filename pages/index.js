@@ -9,13 +9,7 @@ import StatsSection from "../components/StatsSection";
 export default function Home({ heroSection, statsSection, contentGrid }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <Meta
-        title="Home"
-        description="Families for Safe Streets Portland -
-        working to end traffic violence through advocacy, support, and community action."
-        image="/images/support.jpg"
-        url="/"
-      />
+      <Meta title="Home" />
       <HeroSection {...heroSection} />
       <div className="default-link">
         <StatsSection {...statsSection} />
