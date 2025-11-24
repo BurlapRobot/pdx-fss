@@ -18,8 +18,6 @@ content: >-
 
 
   <iframe src="https://donorbox.org/embed/in-their-honor-for-portland-s-future?default_interval=m" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="display: block; margin: 0 auto; max-width: 500px; min-width: 250px; max-height:none!important" allow="payment"></iframe>
-metaDescription:
-  Portland Families for Safe Streets is volunteer-powered. Your donation will
-  help us transform personal tragedy into public change by funding outreach, memorials and events.
+metaDescription: Portland Families for Safe Streets is volunteer-powered. Your donation will help us transform personal tragedy into public change by funding outreach, memorials and events.
 metaImage: /images/donate.jpg
 ---

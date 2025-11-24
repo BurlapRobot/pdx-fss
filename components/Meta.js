@@ -29,7 +29,12 @@ export const Meta = ({
       {/* Canonical URL  */}
       {url && <link rel="canonical" href={fullUrl} />}
       {/* Robots  */}
-      {noIndex && <meta name="robots" content="noindex,nofollow" />}
+      {noIndex ? (
+        <>
+          <meta name="robots" content="noindex,nofollow" />
+          <meta name="googlebot" content="noindex,nofollow" />
+        </>
+      ) : null}
       {/* Open Graph  */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />

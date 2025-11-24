@@ -11,6 +11,6 @@ content: >-
 
 
   [Donate!](/donate)
-metaDescription: Get involved via email sign up or donation.
+metaDescription: Help create a safer Portland. Join our email list to stay updated or make a donation to support our efforts.
 metaImage: /images/support.jpg
 ---

@@ -23,16 +23,16 @@ export default function Victims({
 
   const sortedVictims = [...victims].sort((a, b) => {
     switch (sortBy) {
-    case "name":
-      return a.name.localeCompare(b.name);
-    case "date":
-      return new Date(a.date) - new Date(b.date);
-    case "age":
-      return a.age - b.age;
-    case "type":
-      return a.victimType.localeCompare(b.victimType);
-    default:
-      return a.id - b.id; // Default sort by ID (order)
+      case "name":
+        return a.name.localeCompare(b.name);
+      case "date":
+        return new Date(a.date) - new Date(b.date);
+      case "age":
+        return a.age - b.age;
+      case "type":
+        return a.victimType.localeCompare(b.victimType);
+      default:
+        return a.id - b.id; // Default sort by ID (order)
     }
   });
 
@@ -58,7 +58,7 @@ export default function Victims({
           loadMore();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (loadingRef.current) {
@@ -108,8 +108,8 @@ export default function Victims({
                   href="/contact-us"
                   className="text-blue-600 hover:text-blue-800 ml-1"
                 >
-                  Contact us to tell your story and help make a difference
-                </Link>.
+                  Contact us to tell your story and help make a difference.
+                </Link>
               </p>
             </div>
 
@@ -118,13 +118,13 @@ export default function Victims({
                 Nationwide Story Map
               </h2>
               <p className="text-gray-700">
-                Families for Safe Streets 
-                maintains <Link
+                Families for Safe Streets maintains{" "}
+                <Link
                   href="https://www.familiesforsafestreets.org/stories"
                   className="text-blue-600 hover:text-blue-800"
                 >
-                  a map of crashes across the country
-                </Link>.
+                  a map of crashes across the country.
+                </Link>
               </p>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function Victims({
                   id="sort"
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm 
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm
                     focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Select a sorting method...</option>
@@ -195,12 +195,12 @@ export default function Victims({
             {/* End of results indicator */}
             {displayCount >= sortedVictims.length &&
               sortedVictims.length > 0 && (
-              <div className="text-center mt-8 py-4">
-                <p className="text-gray-500 text-sm">
+                <div className="text-center mt-8 py-4">
+                  <p className="text-gray-500 text-sm">
                     Showing all {sortedVictims.length} victims
-                </p>
-              </div>
-            )}
+                  </p>
+                </div>
+              )}
           </div>
         </div>
       </main>
