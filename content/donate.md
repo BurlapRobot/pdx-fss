@@ -21,5 +21,5 @@ content: >-
 metaDescription:
   Portland Families for Safe Streets is volunteer-powered. Your donation will
   help us transform personal tragedy into public change by funding outreach, memorials and events.
-metaImage: /images/support.jpg
+metaImage: /images/donate.jpg
 ---

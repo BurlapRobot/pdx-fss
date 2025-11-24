@@ -51,6 +51,4 @@ content: >-
 
 
   Contact us to learn more about how you can help make Portland's streets safer for everyone.
-metaDescription: Learn about Portland Families for Safe Streets, our mission to advocate for life-saving transportation changes, and our leadership team.
-metaImage: /images/support.jpg
 ---

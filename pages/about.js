@@ -2,15 +2,8 @@ import { getCommonPageProps } from "../utils/getPageProps";
 import ContentPageLayout from "../components/ContentPageLayout";
 import getStaticPropsData from "../utils/getStaticPropsHelper";
 
-export default function About({ title, content, metaDescription, metaImage }) {
-  return (
-    <ContentPageLayout
-      title={title}
-      content={content}
-      description={metaDescription}
-      image={metaImage}
-    />
-  );
+export default function About({ title, content }) {
+  return <ContentPageLayout title={title} content={content} />;
 }
 
 export async function getStaticProps() {
@@ -21,8 +14,6 @@ export async function getStaticProps() {
     props: {
       title: data.title,
       content: data.content,
-      metaDescription: data.metaDescription,
-      metaImage: data.metaImage,
       ...commonProps,
     },
   };

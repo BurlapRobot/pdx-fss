@@ -237,6 +237,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
   - name: "services & support pages"
     label: "Services & Support Pages"
     files:
@@ -267,18 +279,6 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
-          - {
-              label: "Meta Description",
-              name: "metaDescription",
-              widget: "string",
-              hint: "SEO description for search results (150-160 characters)",
-            }
-          - {
-              label: "Social Share Image",
-              name: "metaImage",
-              widget: "image",
-              hint: "Image for social media previews (1200x630px recommended)",
-            }
       - file: "content/contact-us.md"
         label: "Contact Us Page"
         name: "contact-us"
@@ -286,6 +286,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
+      - file: "content/email-signup.md"
+        label: "Email Signup Page"
+        name: "email-signup"
+        preview_path: "email-signup"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
           - {
               label: "Meta Description",
               name: "metaDescription",
@@ -298,13 +305,6 @@ collections:
               widget: "image",
               hint: "Image for social media previews (1200x630px recommended)",
             }
-      - file: "content/email-signup.md"
-        label: "Email Signup Page"
-        name: "email-signup"
-        preview_path: "email-signup"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/donate.md"
         label: "Donate Page"
         name: "donate"
