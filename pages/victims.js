@@ -103,13 +103,14 @@ export default function Victims({
                 Share a Victim&apos;s Story
               </h2>
               <p className="text-gray-700 mb-3">
-                Have you or someone you know been harmed by a crash in Portland?
+                Have you or someone you know been harmed by a crash in Portland?{" "}
                 <Link
                   href="/contact-us"
                   className="text-blue-600 hover:text-blue-800 ml-1"
                 >
-                  Contact us to tell your story and help make a difference.
+                  Contact us to tell your story and help make a difference
                 </Link>
+                .
               </p>
             </div>
 
@@ -123,8 +124,9 @@ export default function Victims({
                   href="https://www.familiesforsafestreets.org/stories"
                   className="text-blue-600 hover:text-blue-800"
                 >
-                  a map of crashes across the country.
+                  a map of crashes across the country
                 </Link>
+                .
               </p>
             </div>
           </div>
