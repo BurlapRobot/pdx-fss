@@ -11,4 +11,6 @@ content: >-
 
 
   ![Sunday, November 16 11:00 am - 12:00pm / Luuwit View Park, NE 127th and NE Fremont St. in Portland / Remember our loved ones who have been killed in traffic violence; Support survivors; Act to pass #StopSuperSpeeders legislation in Oregon](/images/uploads/wdor-2025-flyer.png "WDOR Flyer")
+metaDescription: World Day of Remembrance on November 16 honors lives lost and touched by roadway crashes, with a global call for action to prevent road violence and support impacted families and communities.
+metaImage: /images/donate.jpg
 ---

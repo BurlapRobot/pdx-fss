@@ -3,7 +3,7 @@ import ContentPageLayout from "../components/ContentPageLayout";
 import getStaticPropsData from "../utils/getStaticPropsHelper";
 
 export default function Test({ title, content }) {
-  return <ContentPageLayout title={title} content={content} />;
+  return <ContentPageLayout title={title} content={content} noIndex />;
 }
 
 export async function getStaticProps() {

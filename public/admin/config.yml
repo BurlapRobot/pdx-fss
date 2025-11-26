@@ -32,12 +32,37 @@ collections:
         name: "alert-bar"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+          - {
+              label: "Hidden",
+              name: "hidden",
+              widget: "boolean",
+              default: false,
+            }
           - { label: "Alert Text", name: "alertText", widget: "string" }
-          - { label: "Link Text", name: "linkText", widget: "string", required: false }
-          - { label: "Link URL", name: "linkUrl", widget: "string", required: false }
-          - { label: "Button Text", name: "buttonText", widget: "string", required: false }
-          - { label: "Button URL", name: "buttonUrl", widget: "string", required: false }
+          - {
+              label: "Link Text",
+              name: "linkText",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Link URL",
+              name: "linkUrl",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Button Text",
+              name: "buttonText",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Button URL",
+              name: "buttonUrl",
+              widget: "string",
+              required: false,
+            }
       # Nav Bar dropdown text and links
       - file: "content/navbar.md"
         label: "Navigation Labels and Links"
@@ -96,11 +121,11 @@ collections:
             name: "cardData"
             widget: "list"
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "string"}
-              - {label: "CTA", name: "cta", widget: "string"}
-              - {label: "CTA Link", name: "ctaLink", widget: "string"}
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "CTA", name: "cta", widget: "string" }
+              - { label: "CTA Link", name: "ctaLink", widget: "string" }
 
   # Main Navigation Sections
   # Collection: Safe Streets Now, Advocacy, Get Involved, Services & Support
@@ -112,22 +137,22 @@ collections:
         name: "why-it-matters"
         preview_path: "why-it-matters"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/our-approach.md"
         label: "Our Approach Page"
         name: "our-approach"
         preview_path: "our-approach"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/dangerous-areas.md"
         label: "Dangerous Areas Page"
         name: "dangerous-areas"
         preview_path: "dangerous-areas"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/victims-content.md"
         label: "Victims Main Page"
         name: "victims-content"
@@ -135,6 +160,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
   - name: "advocacy pages"
     label: "Advocacy Pages"
     files:
@@ -151,7 +188,7 @@ collections:
         preview_path: "partners"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Content", name: "content", widget: "markdown" }
   - name: "get involved pages"
     label: "Get Involved Pages"
     files:
@@ -162,6 +199,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
       - file: "content/volunteer.md"
         label: "Volunteer Opportunities Page"
         name: "volunteer"
@@ -169,6 +218,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
       - file: "content/remember.md"
         label: "Day of Remembrance Page"
         name: "remember"
@@ -176,6 +237,18 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
   - name: "services & support pages"
     label: "Services & Support Pages"
     files:
@@ -211,22 +284,46 @@ collections:
         name: "contact-us"
         preview_path: "contact-us"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
       - file: "content/email-signup.md"
         label: "Email Signup Page"
         name: "email-signup"
         preview_path: "email-signup"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
       - file: "content/donate.md"
         label: "Donate Page"
         name: "donate"
         preview_path: "donate"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "string",
+              hint: "SEO description for search results (150-160 characters)",
+            }
+          - {
+              label: "Social Share Image",
+              name: "metaImage",
+              widget: "image",
+              hint: "Image for social media previews (1200x630px recommended)",
+            }
       # TODO: Re-implementation in the future for Calendar and News pages
       # - file: "content/calendar.md"
       #   label: "Event Calendar Page"
@@ -299,5 +396,5 @@ collections:
         name: "test"
         preview_path: "test"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }

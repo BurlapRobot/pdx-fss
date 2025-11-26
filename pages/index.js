@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import { Meta } from "../components/Meta";
 import ContentGrid from "../components/ContentGrid";
 import HeroSection from "../components/HeroSection";
 import StatsSection from "../components/StatsSection";
@@ -8,6 +9,7 @@ import StatsSection from "../components/StatsSection";
 export default function Home({ heroSection, statsSection, contentGrid }) {
   return (
     <div className="min-h-screen flex flex-col">
+      <Meta title="Home" />
       <HeroSection {...heroSection} />
       <div className="default-link">
         <StatsSection {...statsSection} />

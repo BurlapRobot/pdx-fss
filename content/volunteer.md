@@ -28,4 +28,6 @@ content: >-
 
 
   Join the conversation. Speak out for safe roads.
+metaDescription: Join volunteer opportunities such as the road memorial project, world day of remembrance and testimony.
+metaImage: /images/support.jpg
 ---
