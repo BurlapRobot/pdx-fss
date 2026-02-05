@@ -1,5 +1,5 @@
 ---
-image: /images/uploads/valls_aviary_0056.jpg
+image: /images/uploads/grey-wolfe.jpeg
 heading: The faces behind the statistics
 subheading: Human lives needlessly lost in preventable crashes on Portland roads
 text: The Families for Safe Streets Portland online memorial project honors and
