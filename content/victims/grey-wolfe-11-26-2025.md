@@ -12,4 +12,4 @@ Grey was a social studies teacher when she moved from Baltimore to Portland in t
 
 For the last four decades, she was a therapist, working with individuals and couples. Grey's full and thriving therapy practice was at the center of her life. 
 
-On the morning she was hit and killed by a car at 37th Avenue and Cesar Chavez, she was returning from her daily walk to Mt. Tabor and planning on seeing her first client at 8:30am.
+On the morning she was hit and killed by a car at SE Cesar Chavez and Harrison, she was returning from her daily walk to Mt. Tabor and planning on seeing her first client at 8:30am.
