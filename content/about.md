@@ -4,10 +4,10 @@ content: >-
   # About Portland Families for Safe Streets
 
 
-  Portland Families for Safe Streets non-profit 501(c)(3) organization that is dedicated to improving road safety. Whether you have been directly impacted by road violence or an ally to the road safety movement, you are welcome to join our community of road-safety advocates.
+  Portland Families for Safe Streets is a non-profit 501(c)(3) organization dedicated to improving road safety and supporting victims of road-traffic violence. Whether you have been directly impacted by road violence or an ally to the road safety movement, you are welcome to join our community of advocates.
 
 
-  The Portland chapter was founded in 2015. When Kristi Finney-Dunn, whose son Dustin was killed by a drunk driver in 2010, learned about the New York chapter of Families for Safe Streets, she decided to reach out to local safe streets advocates. With support from the Bicycle Transportation Alliance, Oregon Walks and PBOT, Finney-Dunn connected with Susan Kubota, David Sale, and Kim Stone to found a chapter in Portland. Families for Safe Streets is now a national organization with chapters all across the country.
+  The Portland chapter was founded in 2015. When Kristi Finney-Dunn's son Dustin, killed by a drunk driver in 2010, learned about the New York chapter of Families for Safe Streets and reached out to local safe streets advocates. With support from the Bicycle Transportation Alliance, Oregon Walks and PBOT, Finney-Dunn connected with Susan Kubota, David Sale, and Kim Stone to found a chapter in Portland. Families for Safe Streets is now a national organization with chapters all across the country.
 
 
   ## Mission
