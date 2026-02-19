@@ -2,6 +2,18 @@
 title: Families for Safe Streets
 subtitle: Portland
 menu:
+  - text: About Us
+    links:
+      - text: History
+        url: /History
+      - text: Mission
+        url: /Mission
+      - text: Board of Directors
+        url: /Board of Directors
+      - text: Projects
+        url: /Projects
+      - text: Contact Us
+        url: /Contact Us
   - text: Safe Streets Now
     links:
       - text: Why it Matters
