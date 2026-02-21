@@ -18,6 +18,8 @@ menu:
         url: /legislation
       - text: Our Partners
         url: /partners
+      - text: Our Projects
+        url: /projects
   - text: Get Involved
     links:
       - text: Take Action
