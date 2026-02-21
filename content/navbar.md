@@ -6,7 +6,7 @@ menu:
     links:
       - text: Why it Matters
         url: /why-it-matters
-      - text: Our Projects
+      - text: Our Approach
         url: /our-approach
       - text: Dangerous Areas
         url: /dangerous-areas
