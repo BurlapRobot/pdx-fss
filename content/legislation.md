@@ -13,7 +13,6 @@ content: >-
   *Intelligent Speed Assistance,* ISA, is an in-vehicle technology that helps drivers maintain safe speeds. This technology is available in either passive or active forms. Passive ISA alerts drivers when they exceed posted limits whereas active ISA prevents vehicles from exceeding a certain speed, based on the posted speed limit.
 
 
-
   There is a growing bipartisan movement and push to adopt Intelligent Speed Assistance (ISA) policies across the country, powered by the voices of victims and survivors of traffic violence. The movement began in New York State, where FSS members were instrumental in introducing the first ISA-related bill in the U.S. Efforts in New York laid the groundwork for other local campaigns, including in Washington, D.C., where in 2024 the local FSS chapter successfully advocated for passage of the first ISA law in the country. This historic win marked the beginning of a growing national trend. Washington and Virginia have passed laws mandating ISA for super speeders and similar efforts are underway in Arizona, Maryland, California, Minnesota, Wisconsin, Illinois, Michigan, Indiana, Tennesee, Georgia, Kentucky, Pennsylvania, Connecticut, Vermont, Rhode Island, and New Hampshire. FSS PDX recognizes ISA as a commonsense, targeted tool to prevent the most dangerous forms of speeding, one that should be adopted in Oregon.
 
 
@@ -24,4 +23,36 @@ content: >-
 
 
   [American Walks Webinar ‘How Technology can Stop Super Speeders](https://www.youtube.com/watch?v=k5jbSU47VhM&t=3s)
+
+
+
+
+  ### Measure What We Drive (SB 1542)
+
+
+  Too often, outdated and overly broad legislative direction requires ODOT to commit funding to new projects with limited information on their costs and benefits, all at the expense of addressing maintenance and inadequate safety for current bridges, streets, and transit services.
+
+
+  With already-limited budgets, ODOT needs a performance-based, easy-to-understand accountability framework that assesses projects based on safety, infrastructure maintenance, climate impact, and more.
+
+
+  **What's in the bill?**
+
+
+  * Newly proposed projects get scored on projected outcomes, This scoring system will assess projects based on safety, climate impact, infrastructure maintenance, and cost effectivess.
+
+  * ODOT's project scoring will identify where they're falling short of their goals and can actively invest more in projects that will close the gap.
+
+  * ODOT publishes an annual report card that shows how Oregon is doing to meet our transportation goals and what steps are being taken to improve outcomes in future years.
+
+
+  **Outcomes**
+
+
+  Oregonians and legislators have transparency around transportation investments that improve safety, maintenance, and climate outcomes. The Oregon Transportation Commission, Legislature, and ODOT will have shared clarity and priorities on how projects meet the state's goals and ensure every investment is made in alignment with those objectives.
+
+
+
+
+  [](https://www.youtube.com/watch?v=k5jbSU47VhM&t=3s)
 ---
