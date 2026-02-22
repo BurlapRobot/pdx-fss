@@ -36,6 +36,8 @@ menu:
     links:
       - text: About Us
         url: /about
+      - text: Mission
+        url: /about#mission
 ---
 
 <!--TODO: Event Calendar link falls under Get Involved, but are temporarily removed
