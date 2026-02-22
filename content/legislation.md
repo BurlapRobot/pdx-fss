@@ -52,6 +52,7 @@ content: >-
   Oregonians and legislators have transparency around transportation investments that improve safety, maintenance, and climate outcomes. The Oregon Transportation Commission, Legislature, and ODOT will have shared clarity and priorities on how projects meet the state's goals and ensure every investment is made in alignment with those objectives.
 
 
+  ODOT's debt service costs have surged by 400% since 2007, far outpacing growth in revenues.
 
 
   [](https://www.youtube.com/watch?v=k5jbSU47VhM&t=3s)
