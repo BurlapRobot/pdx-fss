@@ -14,7 +14,7 @@ menu:
         url: /victims
   - text: Advocacy
     links:
-      - text: Legislation we Support
+      - text: 2026 Policy Priorities
         url: /legislation
       - text: Our Partners
         url: /partners
