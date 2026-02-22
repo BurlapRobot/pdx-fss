@@ -32,6 +32,10 @@ menu:
         url: /get-support
       - text: Peer Mentorship
         url: /peer-mentorship
+  - text: About Us
+    links:
+      - text: About Us
+        url: /about
 ---
 
 <!--TODO: Event Calendar link falls under Get Involved, but are temporarily removed
