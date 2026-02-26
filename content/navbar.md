@@ -2,6 +2,12 @@
 title: Families for Safe Streets
 subtitle: Portland
 menu:
+  - text: About Us
+    links:
+      - text: About Us
+        url: /about
+      - text: Mission
+        url: /about#mission
   - text: Safe Streets Now
     links:
       - text: Why it Matters
@@ -14,7 +20,7 @@ menu:
         url: /victims
   - text: Advocacy
     links:
-      - text: 2026 Policy Priorities
+      - text: 2026 Legislative Priorities
         url: /legislation
       - text: Our Partners
         url: /partners
@@ -32,12 +38,6 @@ menu:
         url: /get-support
       - text: Peer Mentorship
         url: /peer-mentorship
-  - text: About Us
-    links:
-      - text: About Us
-        url: /about
-      - text: Mission
-        url: /about#mission
 ---
 
 <!--TODO: Event Calendar link falls under Get Involved, but are temporarily removed
