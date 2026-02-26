@@ -22,7 +22,7 @@ menu:
     links:
       - text: 2026 Legislative Priorities
         url: /legislation
-      - text: Our Partners
+      - text: Partnerships
         url: /partners
   - text: Get Involved
     links:
