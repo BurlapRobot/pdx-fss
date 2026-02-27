@@ -37,6 +37,9 @@ content: >-
   The Portland chapter was founded in 2015. When Kristi Finney-Dunn's son Dustin, killed by a drunk driver in 2010, learned about the New York chapter of Families for Safe Streets and reached out to local safe streets advocates. With support from the Bicycle Transportation Alliance, Oregon Walks and PBOT, Finney-Dunn connected with Susan Kubota, David Sale, and Kim Stone to found a chapter in Portland. Families for Safe Streets is now a national organization with chapters all across the country.
 
 
+  <a id="board-of-directors"></a>
+
+
   ## Board of Directors
 
 
@@ -47,7 +50,16 @@ content: >-
   * **Sarah Risser, Treasurer:** In January of 2019, Sarah and her son Henry set off from St. Paul, MN for the upper peninsula of Michigan to ski for a few days. Near Spooner, Wisconsin a negligent driver crossed the centerline and struck their vehicle head on. Henry, who was behind the wheel took the brunt of the impact and died at the scene. Sarah was injured in the crash but survived. Sarah moved from Saint Paul to Portland in 2022.
 
 
+  <a id="projects"></a>
+
+
   ## Projects
+
+
+  Road-side Memorials
+
+
+  <a id="contact-us"></a>
 
 
   ## Contact Us
