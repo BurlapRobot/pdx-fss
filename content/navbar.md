@@ -8,6 +8,14 @@ menu:
         url: /about
       - text: Mission
         url: /about#mission
+      - text: History
+        url: /about#history
+      - text: Board of Directors
+        url: /about#Board-of-directors
+      - text: Projects
+        url: /about#projects
+      - text: Contact Us
+        url: /about#contact-us
   - text: Safe Streets Now
     links:
       - text: Why it Matters
