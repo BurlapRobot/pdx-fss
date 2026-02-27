@@ -11,7 +11,7 @@ menu:
       - text: History
         url: /about#history
       - text: Board of Directors
-        url: /about#Board-of-directors
+        url: /about#board-of-directors
       - text: Projects
         url: /about#projects
       - text: Contact Us
