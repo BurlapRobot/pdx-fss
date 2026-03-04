@@ -22,7 +22,7 @@ content: >-
   [Download our one-pager](https://drive.google.com/file/d/1i9xS_v4-vpH-8aAcU3bB7zA2aPS-z8cZ/view?usp=drive_link) 
 
 
-  [American Walks Webinar ‘How Technology can Stop Super Speeders](https://www.youtube.com/watch?v=k5jbSU47VhM&t=3s)
+  [American Walks Webinar ‘How Technology can Stop Super Speeders'](https://www.youtube.com/watch?v=k5jbSU47VhM&t=3s)
 
 
   ### Measure What We Drive (SB 1542)
