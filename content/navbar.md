@@ -38,7 +38,7 @@ menu:
         url: /action
       - text: Volunteer Opportunities
         url: /volunteer
-      - text: Day of Remembrance
+      - text: World Day of Remembrance
         url: /remember
   - text: Services & Support
     links:
