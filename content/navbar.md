@@ -34,8 +34,6 @@ menu:
         url: /partners
   - text: Get Involved
     links:
-      - text: Take Action
-        url: /action
       - text: Volunteer Opportunities
         url: /volunteer
       - text: World Day of Remembrance
