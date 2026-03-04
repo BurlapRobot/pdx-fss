@@ -6,7 +6,7 @@ cardData:
       alone. Resources for those directly impacted by road violence.
     cta: Get Support
     ctaLink: /get-support
-  - image: /images/uploads/world-day-of-remembrance-16.jpg
+  - image: /images/uploads/world-day-of-remembrance-10.jpg
     heading: Our Mission
     text: Portland Families for Safe Streets advocates for life-saving changes
       throughout our transportation system that will prevent crashes.
