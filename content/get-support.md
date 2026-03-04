@@ -7,6 +7,9 @@ content: >-
   If you have been directly impacted by road violence, Families for Safe Streets National offers extensive support resources and opportunities to connect with others.
 
 
+  ![](/images/uploads/screenshot-2024-07-13-at-7.05.02 pm.jpg)
+
+
   ## Link to National FSS Grief Group Gatherings
 
 
@@ -14,8 +17,6 @@ content: >-
 
 
   [NATIONAL SUPPORT GATHERINGS](https://www.familiesforsafestreets.org/gatherings) 
-
-
 
 
   ## Link to Victim Resource Guide
