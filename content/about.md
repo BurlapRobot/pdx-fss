@@ -56,7 +56,20 @@ content: >-
   ## Projects
 
 
-  Road-side Memorials
+  ### Memorials
+
+
+  Portland Families for Safe Streets honors road-traffic victims in numerous ways. In addition to our growing on-line memorial, we place signs at crash sites and install ghost bikes. 
+
+
+  * [2024 Memorial Sign Project](https://bikeportland.org/2025/01/16/guest-article-a-journal-of-my-year-placing-signs-at-every-fatal-traffic-crash-site-392200)
+
+  * [82nd Avenue Memorial Sign Project](https://bikeportland.org/2025/11/04/video-advocates-install-memorials-along-82nd-ave-to-remember-traffic-victims-397927)
+
+  * [Ghost Bike Installation for Jason Ruhmshottel](https://bikeportland.org/2024/02/09/ghost-bike-installed-for-jason-ruhmshottel-383807)
+
+
+  ### Supporting policies and legislation that improve road safety
 
 
   <a id="contact-us"></a>
