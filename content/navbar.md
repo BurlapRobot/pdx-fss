@@ -4,7 +4,7 @@ subtitle: Portland
 menu:
   - text: About Us
     links:
-      - text: About Us
+      - text: Our Organization
         url: /about
       - text: Mission
         url: /about#mission
