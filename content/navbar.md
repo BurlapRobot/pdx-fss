@@ -26,6 +26,8 @@ menu:
         url: /dangerous-areas
       - text: Remembering Victims
         url: /victims
+      - text: Hot Topics
+        url: /hot-topics
   - text: Advocacy
     links:
       - text: 2026 Legislative Priorities
