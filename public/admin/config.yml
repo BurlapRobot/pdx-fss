@@ -172,6 +172,13 @@ collections:
               widget: "image",
               hint: "Image for social media previews (1200x630px recommended)",
             }
+      - file: "content/hot-topics.md"
+        label: "Hot Topics Page"
+        name: "hot-topics"
+        preview_path: "hot-topics"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
   - name: "advocacy pages"
     label: "Advocacy Pages"
     files:
