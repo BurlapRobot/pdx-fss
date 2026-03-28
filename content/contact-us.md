@@ -3,7 +3,7 @@ title: Contact Us
 content: >-
   # Contact Us
   
-  We welcome email at [info@PDXFSS.org](<>).
+  We welcome email at [info@PDXFSS.org](mailto:info@PDXFSS.org).
 
   Join our email list for information on upcoming events and opportunities. We anticipate one or two email messages per month.
 
